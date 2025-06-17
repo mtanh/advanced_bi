@@ -1,0 +1,39 @@
+sudo apt update
+sudo apt install vsftpd -y
+
+
+sudo adduser etl_user
+sudo mkdir -p /home/etl_user/TrafficViolationDS
+sudo chown etl_user:etl_user /home/etl_user/TrafficViolationDS
+
+
+ip addr show eth0 | grep inet
+
+
+sudo vi /etc/vsftpd.conf
+listen=YES
+listen_ipv6=NO
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+chroot_local_user=YES
+allow_writeable_chroot=YES
+pasv_enable=YES
+pasv_min_port=30000
+pasv_max_port=31000
+pasv_address=<WSL_IP>
+
+
+sudo apt install ufw -y
+sudo ufw allow 20/tcp
+sudo ufw allow 21/tcp
+sudo ufw allow 30000:31000/tcp
+
+
+sudo systemctl restart vsftpd
+sudo service vsftpd restart
