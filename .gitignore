@@ -1,1 +1,7 @@
 utils/venv/
+
+ds/*.csv
+
+ssis/SSIS_CityDW/obj/
+ssis/SSIS_CityDW/bin/
+ssis/SSIS_CityDW/.vs/
