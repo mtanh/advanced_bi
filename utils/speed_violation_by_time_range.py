@@ -71,3 +71,8 @@ if __name__ == "__main__":
 
     # Call the data extraction function with the parsed arguments
     extract_speed_violations(args.file, args.start, args.end)
+
+
+# python speed_violation_by_time_range.py -f ..\ds\SpeedCameraViolation.csv --start 2014-01-01 --end 2016-12-31
+# python speed_violation_by_time_range.py -f ..\ds\SpeedCameraViolation.csv --start 2017-01-01 --end 2017-01-01
+
