@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-CHFFD81_DIMENSIONAL2022.CityDW"
+  DTS:DTSID="{70315D05-A6E7-4DBA-8FE5-423391D75D7B}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-CHFFD81\DIMENSIONAL2022;Initial Catalog=CityDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-SSISCityDW-{70315D05-A6E7-4DBA-8FE5-423391D75D7B}DESKTOP-CHFFD81\DIMENSIONAL2022.CityDW;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

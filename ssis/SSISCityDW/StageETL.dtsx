@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{7FF8E199-77CE-4B34-975B-4E7A26D66F7F}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{349C4BAF-7F50-46AF-A7B7-D1F6D16EB3B4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -367,18 +367,6 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{B7927BCC-7B56-4B88-9B70-06BD6BA02BCF}"
-      DTS:ObjectName="MTANH1\MULTIDIMENSIONAL.CitySTG">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=MTANH1\MULTIDIMENSIONAL;Initial Catalog=CitySTG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-StageETL-{B7927BCC-7B56-4B88-9B70-06BD6BA02BCF}MTANH1\MULTIDIMENSIONAL.CitySTG;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -2828,8 +2816,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Huminity\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
-                  connectionManagerRefId="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4575,8 +4563,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Pressure\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
-                  connectionManagerRefId="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5566,8 +5554,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_RedLightViolation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
-                  connectionManagerRefId="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6151,8 +6139,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_SpeedViolation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
-                  connectionManagerRefId="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7506,8 +7494,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Temperature\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
-                  connectionManagerRefId="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9253,8 +9241,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Windspeed\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
-                  connectionManagerRefId="Package.ConnectionManagers[MTANH1\MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
