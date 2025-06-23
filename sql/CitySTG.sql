@@ -190,3 +190,20 @@ CREATE TABLE speedcameraviolation (
   [LONGITUDE] VARCHAR(50) NULL,
   [LOCATION] VARCHAR(50) NULL
 );
+
+
+CREATE VIEW vChicagoWeather AS
+SELECT
+    CAST(h.[datetime] AS DATE) AS DateTime,
+    TRY_CAST(h.[Chicago] AS FLOAT) AS Humidity,
+    TRY_CAST(p.[Chicago] AS FLOAT) AS Pressure,
+    TRY_CAST(t.[Chicago] AS FLOAT) AS Temperature,
+    TRY_CAST(w.[Chicago] AS FLOAT) AS WindSpeed,
+    GETDATE() AS CreateTimeStamp,
+    GETDATE() AS UpdateTimeStamp,
+    '1' AS SourceSystemCode,
+    NULL AS OriginalFilePath
+FROM humidity h
+JOIN pressure p ON CAST(h.[datetime] AS DATE) = CAST(p.[datetime] AS DATE)
+JOIN temperature t ON CAST(h.[datetime] AS DATE) = CAST(t.[datetime] AS DATE)
+JOIN windspeed w ON CAST(h.[datetime] AS DATE) = CAST(w.[datetime] AS DATE);

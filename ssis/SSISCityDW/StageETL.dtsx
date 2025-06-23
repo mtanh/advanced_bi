@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{535A2E3F-7CAB-463B-A58B-F8E858A58876}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{7FF8E199-77CE-4B34-975B-4E7A26D66F7F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3148,147 +3148,219 @@
                       name="datetime" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vancouver]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Vancouver" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Portland]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Portland" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Francisco]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Francisco" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Seattle]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Seattle" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Los Angeles]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Los Angeles" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Diego]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Diego" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Las Vegas]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Las Vegas" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phoenix]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Phoenix" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Albuquerque]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Albuquerque" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Denver]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Denver" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Antonio]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Antonio" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dallas]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Dallas" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Houston]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Houston" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Kansas City]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Kansas City" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minneapolis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Minneapolis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Saint Louis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Saint Louis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Chicago]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Chicago" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nashville]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Nashville" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Indianapolis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Indianapolis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Atlanta]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Atlanta" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Detroit]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Detroit" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jacksonville]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Jacksonville" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Charlotte]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Charlotte" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Miami]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Miami" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pittsburgh]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Pittsburgh" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Toronto]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Toronto" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Philadelphia]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Philadelphia" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[New York]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="New York" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Montreal]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Montreal" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Boston]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Boston" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Beersheba]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Beersheba" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tel Aviv District]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Tel Aviv District" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eilat]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Eilat" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Haifa]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Haifa" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nahariyya]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Nahariyya" />
                     <externalMetadataColumn
                       refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jerusalem]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Jerusalem" />
                   </externalMetadataColumns>
                 </input>
@@ -4823,147 +4895,219 @@
                       name="datetime" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vancouver]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Vancouver" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Portland]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Portland" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Francisco]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Francisco" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Seattle]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Seattle" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Los Angeles]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Los Angeles" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Diego]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Diego" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Las Vegas]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Las Vegas" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phoenix]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Phoenix" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Albuquerque]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Albuquerque" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Denver]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Denver" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Antonio]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Antonio" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dallas]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Dallas" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Houston]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Houston" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Kansas City]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Kansas City" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minneapolis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Minneapolis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Saint Louis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Saint Louis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Chicago]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Chicago" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nashville]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Nashville" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Indianapolis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Indianapolis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Atlanta]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Atlanta" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Detroit]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Detroit" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jacksonville]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Jacksonville" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Charlotte]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Charlotte" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Miami]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Miami" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pittsburgh]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Pittsburgh" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Toronto]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Toronto" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Philadelphia]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Philadelphia" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[New York]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="New York" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Montreal]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Montreal" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Boston]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Boston" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Beersheba]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Beersheba" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tel Aviv District]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Tel Aviv District" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eilat]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Eilat" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Haifa]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Haifa" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nahariyya]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Nahariyya" />
                     <externalMetadataColumn
                       refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jerusalem]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Jerusalem" />
                   </externalMetadataColumns>
                 </input>
@@ -5526,7 +5670,9 @@
                       name="INTERSECTION" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CAMERA ID]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="CAMERA ID" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESS]"
@@ -5542,7 +5688,9 @@
                       name="VIOLATION DATE" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VIOLATIONS]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="VIOLATIONS" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[X COORDINATE]"
@@ -6111,7 +6259,9 @@
                       name="VIOLATION DATE" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VIOLATIONS]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="VIOLATIONS" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[X COORDINATE]"
@@ -7676,147 +7826,219 @@
                       name="datetime" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vancouver]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Vancouver" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Portland]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Portland" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Francisco]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Francisco" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Seattle]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Seattle" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Los Angeles]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Los Angeles" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Diego]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Diego" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Las Vegas]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Las Vegas" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phoenix]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Phoenix" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Albuquerque]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Albuquerque" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Denver]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Denver" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Antonio]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Antonio" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dallas]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Dallas" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Houston]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Houston" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Kansas City]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Kansas City" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minneapolis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Minneapolis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Saint Louis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Saint Louis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Chicago]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Chicago" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nashville]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Nashville" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Indianapolis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Indianapolis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Atlanta]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Atlanta" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Detroit]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Detroit" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jacksonville]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Jacksonville" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Charlotte]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Charlotte" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Miami]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Miami" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pittsburgh]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Pittsburgh" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Toronto]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Toronto" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Philadelphia]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Philadelphia" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[New York]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="New York" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Montreal]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Montreal" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Boston]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Boston" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Beersheba]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Beersheba" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tel Aviv District]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Tel Aviv District" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eilat]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Eilat" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Haifa]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Haifa" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nahariyya]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Nahariyya" />
                     <externalMetadataColumn
                       refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jerusalem]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Jerusalem" />
                   </externalMetadataColumns>
                 </input>
@@ -9351,147 +9573,219 @@
                       name="datetime" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vancouver]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Vancouver" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Portland]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Portland" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Francisco]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Francisco" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Seattle]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Seattle" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Los Angeles]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Los Angeles" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Diego]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Diego" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Las Vegas]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Las Vegas" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phoenix]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Phoenix" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Albuquerque]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Albuquerque" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Denver]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Denver" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[San Antonio]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="San Antonio" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Dallas]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Dallas" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Houston]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Houston" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Kansas City]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Kansas City" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Minneapolis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Minneapolis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Saint Louis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Saint Louis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Chicago]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Chicago" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nashville]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Nashville" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Indianapolis]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Indianapolis" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Atlanta]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Atlanta" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Detroit]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Detroit" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jacksonville]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Jacksonville" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Charlotte]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Charlotte" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Miami]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Miami" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pittsburgh]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Pittsburgh" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Toronto]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Toronto" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Philadelphia]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Philadelphia" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[New York]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="New York" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Montreal]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Montreal" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Boston]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Boston" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Beersheba]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Beersheba" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Tel Aviv District]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Tel Aviv District" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Eilat]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Eilat" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Haifa]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Haifa" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nahariyya]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Nahariyya" />
                     <externalMetadataColumn
                       refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Jerusalem]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Jerusalem" />
                   </externalMetadataColumns>
                 </input>
@@ -9595,6 +9889,22 @@
           Size="150,42"
           Id="Package\DFT_Pressure"
           TopLeft="302,111" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\DFT_RedLightViolation"
+          TopLeft="274,188" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\DFT_SpeedViolation"
+          TopLeft="275,269" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\DFT_Temperature"
+          TopLeft="490,115" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\DFT_Windspeed"
+          TopLeft="493,184" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="271,130">
@@ -9617,10 +9927,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="169,42"
-          Id="Package\DFT_Temperature"
-          TopLeft="490,115" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="452,134">
@@ -9643,10 +9949,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="162,42"
-          Id="Package\DFT_Windspeed"
-          TopLeft="493,184" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="574.25,157">
@@ -9669,10 +9971,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="193,42"
-          Id="Package\DFT_RedLightViolation"
-          TopLeft="274,188" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="493,207">
@@ -9695,10 +9993,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="181,42"
-          Id="Package\DFT_SpeedViolation"
-          TopLeft="275,269" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="368,230">
@@ -9730,13 +10024,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\DFT_Huminity\Flat File Source"
-          TopLeft="265,70" />
-        <NodeLayout
           Size="177,42"
           Id="Package\DFT_Huminity\OLE DB Destination"
           TopLeft="247,158" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT_Huminity\Flat File Source"
+          TopLeft="265,70" />
         <EdgeLayout
           Id="Package\DFT_Huminity.Paths[Flat File Source Output]"
           TopLeft="339.25,112">
@@ -9762,19 +10056,32 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Huminity\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT_Pressure">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\DFT_Pressure\Flat File Source"
-          TopLeft="226,56" />
-        <NodeLayout
           Size="177,42"
           Id="Package\DFT_Pressure\OLE DB Destination"
           TopLeft="214,167" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT_Pressure\Flat File Source"
+          TopLeft="226,56" />
         <EdgeLayout
           Id="Package\DFT_Pressure.Paths[Flat File Source Output]"
           TopLeft="303.25,98">
@@ -9800,119 +10107,32 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <TaskHost
-    design-time-name="Package\DFT_Temperature">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="156,42"
-          Id="Package\DFT_Temperature\Flat File Source"
-          TopLeft="161,79" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\DFT_Temperature\OLE DB Destination"
-          TopLeft="138,179" />
-        <EdgeLayout
-          Id="Package\DFT_Temperature.Paths[Flat File Source Output]"
-          TopLeft="239,121">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-12.5,58"
-              Start="0,0"
-              End="-12.5,50.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25"
-                    Point2="0,29"
-                    Point3="-4,29" />
-                  <mssgle:LineSegment
-                    End="-8.5,29" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8.5,29"
-                    Point2="-12.5,29"
-                    Point3="-12.5,33" />
-                  <mssgle:LineSegment
-                    End="-12.5,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\DFT_Windspeed">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="156,42"
-          Id="Package\DFT_Windspeed\Flat File Source"
-          TopLeft="316,90" />
-        <NodeLayout
-          Size="177,42"
-          Id="Package\DFT_Windspeed\OLE DB Destination"
-          TopLeft="370,194" />
-        <EdgeLayout
-          Id="Package\DFT_Windspeed.Paths[Flat File Source Output]"
-          TopLeft="394,132">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="64.5,62"
-              Start="0,0"
-              End="64.5,54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27"
-                    Point2="0,31"
-                    Point3="4,31" />
-                  <mssgle:LineSegment
-                    End="60.5,31" />
-                  <mssgle:CubicBezierSegment
-                    Point1="60.5,31"
-                    Point2="64.5,31"
-                    Point3="64.5,35" />
-                  <mssgle:LineSegment
-                    End="64.5,54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Pressure\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT_RedLightViolation">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\DFT_RedLightViolation\Flat File Source"
-          TopLeft="385,126" />
-        <NodeLayout
           Size="177,42"
           Id="Package\DFT_RedLightViolation\OLE DB Destination"
           TopLeft="434,233" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT_RedLightViolation\Flat File Source"
+          TopLeft="385,126" />
         <EdgeLayout
           Id="Package\DFT_RedLightViolation.Paths[Flat File Source Output]"
           TopLeft="463,168">
@@ -9950,19 +10170,32 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_RedLightViolation\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT_SpeedViolation">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
-          Id="Package\DFT_SpeedViolation\Flat File Source"
-          TopLeft="217,74" />
-        <NodeLayout
           Size="177,42"
           Id="Package\DFT_SpeedViolation\OLE DB Destination"
           TopLeft="206,173" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT_SpeedViolation\Flat File Source"
+          TopLeft="217,74" />
         <EdgeLayout
           Id="Package\DFT_SpeedViolation.Paths[Flat File Source Output]"
           TopLeft="294.75,116">
@@ -10001,32 +10234,56 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Huminity\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Pressure\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_Temperature">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\DFT_Temperature\OLE DB Destination"
+          TopLeft="138,179" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT_Temperature\Flat File Source"
+          TopLeft="161,79" />
+        <EdgeLayout
+          Id="Package\DFT_Temperature.Paths[Flat File Source Output]"
+          TopLeft="239,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.5,58"
+              Start="0,0"
+              End="-12.5,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="-4,29" />
+                  <mssgle:LineSegment
+                    End="-8.5,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.5,29"
+                    Point2="-12.5,29"
+                    Point3="-12.5,33" />
+                  <mssgle:LineSegment
+                    End="-12.5,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_Temperature\OLE DB Destination">
     <Properties>
@@ -10040,21 +10297,58 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_Windspeed">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="177,42"
+          Id="Package\DFT_Windspeed\OLE DB Destination"
+          TopLeft="370,194" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT_Windspeed\Flat File Source"
+          TopLeft="316,90" />
+        <EdgeLayout
+          Id="Package\DFT_Windspeed.Paths[Flat File Source Output]"
+          TopLeft="394,132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64.5,62"
+              Start="0,0"
+              End="64.5,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="60.5,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60.5,31"
+                    Point2="64.5,31"
+                    Point3="64.5,35" />
+                  <mssgle:LineSegment
+                    End="64.5,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_Windspeed\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_RedLightViolation\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
