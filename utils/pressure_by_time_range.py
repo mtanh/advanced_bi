@@ -2,9 +2,9 @@ import pandas as pd
 import os
 import argparse
 
-def extract_speed_violations(csv_file_path, start_date, end_date):
+def extract_pressure_data(csv_file_path, start_date, end_date):
     """
-    Extracts speed violation data from a CSV file within a specified date range.
+    Extracts pressure data from a CSV file within a specified date range.
 
     Args:
         csv_file_path (str): Path to the input CSV file.
@@ -17,17 +17,20 @@ def extract_speed_violations(csv_file_path, start_date, end_date):
         print(f"Error: CSV file not found at path {csv_file_path}")
         return
 
-    df['VIOLATION DATE'] = pd.to_datetime(df['VIOLATION DATE'], format='%m/%d/%Y')
+    df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+
+    df.dropna(subset=['datetime'], inplace=True)
 
     start_date_dt = pd.to_datetime(start_date, format='%Y-%m-%d')
     end_date_dt = pd.to_datetime(end_date, format='%Y-%m-%d')
 
-    filtered_df = df[(df['VIOLATION DATE'] >= start_date_dt) & (df['VIOLATION DATE'] <= end_date_dt)]
+    filtered_df = df[(df['datetime'].dt.date >= start_date_dt.date()) &
+                     (df['datetime'].dt.date <= end_date_dt.date())]
 
     output_directory = end_date
     os.makedirs(output_directory, exist_ok=True)
 
-    output_file_name = "SpeedViolation.csv"
+    output_file_name = "Pressure.csv"
     output_file_path = os.path.join(output_directory, output_file_name)
 
     filtered_df.to_csv(output_file_path, index=False)
@@ -36,14 +39,14 @@ def extract_speed_violations(csv_file_path, start_date, end_date):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Extracts speed violation data from a CSV file within a specified date range."
+        description="Extracts pressure data from a CSV file within a specified date range."
     )
 
     parser.add_argument(
         '-f', '--file',
         type=str,
         required=True,
-        help='Path to the input CSV file'
+        help='Path to the input CSV file (e.g., Pressure.csv)'
     )
     parser.add_argument(
         '--start',
@@ -60,10 +63,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    extract_speed_violations(args.file, args.start, args.end)
+    extract_pressure_data(args.file, args.start, args.end)
 
 # Examples of how to run from the command line:
-# python speed_violation_by_time_range.py -f ..\ds\SpeedCameraViolation.csv --start 2014-01-01 --end 2016-12-31
-# python speed_violation_by_time_range.py -f ..\ds\SpeedCameraViolation.csv --start 2017-01-01 --end 2017-01-01
-# python speed_violation_by_time_range.py -f ..\ds\SpeedCameraViolation.csv --start 2017-01-02 --end 2017-01-02
-
+# python pressure_by_time_range.py -f ..\ds\Pressure.csv --start 2014-01-01 --end 2016-12-31
+# python pressure_by_time_range.py -f ..\ds\Pressure.csv --start 2017-01-01 --end 2017-01-01
+# python pressure_by_time_range.py -f ..\ds\Pressure.csv --start 2017-01-02 --end 2017-01-02
