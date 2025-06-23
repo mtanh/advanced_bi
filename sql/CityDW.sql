@@ -5,7 +5,8 @@ CREATE TABLE ViolationType (
   ViolationTypeKey INT IDENTITY(1,1) PRIMARY KEY,
   ViolationTypeName VARCHAR(100) UNIQUE NOT NULL
 );
-INSERT INTO ViolationType (ViolationTypeName) VALUES ('RedLight'), ('Speed');
+TRUNCATE TABLE ViolationType;
+INSERT INTO ViolationType (ViolationTypeName) VALUES ('REDLIGHT'), ('SPEED'), ('OTHER');
 
 CREATE TABLE StreetType (
   StreetTypeKey INT IDENTITY(1,1) PRIMARY KEY,
@@ -47,7 +48,8 @@ VALUES
 ('RIDGE'),
 ('DALE'),
 ('KNOLL'),
-('MEWS');
+('MEWS'),
+('OTHER');
 
 CREATE TABLE Location (
   LocationKey INT IDENTITY(1,1) PRIMARY KEY,
@@ -56,21 +58,19 @@ CREATE TABLE Location (
   Processed BIT NOT NULL DEFAULT 0,
   CONSTRAINT UQ_Location_LatLong UNIQUE (Latitude, Longitude)
 );
-ALTER TABLE Location
-ADD CONSTRAINT UQ_Location_LatLong UNIQUE (Latitude, Longitude);
 
 CREATE TABLE Address (
   AddressKey INT IDENTITY(1,1) PRIMARY KEY,
   StreetTypeKey INT NOT NULL,
   LocationKey INT UNIQUE NOT NULL,
   FullAddress VARCHAR(200) NOT NULL,
-  ValidFromDate DATETIME NULL,
-  ValidToDate DATETIME NULL,
-  IsCurrent BIT NULL,
-  CreateTimeStamp DATETIME NULL,
-  UpdateTimeStamp DATETIME NULL,
+  ValidFromDate DATETIME NULL DEFAULT GETDATE(),
+  ValidToDate DATETIME NULL DEFAULT NULL,
+  IsCurrent BIT NULL DEFAULT 1,
+  CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
+  UpdateTimeStamp DATETIME NULL DEFAULT NULL,
   SourceSystemCode VARCHAR(50) NULL,
-  OriginalFilePath VARCHAR(200) NULL,
+  SourceFolder VARCHAR(50) NULL,
   Processed BIT NOT NULL DEFAULT 0,
   FOREIGN KEY (StreetTypeKey) REFERENCES StreetType(StreetTypeKey),
   FOREIGN KEY (LocationKey) REFERENCES Location(LocationKey)
@@ -85,7 +85,7 @@ CREATE TABLE TrafficViolation (
   CreateTimeStamp DATETIME NULL,
   UpdateTimeStamp DATETIME NULL,
   SourceSystemCode VARCHAR(50) NULL,
-  OriginalFilePath VARCHAR(200) NULL,
+  SourceFolder VARCHAR(50) NULL,
   Processed BIT NOT NULL DEFAULT 0,
   FOREIGN KEY (ViolationTypeKey) REFERENCES ViolationType(ViolationTypeKey),
   FOREIGN KEY (AddressKey) REFERENCES Address(AddressKey)
@@ -98,12 +98,12 @@ CREATE TABLE Weather (
   Pressure FLOAT NULL,
   Temperature FLOAT NULL,
   WindSpeed FLOAT NULL,
-  CreateTimeStamp DATETIME NULL,
+  CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
   UpdateTimeStamp DATETIME NULL,
   SourceSystemCode VARCHAR(50) NULL,
-  OriginalFilePath VARCHAR(200) NULL,
+  SourceFolder VARCHAR(50) NULL,
   Processed BIT NOT NULL DEFAULT 0
 );
 
 
-truncate table [dbo].[Weather];
+--truncate table [dbo].[Weather];

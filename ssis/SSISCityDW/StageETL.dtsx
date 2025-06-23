@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{1EC84F09-3DA9-4194-BE18-5279D97959D9}">
+  DTS:VersionBuild="91"
+  DTS:VersionGUID="{3352CB26-F527-461B-B6F8-C2C459D87DE3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2773,7 +2773,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[humidity]</property>
+                  name="OpenRowset">[dbo].[Humidity]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2816,8 +2816,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Huminity\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3350,6 +3350,16 @@
                       dataType="str"
                       length="50"
                       name="Jerusalem" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceFolder" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Huminity\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Processed]"
+                      dataType="bool"
+                      name="Processed" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4520,7 +4530,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[pressure]</property>
+                  name="OpenRowset">[dbo].[Pressure]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -4563,8 +4573,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Pressure\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5097,6 +5107,16 @@
                       dataType="str"
                       length="50"
                       name="Jerusalem" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Processed]"
+                      dataType="bool"
+                      name="Processed" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Pressure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceFolder" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5511,7 +5531,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[redlightviolation]</property>
+                  name="OpenRowset">[dbo].[RedLightViolation]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -5554,8 +5574,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_RedLightViolation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5710,6 +5730,16 @@
                       dataType="str"
                       length="50"
                       name="LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Processed]"
+                      dataType="bool"
+                      name="Processed" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceFolder" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6096,7 +6126,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[speedcameraviolation]</property>
+                  name="OpenRowset">[dbo].[SpeedCameraViolation]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -6139,8 +6169,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_SpeedViolation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6281,6 +6311,16 @@
                       dataType="str"
                       length="50"
                       name="LOCATION" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_SpeedViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Processed]"
+                      dataType="bool"
+                      name="Processed" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_SpeedViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceFolder" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7451,7 +7491,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[temperature]</property>
+                  name="OpenRowset">[dbo].[Temperature]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -7494,8 +7534,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Temperature\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8028,6 +8068,16 @@
                       dataType="str"
                       length="50"
                       name="Jerusalem" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Processed]"
+                      dataType="bool"
+                      name="Processed" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Temperature\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceFolder" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -9198,7 +9248,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[windspeed]</property>
+                  name="OpenRowset">[dbo].[WindSpeed]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -9241,8 +9291,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Windspeed\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9775,6 +9825,16 @@
                       dataType="str"
                       length="50"
                       name="Jerusalem" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Processed]"
+                      dataType="bool"
+                      name="Processed" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_Windspeed\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceFolder" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -9814,12 +9874,30 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{B516BADE-3A63-4A7D-980D-B08F32586FC7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2016-12-31';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{DF95274E-5944-416A-A27E-BDD8F547C065}"
+      DTS:DTSID="{5BC567E4-ECB7-435D-9234-CDA3C796DFAC}"
       DTS:From="Package\DFT_Huminity"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -9827,7 +9905,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{5441909C-FA0F-4E36-B7FF-F051E0CB446C}"
+      DTS:DTSID="{DC1F2BC5-65D5-48F3-9203-45D98E1FDF72}"
       DTS:From="Package\DFT_Pressure"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -9835,7 +9913,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{93BE224A-ADBD-48A5-A057-5D4DDBB6FAB9}"
+      DTS:DTSID="{AE7051D0-5858-4F49-A64F-38FA0D383644}"
       DTS:From="Package\DFT_Temperature"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
@@ -9843,7 +9921,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
-      DTS:DTSID="{21E4B44F-6502-4302-A3E5-893569E7870B}"
+      DTS:DTSID="{E04C61F5-7D3B-4121-AF1B-87477F1E373D}"
       DTS:From="Package\DFT_Windspeed"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
@@ -9851,11 +9929,19 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
       DTS:CreationName=""
-      DTS:DTSID="{66C730F7-B947-47CB-BE7E-D70295B36589}"
+      DTS:DTSID="{55E674B9-AC70-4A9F-BFF4-F9FC3CF2266D}"
       DTS:From="Package\DFT_RedLightViolation"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
       DTS:To="Package\DFT_SpeedViolation" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{01C72DB7-1E80-478E-9DFB-5E441F463BE1}"
+      DTS:From="Package\DFT_SpeedViolation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Execute SQL Task" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -9870,43 +9956,47 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149,42"
+          Size="146,42"
           Id="Package\DFT_Huminity"
-          TopLeft="122,107" />
+          TopLeft="511,50" />
         <NodeLayout
-          Size="150,42"
+          Size="144,42"
           Id="Package\DFT_Pressure"
-          TopLeft="302,111" />
+          TopLeft="510,137" />
         <NodeLayout
-          Size="193,42"
-          Id="Package\DFT_RedLightViolation"
-          TopLeft="274,188" />
-        <NodeLayout
-          Size="181,42"
-          Id="Package\DFT_SpeedViolation"
-          TopLeft="275,269" />
-        <NodeLayout
-          Size="169,42"
+          Size="165,42"
           Id="Package\DFT_Temperature"
-          TopLeft="490,115" />
+          TopLeft="509,229" />
         <NodeLayout
-          Size="162,42"
+          Size="156,42"
           Id="Package\DFT_Windspeed"
-          TopLeft="493,184" />
+          TopLeft="528,321" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\DFT_RedLightViolation"
+          TopLeft="511,410" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\DFT_SpeedViolation"
+          TopLeft="517,503" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="528,594" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="271,130">
+          TopLeft="583,92">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="31,0"
+              EndConnector="0,45"
               Start="0,0"
-              End="23.5,0">
+              End="0,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="23.5,0" />
+                    End="0,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9917,18 +10007,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="452,134">
+          TopLeft="582,179">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="38,0"
+              EndConnector="9.5,50"
               Start="0,0"
-              End="30.5,0">
+              End="9.5,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="30.5,0" />
+                    End="0,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="4,25" />
+                  <mssgle:LineSegment
+                    End="5.5,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.5,25"
+                    Point2="9.5,25"
+                    Point3="9.5,29" />
+                  <mssgle:LineSegment
+                    End="9.5,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9939,18 +10041,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="574.25,157">
+          TopLeft="591.5,271">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27"
+              EndConnector="14.5,50"
               Start="0,0"
-              End="0,19.5">
+              End="14.5,42.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
+                    End="0,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21"
+                    Point2="0,25"
+                    Point3="4,25" />
+                  <mssgle:LineSegment
+                    End="10.5,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.5,25"
+                    Point2="14.5,25"
+                    Point3="14.5,29" />
+                  <mssgle:LineSegment
+                    End="14.5,42.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9961,18 +10075,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="493,207">
+          TopLeft="605,363">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-26,0"
+              EndConnector="0,47"
               Start="0,0"
-              End="-18.5,0">
+              End="0,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-18.5,0" />
+                    End="0,39.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9983,18 +10097,40 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="368,230">
+          TopLeft="603.75,452">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="0,51"
               Start="0,0"
-              End="0,31.5">
+              End="0,43.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="606.5,545">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10010,35 +10146,37 @@
     design-time-name="Package\DFT_Huminity">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="177,42"
+          Size="171,42"
           Id="Package\DFT_Huminity\OLE DB Destination"
-          TopLeft="247,158" />
+          TopLeft="260,169" />
         <NodeLayout
           Size="156,42"
           Id="Package\DFT_Huminity\Flat File Source"
           TopLeft="265,70" />
         <EdgeLayout
           Id="Package\DFT_Huminity.Paths[Flat File Source Output]"
-          TopLeft="339.25,112">
+          TopLeft="344.25,112">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46"
+              EndConnector="0,57"
               Start="0,0"
-              End="0,38.5">
+              End="0,49.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
+                    End="0,49.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10061,7 +10199,7 @@
     design-time-name="Package\DFT_Pressure">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="177,42"
           Id="Package\DFT_Pressure\OLE DB Destination"
@@ -10089,7 +10227,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10112,47 +10252,37 @@
     design-time-name="Package\DFT_RedLightViolation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="177,42"
           Id="Package\DFT_RedLightViolation\OLE DB Destination"
-          TopLeft="434,233" />
+          TopLeft="371,235" />
         <NodeLayout
           Size="156,42"
           Id="Package\DFT_RedLightViolation\Flat File Source"
           TopLeft="385,126" />
         <EdgeLayout
           Id="Package\DFT_RedLightViolation.Paths[Flat File Source Output]"
-          TopLeft="463,168">
+          TopLeft="461.25,168">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="59.5,65"
+              EndConnector="0,67"
               Start="0,0"
-              End="59.5,57.5">
+              End="0,59.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.5"
-                    Point2="0,32.5"
-                    Point3="4,32.5" />
-                  <mssgle:LineSegment
-                    End="55.5,32.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="55.5,32.5"
-                    Point2="59.5,32.5"
-                    Point3="59.5,36.5" />
-                  <mssgle:LineSegment
-                    End="59.5,57.5" />
+                    End="0,59.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10175,7 +10305,7 @@
     design-time-name="Package\DFT_SpeedViolation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="177,42"
           Id="Package\DFT_SpeedViolation\OLE DB Destination"
@@ -10203,7 +10333,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10226,7 +10358,7 @@
     design-time-name="Package\DFT_Temperature">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="177,42"
           Id="Package\DFT_Temperature\OLE DB Destination"
@@ -10266,7 +10398,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10289,7 +10423,7 @@
     design-time-name="Package\DFT_Windspeed">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="177,42"
           Id="Package\DFT_Windspeed\OLE DB Destination"
@@ -10317,7 +10451,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

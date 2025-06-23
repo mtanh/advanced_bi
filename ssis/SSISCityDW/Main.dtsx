@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Main"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{634ECD0F-6CE0-427E-A009-0886D4043D7F}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{08EB2362-8C73-42B5-929F-91E131527B13}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,6 +21,7 @@
       DTS:refId="Package\EPT_Cleansing"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
+      DTS:Disabled="True"
       DTS:DTSID="{DD4753E3-0E47-41F7-B065-EFEE2E95D1F0}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
@@ -100,13 +101,17 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,42"
-          Id="Package\EPT_StageETL"
-          TopLeft="213,168" />
-        <NodeLayout
           Size="156,42"
           Id="Package\EPT_Cleansing"
           TopLeft="431,170" />
+        <NodeLayout
+          Size="146,42"
+          Id="Package\EPT_NdsETL"
+          TopLeft="660,172" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\EPT_StageETL"
+          TopLeft="213,168" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="368,190">
@@ -129,10 +134,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="146,42"
-          Id="Package\EPT_NdsETL"
-          TopLeft="660,172" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="587,192">

@@ -1,8 +1,8 @@
 USE CitySTG;
 GO
 
-CREATE TABLE humidity (
-  [datetime] VARCHAR(50) NULL,
+CREATE TABLE Humidity (
+  [datetime] VARCHAR(50) UNIQUE NULL,
   [Vancouver] VARCHAR(50) NULL,
   [Portland] VARCHAR(50) NULL,
   [San Francisco] VARCHAR(50) NULL,
@@ -39,12 +39,13 @@ CREATE TABLE humidity (
   [Haifa] VARCHAR(50) NULL,
   [Nahariyya] VARCHAR(50) NULL,
   [Jerusalem] VARCHAR(50) NULL,
+  [SourceFolder] VARCHAR(50) NULL,
   [Processed] BIT NOT NULL DEFAULT 0
 );
 
 
-CREATE TABLE pressure (
-  [datetime] VARCHAR(50) NULL,
+CREATE TABLE Pressure (
+  [datetime] VARCHAR(50) UNIQUE NULL,
   [Vancouver] VARCHAR(50) NULL,
   [Portland] VARCHAR(50) NULL,
   [San Francisco] VARCHAR(50) NULL,
@@ -81,12 +82,13 @@ CREATE TABLE pressure (
   [Haifa] VARCHAR(50) NULL,
   [Nahariyya] VARCHAR(50) NULL,
   [Jerusalem] VARCHAR(50) NULL,
+  [SourceFolder] VARCHAR(50) NULL,
   [Processed] BIT NOT NULL DEFAULT 0
 );
 
 
-CREATE TABLE temperature (
-  [datetime] VARCHAR(50) NULL,
+CREATE TABLE Temperature (
+  [datetime] VARCHAR(50) UNIQUE NULL,
   [Vancouver] VARCHAR(50) NULL,
   [Portland] VARCHAR(50) NULL,
   [San Francisco] VARCHAR(50) NULL,
@@ -123,11 +125,12 @@ CREATE TABLE temperature (
   [Haifa] VARCHAR(50) NULL,
   [Nahariyya] VARCHAR(50) NULL,
   [Jerusalem] VARCHAR(50) NULL,
+  [SourceFolder] VARCHAR(50) NULL,
   [Processed] BIT NOT NULL DEFAULT 0
 );
 
-CREATE TABLE windspeed (
-  [datetime] VARCHAR(50) NULL,
+CREATE TABLE WindSpeed (
+  [datetime] VARCHAR(50) UNIQUE NULL,
   [Vancouver] VARCHAR(50) NULL,
   [Portland] VARCHAR(50) NULL,
   [San Francisco] VARCHAR(50) NULL,
@@ -164,13 +167,14 @@ CREATE TABLE windspeed (
   [Haifa] VARCHAR(50) NULL,
   [Nahariyya] VARCHAR(50) NULL,
   [Jerusalem] VARCHAR(50) NULL,
+  [SourceFolder] VARCHAR(50) NULL,
   [Processed] BIT NOT NULL DEFAULT 0
 );
 
-CREATE TABLE redlightviolation (
-  [INTERSECTION] VARCHAR(50) NULL,
+CREATE TABLE RedLightViolation (
+  [INTERSECTION] VARCHAR(100) NULL,
   [CAMERA ID] VARCHAR(50) NULL,
-  [ADDRESS] VARCHAR(50) NULL,
+  [ADDRESS] VARCHAR(100) NULL,
   [VIOLATION DATE] VARCHAR(50) NULL,
   [VIOLATIONS] VARCHAR(50) NULL,
   [X COORDINATE] VARCHAR(50) NULL,
@@ -178,12 +182,13 @@ CREATE TABLE redlightviolation (
   [LATITUDE] VARCHAR(50) NULL,
   [LONGITUDE] VARCHAR(50) NULL,
   [LOCATION] VARCHAR(50) NULL,
+  [SourceFolder] VARCHAR(50) NULL,
   [Processed] BIT NOT NULL DEFAULT 0
 );
 
 
-CREATE TABLE speedcameraviolation (
-  [ADDRESS] VARCHAR(50) NULL,
+CREATE TABLE SpeedCameraViolation (
+  [ADDRESS] VARCHAR(100) NULL,
   [CAMERA ID] VARCHAR(50) NULL,
   [VIOLATION DATE] VARCHAR(50) NULL,
   [VIOLATIONS] VARCHAR(50) NULL,
@@ -192,9 +197,9 @@ CREATE TABLE speedcameraviolation (
   [LATITUDE] VARCHAR(50) NULL,
   [LONGITUDE] VARCHAR(50) NULL,
   [LOCATION] VARCHAR(50) NULL,
+  [SourceFolder] VARCHAR(50) NULL,
   [Processed] BIT NOT NULL DEFAULT 0
 );
-
 
 CREATE VIEW v_UnprocessedChicagoWeatherStage AS
 SELECT
@@ -203,18 +208,53 @@ SELECT
     TRY_CAST(p.[Chicago] AS FLOAT) AS Pressure,
     TRY_CAST(t.[Chicago] AS FLOAT) AS Temperature,
     TRY_CAST(w.[Chicago] AS FLOAT) AS WindSpeed,
-    GETDATE() AS CreateTimeStamp,
-    GETDATE() AS UpdateTimeStamp,
     '1' AS SourceSystemCode,
-    'Server01/Weather' AS OriginalFilePath
-FROM humidity h
-JOIN pressure p ON h.[datetime] = p.[datetime]
-JOIN temperature t ON h.[datetime] = t.[datetime]
-JOIN windspeed w ON h.[datetime] = w.[datetime]
+    h.[SourceFolder] AS SourceFolder
+FROM Humidity h
+JOIN Pressure p ON h.[datetime] = p.[datetime]
+JOIN Temperature t ON h.[datetime] = t.[datetime]
+JOIN WindSpeed w ON h.[datetime] = w.[datetime]
 WHERE
     h.Processed = 0 AND
     p.Processed = 0 AND
     t.Processed = 0 AND
     w.Processed = 0;
+
+CREATE VIEW v_UnprocessedRedLightViolationLocationsStage AS
+SELECT DISTINCT
+    TRY_CAST(r.[LATITUDE] AS VARCHAR(50)) AS Latitude,
+    TRY_CAST(r.[LONGITUDE] AS VARCHAR(50)) AS Longitude
+FROM RedLightViolation r
+WHERE
+    r.Processed = 0;
+
+
+CREATE VIEW v_UnprocessedRedLightViolationStage AS
+SELECT
+    [INTERSECTION],
+    [CAMERA ID],
+    [ADDRESS],
+    [VIOLATION DATE],
+    [VIOLATIONS],
+    [X COORDINATE],
+    [Y COORDINATE],
+    [LATITUDE],
+    [LONGITUDE],
+    [LOCATION],
+    [SourceFolder]
+FROM RedLightViolation
+WHERE
+    Processed = 0;
+
+
+--truncate table [dbo].[Humidity];
+--truncate table [dbo].[Pressure];
+--truncate table [dbo].[RedLightViolation];
+--truncate table [dbo].[SpeedCameraViolation];
+--truncate table [dbo].[Temperature];
+--truncate table [dbo].[WindSpeed];
+
+
+
 
 
