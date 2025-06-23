@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="NdsETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{2AC6C9AB-76A5-4B9B-9CB6-B0FB006727F6}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{9017365A-51EB-44CE-9A8C-5B82FDCC3740}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -589,11 +589,11 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{0111AA4D-1256-4D8B-8624-09E047B8D514}"
+      DTS:DTSID="{842A0685-56A9-48B8-AE27-50E059C4B09D}"
       DTS:From="Package\SQL_Processed_Weather"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\DFT_RedLightAddress" />
+      DTS:To="Package\DFT_RedLightLocation" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -607,6 +607,18 @@
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="191,42"
+          Id="Package\DFT_RedLightAddress"
+          TopLeft="378,302" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\DFT_RedLightLocation"
+          TopLeft="371,218" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\DFT_RedLightTrafficViolation"
+          TopLeft="366,404" />
         <NodeLayout
           Size="148,42"
           Id="Package\DFT_Weather"
@@ -637,32 +649,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="192,42"
-          Id="Package\DFT_RedLightLocation"
-          TopLeft="367,312" />
-        <NodeLayout
-          Size="191,42"
-          Id="Package\DFT_RedLightAddress"
-          TopLeft="373,221" />
-        <NodeLayout
-          Size="224,42"
-          Id="Package\DFT_RedLightTrafficViolation"
-          TopLeft="366,404" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="465,155">
+          TopLeft="464.25,155">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,66"
+              EndConnector="0,63"
               Start="0,0"
-              End="0,58.5">
+              End="0,55.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.5" />
+                    End="0,55.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -713,19 +713,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_Weather\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DFT_Weather\OLE DB Destination">
     <Properties>
       <Property>
@@ -735,6 +722,19 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Weather\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

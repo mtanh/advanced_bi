@@ -7,13 +7,6 @@ CREATE TABLE ViolationType (
 );
 INSERT INTO ViolationType (ViolationTypeName) VALUES ('RedLight'), ('Speed');
 
-CREATE TABLE Location (
-  LocationKey INT IDENTITY(1,1) PRIMARY KEY,
-  Latitude VARCHAR(50) NULL,
-  Longitude VARCHAR(50) NULL,
-  Processed BIT NOT NULL DEFAULT 0
-);
-
 CREATE TABLE StreetType (
   StreetTypeKey INT IDENTITY(1,1) PRIMARY KEY,
   StreetTypeName VARCHAR(100) UNIQUE NOT NULL
@@ -55,6 +48,16 @@ VALUES
 ('DALE'),
 ('KNOLL'),
 ('MEWS');
+
+CREATE TABLE Location (
+  LocationKey INT IDENTITY(1,1) PRIMARY KEY,
+  Latitude VARCHAR(50) NULL,
+  Longitude VARCHAR(50) NULL,
+  Processed BIT NOT NULL DEFAULT 0,
+  CONSTRAINT UQ_Location_LatLong UNIQUE (Latitude, Longitude)
+);
+ALTER TABLE Location
+ADD CONSTRAINT UQ_Location_LatLong UNIQUE (Latitude, Longitude);
 
 CREATE TABLE Address (
   AddressKey INT IDENTITY(1,1) PRIMARY KEY,
