@@ -38,7 +38,8 @@ CREATE TABLE humidity (
   [Eilat] VARCHAR(50) NULL,
   [Haifa] VARCHAR(50) NULL,
   [Nahariyya] VARCHAR(50) NULL,
-  [Jerusalem] VARCHAR(50) NULL
+  [Jerusalem] VARCHAR(50) NULL,
+  [Processed] BIT NOT NULL DEFAULT 0
 );
 
 
@@ -79,7 +80,8 @@ CREATE TABLE pressure (
   [Eilat] VARCHAR(50) NULL,
   [Haifa] VARCHAR(50) NULL,
   [Nahariyya] VARCHAR(50) NULL,
-  [Jerusalem] VARCHAR(50) NULL
+  [Jerusalem] VARCHAR(50) NULL,
+  [Processed] BIT NOT NULL DEFAULT 0
 );
 
 
@@ -120,9 +122,9 @@ CREATE TABLE temperature (
   [Eilat] VARCHAR(50) NULL,
   [Haifa] VARCHAR(50) NULL,
   [Nahariyya] VARCHAR(50) NULL,
-  [Jerusalem] VARCHAR(50) NULL
+  [Jerusalem] VARCHAR(50) NULL,
+  [Processed] BIT NOT NULL DEFAULT 0
 );
-
 
 CREATE TABLE windspeed (
   [datetime] VARCHAR(50) NULL,
@@ -161,9 +163,9 @@ CREATE TABLE windspeed (
   [Eilat] VARCHAR(50) NULL,
   [Haifa] VARCHAR(50) NULL,
   [Nahariyya] VARCHAR(50) NULL,
-  [Jerusalem] VARCHAR(50) NULL
+  [Jerusalem] VARCHAR(50) NULL,
+  [Processed] BIT NOT NULL DEFAULT 0
 );
-
 
 CREATE TABLE redlightviolation (
   [INTERSECTION] VARCHAR(50) NULL,
@@ -175,7 +177,8 @@ CREATE TABLE redlightviolation (
   [Y COORDINATE] VARCHAR(50) NULL,
   [LATITUDE] VARCHAR(50) NULL,
   [LONGITUDE] VARCHAR(50) NULL,
-  [LOCATION] VARCHAR(50) NULL
+  [LOCATION] VARCHAR(50) NULL,
+  [Processed] BIT NOT NULL DEFAULT 0
 );
 
 
@@ -188,13 +191,14 @@ CREATE TABLE speedcameraviolation (
   [Y COORDINATE] VARCHAR(50) NULL,
   [LATITUDE] VARCHAR(50) NULL,
   [LONGITUDE] VARCHAR(50) NULL,
-  [LOCATION] VARCHAR(50) NULL
+  [LOCATION] VARCHAR(50) NULL,
+  [Processed] BIT NOT NULL DEFAULT 0
 );
 
 
-CREATE VIEW vChicagoWeather AS
+CREATE VIEW v_UnprocessedChicagoWeatherStage AS
 SELECT
-    CAST(h.[datetime] AS DATE) AS DateTime,
+    TRY_CAST(h.[datetime] AS DATETIME) AS DateTime,
     TRY_CAST(h.[Chicago] AS FLOAT) AS Humidity,
     TRY_CAST(p.[Chicago] AS FLOAT) AS Pressure,
     TRY_CAST(t.[Chicago] AS FLOAT) AS Temperature,
@@ -202,8 +206,15 @@ SELECT
     GETDATE() AS CreateTimeStamp,
     GETDATE() AS UpdateTimeStamp,
     '1' AS SourceSystemCode,
-    NULL AS OriginalFilePath
+    'Server01/Weather' AS OriginalFilePath
 FROM humidity h
-JOIN pressure p ON CAST(h.[datetime] AS DATE) = CAST(p.[datetime] AS DATE)
-JOIN temperature t ON CAST(h.[datetime] AS DATE) = CAST(t.[datetime] AS DATE)
-JOIN windspeed w ON CAST(h.[datetime] AS DATE) = CAST(w.[datetime] AS DATE);
+JOIN pressure p ON h.[datetime] = p.[datetime]
+JOIN temperature t ON h.[datetime] = t.[datetime]
+JOIN windspeed w ON h.[datetime] = w.[datetime]
+WHERE
+    h.Processed = 0 AND
+    p.Processed = 0 AND
+    t.Processed = 0 AND
+    w.Processed = 0;
+
+

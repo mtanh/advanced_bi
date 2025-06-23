@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{349C4BAF-7F50-46AF-A7B7-D1F6D16EB3B4}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{1EC84F09-3DA9-4194-BE18-5279D97959D9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2816,8 +2816,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Huminity\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
+                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4563,8 +4563,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Pressure\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
+                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5554,8 +5554,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_RedLightViolation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
+                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6139,8 +6139,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_SpeedViolation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
+                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7494,8 +7494,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Temperature\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
+                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9241,8 +9241,8 @@
               <connections>
                 <connection
                   refId="Package\DFT_Windspeed\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
+                  connectionManagerID="{ED804BFC-7B3D-4545-B1A1-FA29A79C942B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10293,37 +10293,25 @@
         <NodeLayout
           Size="177,42"
           Id="Package\DFT_Windspeed\OLE DB Destination"
-          TopLeft="370,194" />
+          TopLeft="300,181" />
         <NodeLayout
           Size="156,42"
           Id="Package\DFT_Windspeed\Flat File Source"
           TopLeft="316,90" />
         <EdgeLayout
           Id="Package\DFT_Windspeed.Paths[Flat File Source Output]"
-          TopLeft="394,132">
+          TopLeft="391.25,132">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="64.5,62"
+              EndConnector="0,49"
               Start="0,0"
-              End="64.5,54.5">
+              End="0,41.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,27"
-                    Point2="0,31"
-                    Point3="4,31" />
-                  <mssgle:LineSegment
-                    End="60.5,31" />
-                  <mssgle:CubicBezierSegment
-                    Point1="60.5,31"
-                    Point2="64.5,31"
-                    Point3="64.5,35" />
-                  <mssgle:LineSegment
-                    End="64.5,54.5" />
+                    End="0,41.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -3,19 +3,58 @@ GO
 
 CREATE TABLE ViolationType (
   ViolationTypeKey INT IDENTITY(1,1) PRIMARY KEY,
-  ViolationTypeName VARCHAR(100) NOT NULL
+  ViolationTypeName VARCHAR(100) UNIQUE NOT NULL
 );
+INSERT INTO ViolationType (ViolationTypeName) VALUES ('RedLight'), ('Speed');
 
 CREATE TABLE Location (
   LocationKey INT IDENTITY(1,1) PRIMARY KEY,
   Latitude VARCHAR(50) NULL,
-  Longitude VARCHAR(50) NULL
+  Longitude VARCHAR(50) NULL,
+  Processed BIT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE StreetType (
   StreetTypeKey INT IDENTITY(1,1) PRIMARY KEY,
-  StreetTypeName VARCHAR(100) NOT NULL
+  StreetTypeName VARCHAR(100) UNIQUE NOT NULL
 );
+INSERT INTO StreetType (StreetTypeName)
+VALUES
+('AVENUE'),
+('STREET'),
+('ROAD'),
+('BOULEVARD'),
+('DRIVE'),
+('PARKWAY'),
+('PLACE'),
+('COURT'),
+('TERRACE'),
+('CIRCLE'),
+('WAY'),
+('SQUARE'),
+('LANE'),
+('TRAIL'),
+('HIGHWAY'),
+('EXPRESSWAY'),
+('EXTENSION'),
+('ALLEY'),
+('BROADWAY'),
+('CRESCENT'),
+('COVE'),
+('ROW'),
+('PIKE'),
+('PLAZA'),
+('TURNPIKE'),
+('RUN'),
+('WALK'),
+('CENTER'),
+('TRACE'),
+('VIEW'),
+('HEIGHTS'),
+('RIDGE'),
+('DALE'),
+('KNOLL'),
+('MEWS');
 
 CREATE TABLE Address (
   AddressKey INT IDENTITY(1,1) PRIMARY KEY,
@@ -29,6 +68,7 @@ CREATE TABLE Address (
   UpdateTimeStamp DATETIME NULL,
   SourceSystemCode VARCHAR(50) NULL,
   OriginalFilePath VARCHAR(200) NULL,
+  Processed BIT NOT NULL DEFAULT 0,
   FOREIGN KEY (StreetTypeKey) REFERENCES StreetType(StreetTypeKey),
   FOREIGN KEY (LocationKey) REFERENCES Location(LocationKey)
 );
@@ -43,6 +83,7 @@ CREATE TABLE TrafficViolation (
   UpdateTimeStamp DATETIME NULL,
   SourceSystemCode VARCHAR(50) NULL,
   OriginalFilePath VARCHAR(200) NULL,
+  Processed BIT NOT NULL DEFAULT 0,
   FOREIGN KEY (ViolationTypeKey) REFERENCES ViolationType(ViolationTypeKey),
   FOREIGN KEY (AddressKey) REFERENCES Address(AddressKey)
 );
@@ -57,5 +98,9 @@ CREATE TABLE Weather (
   CreateTimeStamp DATETIME NULL,
   UpdateTimeStamp DATETIME NULL,
   SourceSystemCode VARCHAR(50) NULL,
-  OriginalFilePath VARCHAR(200) NULL
+  OriginalFilePath VARCHAR(200) NULL,
+  Processed BIT NOT NULL DEFAULT 0
 );
+
+
+truncate table [dbo].[Weather];
