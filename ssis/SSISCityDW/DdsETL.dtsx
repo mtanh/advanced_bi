@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DdsETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{6E8A9BBC-0C32-4D83-97B9-D6F8FA041BA6}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{412000FD-8AE9-4D40-B38E-6D567C80256C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2862,12 +2862,6 @@ where [refTable].[WeatherDate] = ?</property>
                       externalMetadataColumnId="Package\DFT_FactTrafficViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherKey]"
                       lineageId="Package\DFT_FactTrafficViolation\Lookup at DimWeather.Outputs[Lookup Match Output].Columns[WeatherKey]" />
                     <inputColumn
-                      refId="Package\DFT_FactTrafficViolation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressKey]"
-                      cachedDataType="i4"
-                      cachedName="AddressKey"
-                      externalMetadataColumnId="Package\DFT_FactTrafficViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKey]"
-                      lineageId="Package\DFT_FactTrafficViolation\v_Unprocessed_TrafficViolation_Nds.Outputs[OLE DB Source Output].Columns[AddressKey]" />
-                    <inputColumn
                       refId="Package\DFT_FactTrafficViolation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceSystemCode]"
                       cachedDataType="i4"
                       cachedName="SourceSystemCode"
@@ -2881,6 +2875,12 @@ where [refTable].[WeatherDate] = ?</property>
                       cachedName="SourceFolder"
                       externalMetadataColumnId="Package\DFT_FactTrafficViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
                       lineageId="Package\DFT_FactTrafficViolation\v_Unprocessed_TrafficViolation_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]" />
+                    <inputColumn
+                      refId="Package\DFT_FactTrafficViolation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressKey]"
+                      cachedDataType="i4"
+                      cachedName="AddressKey"
+                      externalMetadataColumnId="Package\DFT_FactTrafficViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKey]"
+                      lineageId="Package\DFT_FactTrafficViolation\Lookup at DimAddress.Outputs[Lookup Match Output].Columns[AddressKey]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
