@@ -222,26 +222,18 @@ WHERE
 
 CREATE VIEW v_UnprocessedRedLightViolationLocationsStage AS
 SELECT DISTINCT
-    TRY_CAST(r.[LATITUDE] AS VARCHAR(50)) AS Latitude,
-    TRY_CAST(r.[LONGITUDE] AS VARCHAR(50)) AS Longitude
-FROM RedLightViolation r
+    TRY_CAST([LATITUDE] AS VARCHAR(50)) AS Latitude,
+    TRY_CAST([LONGITUDE] AS VARCHAR(50)) AS Longitude
+FROM RedLightViolation
 WHERE
-    r.Processed = 0;
+    Processed = 0;
 
-
-CREATE VIEW v_UnprocessedRedLightViolationStage AS
+CREATE VIEW v_UnprocessedRedLightViolationAddressesStage AS
 SELECT
-    [INTERSECTION],
-    [CAMERA ID],
-    [ADDRESS],
-    [VIOLATION DATE],
-    [VIOLATIONS],
-    [X COORDINATE],
-    [Y COORDINATE],
+    TRY_CAST([ADDRESS] AS VARCHAR(100)) AS [ADDRESS],
     [LATITUDE],
-    [LONGITUDE],
-    [LOCATION],
-    [SourceFolder]
+	[LONGITUDE],
+	[SourceFolder]
 FROM RedLightViolation
 WHERE
     Processed = 0;
@@ -255,6 +247,15 @@ WHERE
 --truncate table [dbo].[WindSpeed];
 
 
+--drop table [dbo].[Humidity];
+--drop table [dbo].[Pressure];
+--drop table [dbo].[Temperature]
+--drop table [dbo].[WindSpeed]
+--drop table [dbo].[RedLightViolation];
+--drop table [dbo].[SpeedCameraViolation];
 
+--drop view [dbo].[v_UnprocessedChicagoWeatherStage];
+--drop view [dbo].[v_UnprocessedRedLightViolationLocationsStage];
+--drop view [dbo].[v_UnprocessedRedLightViolationAddressesStage];
 
 

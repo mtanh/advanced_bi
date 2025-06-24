@@ -5,7 +5,6 @@ CREATE TABLE ViolationType (
   ViolationTypeKey INT IDENTITY(1,1) PRIMARY KEY,
   ViolationTypeName VARCHAR(100) UNIQUE NOT NULL
 );
-TRUNCATE TABLE ViolationType;
 INSERT INTO ViolationType (ViolationTypeName) VALUES ('REDLIGHT'), ('SPEED'), ('OTHER');
 
 CREATE TABLE StreetType (
@@ -63,7 +62,7 @@ CREATE TABLE Address (
   AddressKey INT IDENTITY(1,1) PRIMARY KEY,
   StreetTypeKey INT NOT NULL,
   LocationKey INT UNIQUE NOT NULL,
-  FullAddress VARCHAR(200) NOT NULL,
+  FullAddress VARCHAR(100) NOT NULL,
   ValidFromDate DATETIME NULL DEFAULT GETDATE(),
   ValidToDate DATETIME NULL DEFAULT NULL,
   IsCurrent BIT NULL DEFAULT 1,
@@ -107,3 +106,11 @@ CREATE TABLE Weather (
 
 
 --truncate table [dbo].[Weather];
+--truncate table [dbo].[Address];
+
+--drop table [dbo].[TrafficViolation];
+--drop table [dbo].[Address];
+--drop table [dbo].[Location];
+--drop table [dbo].[StreetType];
+--drop table [dbo].[ViolationType];
+--drop table [dbo].[Weather];

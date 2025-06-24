@@ -6,7 +6,7 @@
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
-      DTS:ConnectRetryInterval="5"
+      DTS:ConnectRetryInterval="1"
       DTS:ConnectionString="Data Source=DESKTOP-CHFFD81\DIMENSIONAL2022;Initial Catalog=CitySTG;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-SSISCityDW-{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}DESKTOP-CHFFD81\DIMENSIONAL2022.CitySTG;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
