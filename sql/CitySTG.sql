@@ -201,7 +201,7 @@ CREATE TABLE SpeedCameraViolation (
   [Processed] BIT NOT NULL DEFAULT 0
 );
 
-CREATE VIEW v_UnprocessedChicagoWeatherStage AS
+CREATE VIEW v_Unprocessed_Chicago_Weather_Stage AS
 SELECT
     TRY_CAST(h.[datetime] AS DATETIME) AS DateTime,
     TRY_CAST(h.[Chicago] AS FLOAT) AS Humidity,
@@ -220,7 +220,7 @@ WHERE
     t.Processed = 0 AND
     w.Processed = 0;
 
-CREATE VIEW v_UnprocessedRedLightViolationLocationsStage AS
+CREATE VIEW v_Unprocessed_RedLightViolation_Locations_Stage AS
 SELECT DISTINCT
     TRY_CAST([LATITUDE] AS VARCHAR(50)) AS Latitude,
     TRY_CAST([LONGITUDE] AS VARCHAR(50)) AS Longitude
@@ -228,13 +228,54 @@ FROM RedLightViolation
 WHERE
     Processed = 0;
 
-CREATE VIEW v_UnprocessedRedLightViolationAddressesStage AS
+CREATE VIEW v_Unprocessed_RedLightViolation_Addresses_Stage AS
 SELECT
     TRY_CAST([ADDRESS] AS VARCHAR(100)) AS [ADDRESS],
     [LATITUDE],
 	[LONGITUDE],
 	[SourceFolder]
 FROM RedLightViolation
+WHERE
+    Processed = 0;
+
+CREATE VIEW v_Unprocessed_RedLightViolation_Date_Count_Stage AS
+SELECT
+    [LATITUDE],
+	[LONGITUDE],
+	[VIOLATION DATE],
+	[VIOLATIONS],
+	[SourceFolder]
+FROM RedLightViolation
+WHERE
+    Processed = 0;
+
+
+CREATE VIEW v_Unprocessed_SpeedViolation_Locations_Stage AS
+SELECT DISTINCT
+    TRY_CAST([LATITUDE] AS VARCHAR(50)) AS Latitude,
+    TRY_CAST([LONGITUDE] AS VARCHAR(50)) AS Longitude
+FROM SpeedCameraViolation
+WHERE
+    Processed = 0;
+
+CREATE VIEW v_Unprocessed_SpeedViolation_Addresses_Stage AS
+SELECT
+    TRY_CAST([ADDRESS] AS VARCHAR(100)) AS [ADDRESS],
+    [LATITUDE],
+	[LONGITUDE],
+	[SourceFolder]
+FROM SpeedCameraViolation
+WHERE
+    Processed = 0;
+
+CREATE VIEW v_Unprocessed_SpeedViolation_Date_Count_Stage AS
+SELECT
+    [LATITUDE],
+	[LONGITUDE],
+	[VIOLATION DATE],
+	[VIOLATIONS],
+	[SourceFolder]
+FROM SpeedCameraViolation
 WHERE
     Processed = 0;
 

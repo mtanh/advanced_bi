@@ -68,7 +68,7 @@ CREATE TABLE Address (
   IsCurrent BIT NULL DEFAULT 1,
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
   UpdateTimeStamp DATETIME NULL DEFAULT NULL,
-  SourceSystemCode VARCHAR(50) NULL,
+  SourceSystemCode INT NULL,
   SourceFolder VARCHAR(50) NULL,
   Processed BIT NOT NULL DEFAULT 0,
   FOREIGN KEY (StreetTypeKey) REFERENCES StreetType(StreetTypeKey),
@@ -81,9 +81,9 @@ CREATE TABLE TrafficViolation (
   AddressKey INT NOT NULL,
   ViolationDate DATETIME NULL,
   ViolationCount INT NULL,
-  CreateTimeStamp DATETIME NULL,
-  UpdateTimeStamp DATETIME NULL,
-  SourceSystemCode VARCHAR(50) NULL,
+  CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
+  UpdateTimeStamp DATETIME NULL DEFAULT NULL,
+  SourceSystemCode INT NULL,
   SourceFolder VARCHAR(50) NULL,
   Processed BIT NOT NULL DEFAULT 0,
   FOREIGN KEY (ViolationTypeKey) REFERENCES ViolationType(ViolationTypeKey),
@@ -99,14 +99,11 @@ CREATE TABLE Weather (
   WindSpeed FLOAT NULL,
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
   UpdateTimeStamp DATETIME NULL,
-  SourceSystemCode VARCHAR(50) NULL,
+  SourceSystemCode INT NULL,
   SourceFolder VARCHAR(50) NULL,
   Processed BIT NOT NULL DEFAULT 0
 );
 
-
---truncate table [dbo].[Weather];
---truncate table [dbo].[Address];
 
 --drop table [dbo].[TrafficViolation];
 --drop table [dbo].[Address];
