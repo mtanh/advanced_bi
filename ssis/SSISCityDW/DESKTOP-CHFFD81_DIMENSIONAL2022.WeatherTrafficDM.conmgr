@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-CHFFD81_DIMENSIONAL2022.WeatherTrafficDM"
+  DTS:DTSID="{7177D4EC-41F7-4463-9643-91E0D73C6BA7}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-CHFFD81\DIMENSIONAL2022;Initial Catalog=WeatherTrafficDM;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-SSISCityDW-{7177D4EC-41F7-4463-9643-91E0D73C6BA7}DESKTOP-CHFFD81\DIMENSIONAL2022.WeatherTrafficDM;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

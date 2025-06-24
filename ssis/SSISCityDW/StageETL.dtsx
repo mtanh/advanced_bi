@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="110"
-  DTS:VersionGUID="{26C35CE3-E58A-4534-A506-722F02690787}">
+  DTS:VersionBuild="116"
+  DTS:VersionGUID="{9FF96CAD-4132-4155-A550-8D65BCBA06F6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2827,8 +2827,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_Huminity\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2959,8 +2959,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_Huminity\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4732,8 +4732,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_Pressure\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -4864,8 +4864,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_Pressure\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5870,8 +5870,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_RedLightViolation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6465,8 +6465,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_SpeedViolation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7841,8 +7841,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_Temperature\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -7973,8 +7973,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_Temperature\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9746,8 +9746,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_Windspeed\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -9878,8 +9878,8 @@ where [refTable].[datetime] = ?</property>
               <connections>
                 <connection
                   refId="Package\DFT_Windspeed\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[MTANH1_MULTIDIMENSIONAL.CitySTG 1]"
+                  connectionManagerID="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CitySTG]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10479,7 +10479,7 @@ where [refTable].[datetime] = ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{C3E3E4AF-92A7-4A66-B908-760B5C4B6B67}"
+          SQLTask:Connection="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}"
           SQLTask:BypassPrepare="False"
           SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2016-12-31';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
@@ -10740,39 +10740,17 @@ where [refTable].[datetime] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\DFT_Huminity\OLE DB Destination"
-          TopLeft="266,240" />
+          Size="115,42"
+          Id="Package\DFT_Huminity\Lookup"
+          TopLeft="289,147" />
         <NodeLayout
           Size="156,42"
           Id="Package\DFT_Huminity\Flat File Source"
           TopLeft="265,70" />
         <NodeLayout
-          Size="115,42"
-          Id="Package\DFT_Huminity\Lookup"
-          TopLeft="289,147" />
-        <EdgeLayout
-          Id="Package\DFT_Huminity.Paths[Flat File Source Output]"
-          TopLeft="344.75,112">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="171,42"
+          Id="Package\DFT_Huminity\OLE DB Destination"
+          TopLeft="266,240" />
         <EdgeLayout
           Id="Package\DFT_Huminity.Paths[Lookup No Match Output]"
           TopLeft="349,189">
@@ -10797,9 +10775,54 @@ where [refTable].[datetime] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Huminity.Paths[Flat File Source Output]"
+          TopLeft="344.75,112">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Huminity\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Humidity]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_Huminity\OLE DB Destination">
     <Properties>
@@ -10819,39 +10842,17 @@ where [refTable].[datetime] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="177,42"
-          Id="Package\DFT_Pressure\OLE DB Destination"
-          TopLeft="215,233" />
+          Size="115,42"
+          Id="Package\DFT_Pressure\Lookup"
+          TopLeft="251,132" />
         <NodeLayout
           Size="156,42"
           Id="Package\DFT_Pressure\Flat File Source"
           TopLeft="226,56" />
         <NodeLayout
-          Size="115,42"
-          Id="Package\DFT_Pressure\Lookup"
-          TopLeft="251,132" />
-        <EdgeLayout
-          Id="Package\DFT_Pressure.Paths[Flat File Source Output]"
-          TopLeft="306.25,98">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34"
-              Start="0,0"
-              End="0,26.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="177,42"
+          Id="Package\DFT_Pressure\OLE DB Destination"
+          TopLeft="215,233" />
         <EdgeLayout
           Id="Package\DFT_Pressure.Paths[Lookup No Match Output]"
           TopLeft="306,174">
@@ -10876,9 +10877,54 @@ where [refTable].[datetime] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Pressure.Paths[Flat File Source Output]"
+          TopLeft="306.25,98">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Pressure\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Pressure]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_Pressure\OLE DB Destination">
     <Properties>
@@ -11000,39 +11046,17 @@ where [refTable].[datetime] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="177,42"
-          Id="Package\DFT_Temperature\OLE DB Destination"
-          TopLeft="145,280" />
+          Size="115,42"
+          Id="Package\DFT_Temperature\Lookup"
+          TopLeft="179,174" />
         <NodeLayout
           Size="156,42"
           Id="Package\DFT_Temperature\Flat File Source"
           TopLeft="161,79" />
         <NodeLayout
-          Size="115,42"
-          Id="Package\DFT_Temperature\Lookup"
-          TopLeft="179,174" />
-        <EdgeLayout
-          Id="Package\DFT_Temperature.Paths[Flat File Source Output]"
-          TopLeft="237.75,121">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53"
-              Start="0,0"
-              End="0,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="177,42"
+          Id="Package\DFT_Temperature\OLE DB Destination"
+          TopLeft="145,280" />
         <EdgeLayout
           Id="Package\DFT_Temperature.Paths[Lookup No Match Output]"
           TopLeft="235,216">
@@ -11057,53 +11081,20 @@ where [refTable].[datetime] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Temperature\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\DFT_Windspeed">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="177,42"
-          Id="Package\DFT_Windspeed\OLE DB Destination"
-          TopLeft="304,326" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\DFT_Windspeed\Flat File Source"
-          TopLeft="316,90" />
-        <NodeLayout
-          Size="115,42"
-          Id="Package\DFT_Windspeed\Lookup"
-          TopLeft="339,196" />
         <EdgeLayout
-          Id="Package\DFT_Windspeed.Paths[Flat File Source Output]"
-          TopLeft="395.25,132">
+          Id="Package\DFT_Temperature.Paths[Flat File Source Output]"
+          TopLeft="237.75,121">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,64"
+              EndConnector="0,53"
               Start="0,0"
-              End="0,56.5">
+              End="0,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,56.5" />
+                    End="0,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11112,92 +11103,9 @@ where [refTable].[datetime] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Windspeed.Paths[Lookup No Match Output]"
-          TopLeft="394.5,238">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,88"
-              Start="0,0"
-              End="0,80.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,80.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,34.4453125,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Windspeed\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Huminity\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Humidity]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Pressure\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Pressure]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_Temperature\Lookup">
     <Properties>
@@ -11222,6 +11130,85 @@ where [refTable].[datetime] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT_Temperature\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_Windspeed">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="115,42"
+          Id="Package\DFT_Windspeed\Lookup"
+          TopLeft="339,196" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\DFT_Windspeed\Flat File Source"
+          TopLeft="316,90" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\DFT_Windspeed\OLE DB Destination"
+          TopLeft="304,326" />
+        <EdgeLayout
+          Id="Package\DFT_Windspeed.Paths[Lookup No Match Output]"
+          TopLeft="394.5,238">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,34.4453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Windspeed.Paths[Flat File Source Output]"
+          TopLeft="395.25,132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT_Windspeed\Lookup">
     <Properties>
       <Property>
@@ -11241,6 +11228,19 @@ where [refTable].[datetime] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Windspeed\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

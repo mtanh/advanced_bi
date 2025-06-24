@@ -294,9 +294,3 @@ WHERE
 --drop table [dbo].[WindSpeed]
 --drop table [dbo].[RedLightViolation];
 --drop table [dbo].[SpeedCameraViolation];
-
---drop view [dbo].[v_UnprocessedChicagoWeatherStage];
---drop view [dbo].[v_UnprocessedRedLightViolationLocationsStage];
---drop view [dbo].[v_UnprocessedRedLightViolationAddressesStage];
-
-
