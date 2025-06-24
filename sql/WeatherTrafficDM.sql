@@ -14,15 +14,15 @@ CREATE TABLE DimDate (
     CalendarYear INT,
     IsWeekend BIT,
     CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
-	UpdateTimeStamp DATETIME NULL DEFAULT NULL,
+  UpdateTimeStamp DATETIME NULL DEFAULT NULL,
     SourceSystemCode INT NULL,
-	SourceFolder VARCHAR(50) NULL
+  SourceFolder VARCHAR(50) NULL
 );
 
 
 CREATE TABLE DimAddress (
     AddressKey INT IDENTITY(1,1) PRIMARY KEY,
-	AddressKeyOfNds INT NOT NULL,
+  AddressKeyOfNds INT NOT NULL,
     FullAddress VARCHAR(100),
     StreetTypeName VARCHAR(50),
     Latitude FLOAT,
@@ -32,20 +32,20 @@ CREATE TABLE DimAddress (
     ValidToDate DATE NULL DEFAULT NULL,
     IsCurrent BIT DEFAULT 1,
     CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
-	UpdateTimeStamp DATETIME NULL DEFAULT NULL,
+  UpdateTimeStamp DATETIME NULL DEFAULT NULL,
     SourceSystemCode INT NULL,
-	SourceFolder VARCHAR(50) NULL
+  SourceFolder VARCHAR(50) NULL
 );
 
 CREATE TABLE DimWeather (
     WeatherKey INT IDENTITY(1,1) PRIMARY KEY,
-	WeatherDate DATE,
+  WeatherDate DATE,
     
-	MaxHumidity FLOAT,
+  MaxHumidity FLOAT,
     MinHumidity FLOAT,
     AverageHumidity FLOAT,
     
-	MaxPressure FLOAT,
+  MaxPressure FLOAT,
     MinPressure FLOAT,
     AveragePressure FLOAT,
 

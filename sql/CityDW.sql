@@ -107,9 +107,9 @@ CREATE TABLE Weather (
 
 CREATE VIEW v_Unprocessed_TrafficViolation_Distinct_Dates_Nds AS
 SELECT DISTINCT
-	TRY_CAST([ViolationDate] AS DATE) AS [ViolationDate],
-	[SourceSystemCode],
-	[SourceFolder]
+  TRY_CAST([ViolationDate] AS DATE) AS [ViolationDate],
+  [SourceSystemCode],
+  [SourceFolder]
 FROM TrafficViolation
 WHERE Processed = 0;
 

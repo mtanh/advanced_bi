@@ -232,8 +232,8 @@ CREATE VIEW v_Unprocessed_RedLightViolation_Addresses_Stage AS
 SELECT
     TRY_CAST([ADDRESS] AS VARCHAR(100)) AS [ADDRESS],
     [LATITUDE],
-	[LONGITUDE],
-	[SourceFolder]
+  [LONGITUDE],
+  [SourceFolder]
 FROM RedLightViolation
 WHERE
     Processed = 0;
@@ -241,10 +241,10 @@ WHERE
 CREATE VIEW v_Unprocessed_RedLightViolation_Date_Count_Stage AS
 SELECT
     [LATITUDE],
-	[LONGITUDE],
-	[VIOLATION DATE],
-	[VIOLATIONS],
-	[SourceFolder]
+  [LONGITUDE],
+  [VIOLATION DATE],
+  [VIOLATIONS],
+  [SourceFolder]
 FROM RedLightViolation
 WHERE
     Processed = 0;
@@ -262,8 +262,8 @@ CREATE VIEW v_Unprocessed_SpeedViolation_Addresses_Stage AS
 SELECT
     TRY_CAST([ADDRESS] AS VARCHAR(100)) AS [ADDRESS],
     [LATITUDE],
-	[LONGITUDE],
-	[SourceFolder]
+  [LONGITUDE],
+  [SourceFolder]
 FROM SpeedCameraViolation
 WHERE
     Processed = 0;
@@ -271,10 +271,10 @@ WHERE
 CREATE VIEW v_Unprocessed_SpeedViolation_Date_Count_Stage AS
 SELECT
     [LATITUDE],
-	[LONGITUDE],
-	[VIOLATION DATE],
-	[VIOLATIONS],
-	[SourceFolder]
+  [LONGITUDE],
+  [VIOLATION DATE],
+  [VIOLATIONS],
+  [SourceFolder]
 FROM SpeedCameraViolation
 WHERE
     Processed = 0;
