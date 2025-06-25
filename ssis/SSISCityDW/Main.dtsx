@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Main"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{CC382671-B038-499C-9ED5-40CC06E59F85}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{64B79F81-D458-4ADC-88E6-89699C431E15}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -72,6 +72,7 @@
       DTS:refId="Package\EPT_StageETL"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
+      DTS:Disabled="True"
       DTS:DTSID="{34F3FC5E-8E0B-42E1-A366-281327FD40DA}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
@@ -117,16 +118,24 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\EPT_Cleansing"
+          TopLeft="249.442857115488,45.9823529807238" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\EPT_DdsETL"
+          TopLeft="254.242857115488,249.182352980723" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\EPT_NdsETL"
+          TopLeft="254.242857115488,147.582352980723" />
+        <NodeLayout
           Size="146.4,41.6"
           Id="Package\EPT_StageETL"
           TopLeft="34.4285710484398,43.3529412857286" />
-        <NodeLayout
-          Size="147.2,41.6"
-          Id="Package\EPT_Cleansing"
-          TopLeft="451.585714688654,57.4529412059635" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="525.185714688654,99.0529412059634">
+          TopLeft="323.042857115488,87.5823529807237">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -146,13 +155,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\EPT_NdsETL"
-          TopLeft="456.385714688654,159.052941205963" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="525.185714688654,200.652941205963">
+          TopLeft="323.042857115488,189.182352980723">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -172,10 +177,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\EPT_DdsETL"
-          TopLeft="456.385714688654,260.652941205963" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

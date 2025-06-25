@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DdsETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="72"
-  DTS:VersionGUID="{0EB1FBC4-53E2-4405-9C48-C89FFFE0F35A}">
+  DTS:VersionBuild="86"
+  DTS:VersionGUID="{678623BE-9CEB-4DAC-AFCF-BE8A62D962F3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2702,35 +2702,11 @@ where [refTable].[WeatherDate] = ?</property>
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherDate]"
                       lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[WeatherDate]" />
                     <inputColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxHumidity]"
-                      cachedDataType="r8"
-                      cachedName="MaxHumidity"
-                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxHumidity]"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxHumidity]" />
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinHumidity]"
-                      cachedDataType="r8"
-                      cachedName="MinHumidity"
-                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinHumidity]"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinHumidity]" />
-                    <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageHumidity]"
                       cachedDataType="r8"
                       cachedName="AverageHumidity"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageHumidity]"
                       lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]" />
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxPressure]"
-                      cachedDataType="r8"
-                      cachedName="MaxPressure"
-                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxPressure]"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxPressure]" />
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinPressure]"
-                      cachedDataType="r8"
-                      cachedName="MinPressure"
-                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinPressure]"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinPressure]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AveragePressure]"
                       cachedDataType="r8"
@@ -2738,35 +2714,11 @@ where [refTable].[WeatherDate] = ?</property>
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AveragePressure]"
                       lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AveragePressure]" />
                     <inputColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxTemperature]"
-                      cachedDataType="r8"
-                      cachedName="MaxTemperature"
-                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxTemperature]"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxTemperature]" />
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinTemperature]"
-                      cachedDataType="r8"
-                      cachedName="MinTemperature"
-                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinTemperature]"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinTemperature]" />
-                    <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageTemperature]"
                       cachedDataType="r8"
                       cachedName="AverageTemperature"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageTemperature]"
                       lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]" />
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxWindSpeed]"
-                      cachedDataType="r8"
-                      cachedName="MaxWindSpeed"
-                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxWindSpeed]"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxWindSpeed]" />
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinWindSpeed]"
-                      cachedDataType="r8"
-                      cachedName="MinWindSpeed"
-                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinWindSpeed]"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinWindSpeed]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageWindSpeed]"
                       cachedDataType="r8"
@@ -2794,7 +2746,7 @@ where [refTable].[WeatherDate] = ?</property>
                       cachedLength="50"
                       cachedName="TemperatureRangeName"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TemperatureRangeName]"
-                      lineageId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Output].Columns[TemperatureRangeName]" />
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[TemperatureRangeName]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[HumidityLevelName]"
                       cachedCodepage="1252"
@@ -2802,7 +2754,47 @@ where [refTable].[WeatherDate] = ?</property>
                       cachedLength="50"
                       cachedName="HumidityLevelName"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[HumidityLevelName]"
-                      lineageId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Output].Columns[HumidityLevelName]" />
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[HumidityLevelName]" />
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PressureLevelName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PressureLevelName"
+                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PressureLevelName]"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[PressureLevelName]" />
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WindLevelName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WindLevelName"
+                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WindLevelName]"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[WindLevelName]" />
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeatherComfortLevel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WeatherComfortLevel"
+                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherComfortLevel]"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[WeatherComfortLevel]" />
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OverallWeatherDescription]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="OverallWeatherDescription"
+                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallWeatherDescription]"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[OverallWeatherDescription]" />
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ComfortLevel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ComfortLevel"
+                      externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ComfortLevel]"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[ComfortLevel]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2815,49 +2807,17 @@ where [refTable].[WeatherDate] = ?</property>
                       dataType="dbDate"
                       name="WeatherDate" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxHumidity]"
-                      dataType="r8"
-                      name="MaxHumidity" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinHumidity]"
-                      dataType="r8"
-                      name="MinHumidity" />
-                    <externalMetadataColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageHumidity]"
                       dataType="r8"
                       name="AverageHumidity" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxPressure]"
-                      dataType="r8"
-                      name="MaxPressure" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinPressure]"
-                      dataType="r8"
-                      name="MinPressure" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AveragePressure]"
                       dataType="r8"
                       name="AveragePressure" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxTemperature]"
-                      dataType="r8"
-                      name="MaxTemperature" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinTemperature]"
-                      dataType="r8"
-                      name="MinTemperature" />
-                    <externalMetadataColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageTemperature]"
                       dataType="r8"
                       name="AverageTemperature" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxWindSpeed]"
-                      dataType="r8"
-                      name="MaxWindSpeed" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinWindSpeed]"
-                      dataType="r8"
-                      name="MinWindSpeed" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageWindSpeed]"
                       dataType="r8"
@@ -2892,6 +2852,36 @@ where [refTable].[WeatherDate] = ?</property>
                       dataType="str"
                       length="50"
                       name="SourceFolder" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PressureLevelName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PressureLevelName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WindLevelName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WindLevelName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherComfortLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WeatherComfortLevel" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OverallWeatherDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OverallWeatherDescription" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ComfortLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ComfortLevel" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2960,74 +2950,10 @@ where [refTable].[WeatherDate] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MaxHumidity]"
-                      cachedDataType="r8"
-                      cachedName="MaxHumidity"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxHumidity]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MinHumidity]"
-                      cachedDataType="r8"
-                      cachedName="MinHumidity"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinHumidity]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[AverageHumidity]"
                       cachedDataType="r8"
                       cachedName="AverageHumidity"
                       lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MaxPressure]"
-                      cachedDataType="r8"
-                      cachedName="MaxPressure"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxPressure]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MinPressure]"
-                      cachedDataType="r8"
-                      cachedName="MinPressure"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinPressure]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3056,74 +2982,10 @@ where [refTable].[WeatherDate] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MaxTemperature]"
-                      cachedDataType="r8"
-                      cachedName="MaxTemperature"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxTemperature]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MinTemperature]"
-                      cachedDataType="r8"
-                      cachedName="MinTemperature"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinTemperature]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[AverageTemperature]"
                       cachedDataType="r8"
                       cachedName="AverageTemperature"
                       lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MaxWindSpeed]"
-                      cachedDataType="r8"
-                      cachedName="MaxWindSpeed"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxWindSpeed]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MinWindSpeed]"
-                      cachedDataType="r8"
-                      cachedName="MinWindSpeed"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinWindSpeed]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -3210,32 +3072,6 @@ where [refTable].[WeatherDate] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxHumidity]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxHumidity]"
-                      name="MaxHumidity">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxHumidity]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinHumidity]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinHumidity]"
-                      name="MinHumidity">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinHumidity]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]"
                       dataType="r8"
                       lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]"
@@ -3246,32 +3082,6 @@ where [refTable].[WeatherDate] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxPressure]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxPressure]"
-                      name="MaxPressure">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxPressure]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinPressure]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinPressure]"
-                      name="MinPressure">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinPressure]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3288,32 +3098,6 @@ where [refTable].[WeatherDate] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxTemperature]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxTemperature]"
-                      name="MaxTemperature">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxTemperature]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinTemperature]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinTemperature]"
-                      name="MinTemperature">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinTemperature]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]"
                       dataType="r8"
                       lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]"
@@ -3324,32 +3108,6 @@ where [refTable].[WeatherDate] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxWindSpeed]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxWindSpeed]"
-                      name="MaxWindSpeed">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxWindSpeed]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinWindSpeed]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinWindSpeed]"
-                      name="MinWindSpeed">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinWindSpeed]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -3393,117 +3151,6 @@ where [refTable].[WeatherDate] = ?</property>
                           name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]}</property>
                       </properties>
                     </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="TemperatureRangeName, HumidityLevelName"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input].Columns[AverageHumidity]"
-                      cachedDataType="r8"
-                      cachedName="AverageHumidity"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]" />
-                    <inputColumn
-                      refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input].Columns[AverageTemperature]"
-                      cachedDataType="r8"
-                      cachedName="AverageTemperature"
-                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Output].Columns[TemperatureRangeName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Output].Columns[TemperatureRangeName]"
-                      name="TemperatureRangeName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt; 303.15) ? "Hot" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt;= 293.15) ? "Warm" : "Cold")</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)((AverageTemperature &gt; 303.15) ? "Hot" : (AverageTemperature &gt;= 293.15) ? "Warm" : "Cold")</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Output].Columns[HumidityLevelName]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Output].Columns[HumidityLevelName]"
-                      name="HumidityLevelName"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 80) ? "High" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 50) ? "Medium" : "Low")</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">(DT_STR,50,1252)((AverageHumidity &gt;= 80) ? "High" : (AverageHumidity &gt;= 50) ? "Medium" : "Low")</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -3580,24 +3227,6 @@ where [refTable].[WeatherDate] = ?</property>
                       name="WeatherDate"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxHumidity]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MaxHumidity]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxHumidity]"
-                      name="MaxHumidity"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinHumidity]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MinHumidity]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinHumidity]"
-                      name="MinHumidity"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
@@ -3605,24 +3234,6 @@ where [refTable].[WeatherDate] = ?</property>
                       externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[AverageHumidity]"
                       lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]"
                       name="AverageHumidity"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxPressure]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MaxPressure]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxPressure]"
-                      name="MaxPressure"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinPressure]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MinPressure]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinPressure]"
-                      name="MinPressure"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AveragePressure]"
@@ -3634,24 +3245,6 @@ where [refTable].[WeatherDate] = ?</property>
                       name="AveragePressure"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxTemperature]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MaxTemperature]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxTemperature]"
-                      name="MaxTemperature"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinTemperature]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MinTemperature]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinTemperature]"
-                      name="MinTemperature"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
@@ -3659,24 +3252,6 @@ where [refTable].[WeatherDate] = ?</property>
                       externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[AverageTemperature]"
                       lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]"
                       name="AverageTemperature"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxWindSpeed]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MaxWindSpeed]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxWindSpeed]"
-                      name="MaxWindSpeed"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinWindSpeed]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MinWindSpeed]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinWindSpeed]"
-                      name="MinWindSpeed"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageWindSpeed]"
@@ -3715,49 +3290,17 @@ where [refTable].[WeatherDate] = ?</property>
                       dataType="dbDate"
                       name="WeatherDate" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MaxHumidity]"
-                      dataType="r8"
-                      name="MaxHumidity" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MinHumidity]"
-                      dataType="r8"
-                      name="MinHumidity" />
-                    <externalMetadataColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[AverageHumidity]"
                       dataType="r8"
                       name="AverageHumidity" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MaxPressure]"
-                      dataType="r8"
-                      name="MaxPressure" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MinPressure]"
-                      dataType="r8"
-                      name="MinPressure" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[AveragePressure]"
                       dataType="r8"
                       name="AveragePressure" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MaxTemperature]"
-                      dataType="r8"
-                      name="MaxTemperature" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MinTemperature]"
-                      dataType="r8"
-                      name="MinTemperature" />
-                    <externalMetadataColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[AverageTemperature]"
                       dataType="r8"
                       name="AverageTemperature" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MaxWindSpeed]"
-                      dataType="r8"
-                      name="MaxWindSpeed" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[MinWindSpeed]"
-                      dataType="r8"
-                      name="MinWindSpeed" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].ExternalColumns[AverageWindSpeed]"
                       dataType="r8"
@@ -3785,60 +3328,20 @@ where [refTable].[WeatherDate] = ?</property>
                       lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[WeatherDate]"
                       name="WeatherDate" />
                     <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MaxHumidity]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MaxHumidity]"
-                      name="MaxHumidity" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MinHumidity]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MinHumidity]"
-                      name="MinHumidity" />
-                    <outputColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[AverageHumidity]"
                       dataType="r8"
                       lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[AverageHumidity]"
                       name="AverageHumidity" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MaxPressure]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MaxPressure]"
-                      name="MaxPressure" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MinPressure]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MinPressure]"
-                      name="MinPressure" />
                     <outputColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[AveragePressure]"
                       dataType="r8"
                       lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[AveragePressure]"
                       name="AveragePressure" />
                     <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MaxTemperature]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MaxTemperature]"
-                      name="MaxTemperature" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MinTemperature]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MinTemperature]"
-                      name="MinTemperature" />
-                    <outputColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[AverageTemperature]"
                       dataType="r8"
                       lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[AverageTemperature]"
                       name="AverageTemperature" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MaxWindSpeed]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MaxWindSpeed]"
-                      name="MaxWindSpeed" />
-                    <outputColumn
-                      refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MinWindSpeed]"
-                      dataType="r8"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[MinWindSpeed]"
-                      name="MinWindSpeed" />
                     <outputColumn
                       refId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Error Output].Columns[AverageWindSpeed]"
                       dataType="r8"
@@ -3873,13 +3376,254 @@ where [refTable].[WeatherDate] = ?</property>
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\DFT_DimWeather\Weather Qualitative Labels"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Weather Qualitative Labels"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_DimWeather\Weather Qualitative Labels.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Inputs[Derived Column Input].Columns[AverageHumidity]"
+                      cachedDataType="r8"
+                      cachedName="AverageHumidity"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]" />
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Inputs[Derived Column Input].Columns[AverageTemperature]"
+                      cachedDataType="r8"
+                      cachedName="AverageTemperature"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]" />
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Inputs[Derived Column Input].Columns[AveragePressure]"
+                      cachedDataType="r8"
+                      cachedName="AveragePressure"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AveragePressure]" />
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Inputs[Derived Column Input].Columns[AverageWindSpeed]"
+                      cachedDataType="r8"
+                      cachedName="AverageWindSpeed"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageWindSpeed]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_DimWeather\Weather Qualitative Labels.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[TemperatureRangeName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[TemperatureRangeName]"
+                      name="TemperatureRangeName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt;= 313.15) ? "Very Hot" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt; 303.15) ? "Hot" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt;= 293.15) ? "Warm" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt;= 283.15) ? "Cool" : "Cold")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)((AverageTemperature &gt;= 313.15) ? "Very Hot" : (AverageTemperature &gt; 303.15) ? "Hot" : (AverageTemperature &gt;= 293.15) ? "Warm" : (AverageTemperature &gt;= 283.15) ? "Cool" : "Cold")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[HumidityLevelName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[HumidityLevelName]"
+                      name="HumidityLevelName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 80) ? "High" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 50) ? "Medium" : "Low")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)((AverageHumidity &gt;= 80) ? "High" : (AverageHumidity &gt;= 50) ? "Medium" : "Low")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[PressureLevelName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[PressureLevelName]"
+                      name="PressureLevelName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AveragePressure]} &gt;= 1025) ? "High Pressure" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AveragePressure]} &lt;= 1000) ? "Low Pressure" : "Normal Pressure")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)((AveragePressure &gt;= 1025) ? "High Pressure" : (AveragePressure &lt;= 1000) ? "Low Pressure" : "Normal Pressure")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[WindLevelName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[WindLevelName]"
+                      name="WindLevelName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageWindSpeed]} &gt;= 10) ? "Strong Wind" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageWindSpeed]} &gt;= 5) ? "Moderate Wind" : "Light Wind")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)((AverageWindSpeed &gt;= 10) ? "Strong Wind" : (AverageWindSpeed &gt;= 5) ? "Moderate Wind" : "Light Wind")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[WeatherComfortLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[WeatherComfortLevel]"
+                      name="WeatherComfortLevel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt;= 303.15 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 70) ? "Uncomfortable - Hot &amp; Humid" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt;= 303.15) ? "Hot but Dry" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &lt;= 283.15 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 70) ? "Cold &amp; Humid" : "Comfortable")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)((AverageTemperature &gt;= 303.15 &amp;&amp; AverageHumidity &gt;= 70) ? "Uncomfortable - Hot &amp; Humid" : (AverageTemperature &gt;= 303.15) ? "Hot but Dry" : (AverageTemperature &lt;= 283.15 &amp;&amp; AverageHumidity &gt;= 70) ? "Cold &amp; Humid" : "Comfortable")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[OverallWeatherDescription]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[OverallWeatherDescription]"
+                      name="OverallWeatherDescription"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt; 303.15 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 80) ? "Hot and Humid" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &lt;= 293.15 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &lt; 50 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AveragePressure]} &gt;= 1020) ? "Cool and Dry" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt;= 293.15 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &lt;= 303.15 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 50 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &lt; 80) ? "Mild and Damp" : "Variable")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)((AverageTemperature &gt; 303.15 &amp;&amp; AverageHumidity &gt;= 80) ? "Hot and Humid" : (AverageTemperature &lt;= 293.15 &amp;&amp; AverageHumidity &lt; 50 &amp;&amp; AveragePressure &gt;= 1020) ? "Cool and Dry" : (AverageTemperature &gt;= 293.15 &amp;&amp; AverageTemperature &lt;= 303.15 &amp;&amp; AverageHumidity &gt;= 50 &amp;&amp; AverageHumidity &lt; 80) ? "Mild and Damp" : "Variable")</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[ComfortLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output].Columns[ComfortLevel]"
+                      name="ComfortLevel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt; 303.15 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 80) ? "Uncomfortably Hot &amp; Humid" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &lt;= 283.15 &amp;&amp; #{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageWindSpeed]} &gt;= 10) ? "Chilly &amp; Windy" : "Pleasant")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)((AverageTemperature &gt; 303.15 &amp;&amp; AverageHumidity &gt;= 80) ? "Uncomfortably Hot &amp; Humid" : (AverageTemperature &lt;= 283.15 &amp;&amp; AverageWindSpeed &gt;= 10) ? "Chilly &amp; Windy" : "Pleasant")</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_DimWeather\Weather Qualitative Labels.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
               refId="Package\DFT_DimWeather.Paths[Derived Column Output]"
               endId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Output]" />
+              startId="Package\DFT_DimWeather\Weather Qualitative Labels.Outputs[Derived Column Output]" />
             <path
               refId="Package\DFT_DimWeather.Paths[Lookup No Match Output]"
               endId="Package\DFT_DimWeather\Sort.Inputs[Sort Input]"
@@ -3892,7 +3636,7 @@ where [refTable].[WeatherDate] = ?</property>
               startId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\DFT_DimWeather.Paths[Sort Output]"
-              endId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input]"
+              endId="Package\DFT_DimWeather\Weather Qualitative Labels.Inputs[Derived Column Input]"
               name="Sort Output"
               startId="Package\DFT_DimWeather\Sort.Outputs[Sort Output]" />
           </paths>
@@ -5077,6 +4821,10 @@ where [refTable].[WeatherDate] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\DFT_DimAddress\Sort"
+          TopLeft="209.999996870756,235.285710779684" />
+        <NodeLayout
           Size="303.2,41.6"
           Id="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds"
           TopLeft="111.285719139235,49.7142862996884" />
@@ -5085,9 +4833,9 @@ where [refTable].[WeatherDate] = ?</property>
           Id="Package\DFT_DimAddress\OLE DB Destination"
           TopLeft="176.714290531618,323.571426610861" />
         <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\DFT_DimAddress\Sort"
-          TopLeft="209.999996870756,235.285710779684" />
+          Size="184,41.6"
+          Id="Package\DFT_DimAddress\Lookup at DimAddress"
+          TopLeft="166.142854667136,128.714283796293" />
         <EdgeLayout
           Id="Package\DFT_DimAddress.Paths[Sort Output]"
           TopLeft="260.357143701187,276.885710779684">
@@ -5107,13 +4855,11 @@ where [refTable].[WeatherDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="184,41.6"
-          Id="Package\DFT_DimAddress\Lookup at DimAddress"
-          TopLeft="166.142854667136,128.714283796293" />
         <EdgeLayout
           Id="Package\DFT_DimAddress.Paths[OLE DB Source Output]"
           TopLeft="260.514286903186,91.3142862996884">
@@ -5133,7 +4879,9 @@ where [refTable].[WeatherDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5222,17 +4970,45 @@ where [refTable].[WeatherDate] = ?</property>
           Id="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds"
           TopLeft="335,60" />
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\DFT_DimDate\OLE DB Destination"
-          TopLeft="408.892857144758,414.176470534612" />
-        <NodeLayout
           Size="168.8,41.6"
           Id="Package\DFT_DimDate\DimData Attributes"
           TopLeft="411,261" />
         <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\DFT_DimDate\OLE DB Destination"
+          TopLeft="408.892857144758,414.176470534612" />
+        <NodeLayout
           Size="169.6,41.6"
           Id="Package\DFT_DimDate\Lookup at DimDate"
           TopLeft="408,158" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\DFT_DimDate\Sort"
+          TopLeft="448.57142952632,341.05882323046" />
+        <EdgeLayout
+          Id="Package\DFT_DimDate.Paths[Sort Output]"
+          TopLeft="495.932143335539,382.65882323046">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.5176473041513"
+              Start="0,0"
+              End="0,24.0176473041513">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0176473041513" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_DimDate.Paths[OLE DB Source Output]"
           TopLeft="494.75,102">
@@ -5252,7 +5028,9 @@ where [refTable].[WeatherDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5279,10 +5057,6 @@ where [refTable].[WeatherDate] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\DFT_DimDate\Sort"
-          TopLeft="448.57142952632,341.05882323046" />
         <EdgeLayout
           Id="Package\DFT_DimDate.Paths[Derived Column Output]"
           TopLeft="496.38571476316,302.6">
@@ -5302,29 +5076,9 @@ where [refTable].[WeatherDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_DimDate.Paths[Sort Output]"
-          TopLeft="495.932143335539,382.65882323046">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31.5176473041513"
-              Start="0,0"
-              End="0,24.0176473041513">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.0176473041513" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5385,57 +5139,31 @@ where [refTable].[WeatherDate] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="300,41.6"
-          Id="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds"
-          TopLeft="468,60" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\DFT_DimWeather\OLE DB Destination"
-          TopLeft="538.999999940395,435.999997466803" />
+          TopLeft="131.142856215031,390.882350447527" />
         <NodeLayout
-          Size="296.8,41.6"
-          Id="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName"
-          TopLeft="472.999999910593,332.999997541308" />
+          Size="204.8,41.6"
+          Id="Package\DFT_DimWeather\Weather Qualitative Labels"
+          TopLeft="120.14285630231,289.411762285397" />
+        <NodeLayout
+          Size="300,41.6"
+          Id="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds"
+          TopLeft="70.1428562959236,19.4705882708197" />
         <EdgeLayout
           Id="Package\DFT_DimWeather.Paths[Derived Column Output]"
-          TopLeft="622.999999925494,374.599997541308">
+          TopLeft="219.64285625867,331.011762285397">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.3999999254942"
+              EndConnector="0,59.8705881621297"
               Start="0,0"
-              End="0,53.8999999254942">
+              End="0,52.3705881621297">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.8999999254942" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\DFT_DimWeather\Sort"
-          TopLeft="572.999991461635,241.999996393919" />
-        <EdgeLayout
-          Id="Package\DFT_DimWeather.Paths[Sort Output]"
-          TopLeft="621.599995686114,283.599996393919">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49.4000011473893"
-              Start="0,0"
-              End="0,41.9000011473893">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.9000011473893" />
+                    End="0,52.3705881621297" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5447,21 +5175,21 @@ where [refTable].[WeatherDate] = ?</property>
         <NodeLayout
           Size="186.4,41.6"
           Id="Package\DFT_DimWeather\Lookup at DimWeather"
-          TopLeft="529.999992102385,152.999997720122" />
+          TopLeft="123.57142883448,109.611764630139" />
         <EdgeLayout
           Id="Package\DFT_DimWeather.Paths[OLE DB Source Output]"
-          TopLeft="620.599996051192,101.6">
+          TopLeft="218.457142565202,61.0705882708197">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.3999977201224"
+              EndConnector="0,48.5411763593194"
               Start="0,0"
-              End="0,43.8999977201224">
+              End="0,41.0411763593194">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.8999977201224" />
+                    End="0,41.0411763593194" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5470,28 +5198,54 @@ where [refTable].[WeatherDate] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\DFT_DimWeather\Sort"
+          TopLeft="170.714286077692,207.352941012248" />
         <EdgeLayout
           Id="Package\DFT_DimWeather.Paths[Lookup No Match Output]"
-          TopLeft="622.49999178201,194.599997720122">
+          TopLeft="218.142857456086,151.211764630139">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,47.3999986737967"
+              EndConnector="0,56.1411763821093"
               Start="0,0"
-              End="0,39.8999986737967">
+              End="0,48.6411763821093">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.8999986737967" />
+                    End="0,48.6411763821093" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,14.1453118368983,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,18.5159006910547,111.6127734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimWeather.Paths[Sort Output]"
+          TopLeft="221.028571190001,248.952941012248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.4588212731487"
+              Start="0,0"
+              End="0,32.9588212731487">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.9588212731487" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5507,29 +5261,6 @@ where [refTable].[WeatherDate] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimWeather\Lookup at DimWeather">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimWeather]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5662,7 +5393,9 @@ where [refTable].[WeatherDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5760,6 +5493,29 @@ where [refTable].[WeatherDate] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimWeather\Lookup at DimWeather">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimWeather]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

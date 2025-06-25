@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="184"
-  DTS:VersionGUID="{EFFFD4C7-6044-434E-8D5F-5C65CDA2EF7E}">
+  DTS:VersionBuild="195"
+  DTS:VersionGUID="{A56E1958-9CC6-4704-9D53-69181CA60988}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -32,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\Humidity.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-12-31\\Humidity.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -387,7 +387,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\Pressure.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-12-31\\Pressure.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -742,7 +742,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\RedLightViolation.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-12-31\\RedLightViolation.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -854,7 +854,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\SpeedViolation.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-12-31\\SpeedViolation.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -957,7 +957,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\Temperature.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-12-31\\Temperature.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1312,7 +1312,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\WindSpeed.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-12-31\\WindSpeed.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1687,7 +1687,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="SourceFolderFull">
       <DTS:VariableValue
-        DTS:DataType="8">C:\\Temp\\2017-01-02\\</DTS:VariableValue>
+        DTS:DataType="8">C:\\Temp\\2017-12-31\\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -10763,7 +10763,7 @@ where [refTable].[datetime] = ?</property>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2017-01-02';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2017-12-31';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation_1&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation_1&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -11204,7 +11204,7 @@ where [refTable].[datetime] = ?</property>
     design-time-name="Package\DFT_RedLightViolation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="156,41.6"
           Id="Package\DFT_RedLightViolation\Flat File Source"
@@ -11236,7 +11236,9 @@ where [refTable].[datetime] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11258,7 +11260,9 @@ where [refTable].[datetime] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11283,10 +11287,6 @@ where [refTable].[datetime] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\DFT_SpeedViolation\OLE DB Destination"
-          TopLeft="208.999999955297,279.999998405576" />
-        <NodeLayout
           Size="156,41.6"
           Id="Package\DFT_SpeedViolation\Flat File Source"
           TopLeft="217,74" />
@@ -11294,6 +11294,10 @@ where [refTable].[datetime] = ?</property>
           Size="152.8,41.6"
           Id="Package\DFT_SpeedViolation\Derived Column"
           TopLeft="222.999996677041,173.999997407198" />
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\DFT_SpeedViolation\OLE DB Destination"
+          TopLeft="208.999999955297,279.999998405576" />
         <EdgeLayout
           Id="Package\DFT_SpeedViolation.Paths[Flat File Source Output]"
           TopLeft="297.199998338521,115.6">

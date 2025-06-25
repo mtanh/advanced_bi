@@ -119,20 +119,9 @@ CREATE VIEW v_Unprocessed_TrafficViolation_Weathers_Nds AS
 SELECT 
   CAST(W.DateTime AS DATE) AS WeatherDate,
 
-  MAX(W.Humidity) AS MaxHumidity,
-  MIN(W.Humidity) AS MinHumidity,
   AVG(W.Humidity) AS AverageHumidity,
-
-  MAX(W.Pressure) AS MaxPressure,
-  MIN(W.Pressure) AS MinPressure,
   AVG(W.Pressure) AS AveragePressure,
-
-  MAX(W.Temperature) AS MaxTemperature,
-  MIN(W.Temperature) AS MinTemperature,
   AVG(W.Temperature) AS AverageTemperature,
-
-  MAX(W.WindSpeed) AS MaxWindSpeed,
-  MIN(W.WindSpeed) AS MinWindSpeed,
   AVG(W.WindSpeed) AS AverageWindSpeed,
 
   MIN(TV.SourceSystemCode) AS SourceSystemCode,

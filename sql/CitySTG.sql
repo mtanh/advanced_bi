@@ -318,7 +318,8 @@ WHERE Processed = 0;
 
 CREATE VIEW v_Unprocessed_RedLightViolation_Addresses_Stage AS
 SELECT
-  TRY_CAST([ADDRESS] AS VARCHAR(100)) AS [ADDRESS],
+  [ADDRESS],
+  [STREET TYPE],
   [LATITUDE],
   [LONGITUDE],
   [SourceFolder]
@@ -361,7 +362,8 @@ WHERE Processed = 0;
 
 CREATE VIEW v_Unprocessed_SpeedViolation_Addresses_Stage AS
 SELECT
-  TRY_CAST([ADDRESS] AS VARCHAR(100)) AS [ADDRESS],
+  [ADDRESS],
+  [STREET TYPE],
   [LATITUDE],
   [LONGITUDE],
   [SourceFolder]

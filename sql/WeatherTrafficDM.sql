@@ -45,24 +45,18 @@ CREATE TABLE DimWeather (
   WeatherKey INT IDENTITY(1,1) PRIMARY KEY,
   WeatherDate DATE NOT NULL,
     
-  MaxHumidity FLOAT,
-  MinHumidity FLOAT,
   AverageHumidity FLOAT,
-    
-  MaxPressure FLOAT,
-  MinPressure FLOAT,
-
   AveragePressure FLOAT,
-  MaxTemperature FLOAT,
-  MinTemperature FLOAT,
   AverageTemperature FLOAT,
-
-  MaxWindSpeed FLOAT,
-  MinWindSpeed FLOAT,
   AverageWindSpeed FLOAT,
 
   TemperatureRangeName VARCHAR(50) NULL,
   HumidityLevelName VARCHAR(50) NULL,
+  PressureLevelName VARCHAR(50) NULL,
+  WindLevelName VARCHAR(50) NULL,
+  WeatherComfortLevel VARCHAR(50) NULL,
+  OverallWeatherDescription VARCHAR(50) NULL,
+  ComfortLevel VARCHAR(50) NULL,
 
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
   UpdateTimeStamp DATETIME NULL DEFAULT NULL,
