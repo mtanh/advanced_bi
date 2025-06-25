@@ -1,6 +1,11 @@
 USE WeatherTrafficDM;
 GO
 
+--drop table [FactTrafficViolation];
+--drop table [DimAddress];
+--drop table [DimWeather];
+--drop table [DimDate];
+
 CREATE TABLE DimDate (
   DateKey INT IDENTITY(1,1) PRIMARY KEY,
   Date DATE UNIQUE NOT NULL,
@@ -86,7 +91,4 @@ CREATE TABLE FactTrafficViolation (
   FOREIGN KEY (AddressKey) REFERENCES DimAddress(AddressKey)
 );
 
---drop table [dbo].[FactTrafficViolation];
---drop table [dbo].[DimAddress];
---drop table [dbo].[DimDate];
---drop table [dbo].[DimWeather];
+

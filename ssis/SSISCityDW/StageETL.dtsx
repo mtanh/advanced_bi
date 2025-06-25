@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="153"
-  DTS:VersionGUID="{95093A72-B62B-4CBA-BCBF-F26EE5B8F620}">
+  DTS:VersionBuild="184"
+  DTS:VersionGUID="{EFFFD4C7-6044-434E-8D5F-5C65CDA2EF7E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -32,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-03\\Humidity.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-02\\Humidity.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -387,7 +387,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-03\\Pressure.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-02\\Pressure.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -742,7 +742,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-03\\RedLightViolation.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-02\\RedLightViolation.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -854,7 +854,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-03\\SpeedViolation.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-02\\SpeedViolation.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -957,7 +957,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-03\\Temperature.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-02\\Temperature.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1312,7 +1312,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-03\\WindSpeed.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-02\\WindSpeed.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1687,7 +1687,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="SourceFolderFull">
       <DTS:VariableValue
-        DTS:DataType="8">C:\\Temp\\2017-01-03\\</DTS:VariableValue>
+        DTS:DataType="8">C:\\Temp\\2017-01-02\\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -5543,6 +5543,90 @@ where [refTable].[datetime] = ?</property>
           version="1">
           <components>
             <component
+              refId="Package\DFT_RedLightViolation\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_RedLightViolation\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_RedLightViolation\Derived Column.Inputs[Derived Column Input].Columns[ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ADDRESS"
+                      lineageId="Package\DFT_RedLightViolation\Flat File Source.Outputs[Flat File Source Output].Columns[ADDRESS]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_RedLightViolation\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Output].Columns[STREET TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Output].Columns[STREET TYPE]"
+                      name="STREET TYPE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)([RIGHT](#{Package\DFT_RedLightViolation\Flat File Source.Outputs[Flat File Source Output].Columns[ADDRESS]},[FINDSTRING]([REVERSE](#{Package\DFT_RedLightViolation\Flat File Source.Outputs[Flat File Source Output].Columns[ADDRESS]})," ",1) - 1))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)(RIGHT(ADDRESS,FINDSTRING(REVERSE(ADDRESS)," ",1) - 1))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_RedLightViolation\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DFT_RedLightViolation\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -5903,7 +5987,7 @@ where [refTable].[datetime] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[RedLightViolation]</property>
+                  name="OpenRowset">[dbo].[RedLightViolation_1]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -6039,6 +6123,14 @@ where [refTable].[datetime] = ?</property>
                       cachedName="LOCATION"
                       externalMetadataColumnId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LOCATION]"
                       lineageId="Package\DFT_RedLightViolation\Flat File Source.Outputs[Flat File Source Output].Columns[LOCATION]" />
+                    <inputColumn
+                      refId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[STREET TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STREET TYPE"
+                      externalMetadataColumnId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET TYPE]"
+                      lineageId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Output].Columns[STREET TYPE]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6112,6 +6204,12 @@ where [refTable].[datetime] = ?</property>
                       dataType="str"
                       length="50"
                       name="SourceFolder" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STREET TYPE" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6143,8 +6241,13 @@ where [refTable].[datetime] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\DFT_RedLightViolation.Paths[Flat File Source Output]"
+              refId="Package\DFT_RedLightViolation.Paths[Derived Column Output]"
               endId="Package\DFT_RedLightViolation\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT_RedLightViolation\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_RedLightViolation.Paths[Flat File Source Output]"
+              endId="Package\DFT_RedLightViolation\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\DFT_RedLightViolation\Flat File Source.Outputs[Flat File Source Output]" />
           </paths>
@@ -6165,6 +6268,90 @@ where [refTable].[datetime] = ?</property>
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\DFT_SpeedViolation\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_SpeedViolation\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_SpeedViolation\Derived Column.Inputs[Derived Column Input].Columns[ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ADDRESS"
+                      lineageId="Package\DFT_SpeedViolation\Flat File Source.Outputs[Flat File Source Output].Columns[ADDRESS]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_SpeedViolation\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Output].Columns[STREET TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Output].Columns[STREET TYPE]"
+                      name="STREET TYPE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_STR,50,1252)([RIGHT](#{Package\DFT_SpeedViolation\Flat File Source.Outputs[Flat File Source Output].Columns[ADDRESS]},[FINDSTRING]([REVERSE](#{Package\DFT_SpeedViolation\Flat File Source.Outputs[Flat File Source Output].Columns[ADDRESS]})," ",1) - 1))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_STR,50,1252)(RIGHT(ADDRESS,FINDSTRING(REVERSE(ADDRESS)," ",1) - 1))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_SpeedViolation\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\DFT_SpeedViolation\Flat File Source"
               componentClassID="Microsoft.FlatFileSource"
@@ -6498,7 +6685,7 @@ where [refTable].[datetime] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[SpeedCameraViolation]</property>
+                  name="OpenRowset">[dbo].[SpeedCameraViolation_1]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -6626,6 +6813,14 @@ where [refTable].[datetime] = ?</property>
                       cachedName="LOCATION"
                       externalMetadataColumnId="Package\DFT_SpeedViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LOCATION]"
                       lineageId="Package\DFT_SpeedViolation\Flat File Source.Outputs[Flat File Source Output].Columns[LOCATION]" />
+                    <inputColumn
+                      refId="Package\DFT_SpeedViolation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[STREET TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STREET TYPE"
+                      externalMetadataColumnId="Package\DFT_SpeedViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET TYPE]"
+                      lineageId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Output].Columns[STREET TYPE]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6693,6 +6888,12 @@ where [refTable].[datetime] = ?</property>
                       dataType="str"
                       length="50"
                       name="SourceFolder" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_SpeedViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STREET TYPE" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -6724,8 +6925,13 @@ where [refTable].[datetime] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\DFT_SpeedViolation.Paths[Flat File Source Output]"
+              refId="Package\DFT_SpeedViolation.Paths[Derived Column Output]"
               endId="Package\DFT_SpeedViolation\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\DFT_SpeedViolation\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_SpeedViolation.Paths[Flat File Source Output]"
+              endId="Package\DFT_SpeedViolation\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\DFT_SpeedViolation\Flat File Source.Outputs[Flat File Source Output]" />
           </paths>
@@ -10557,7 +10763,7 @@ where [refTable].[datetime] = ?</property>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2017-01-03';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2017-01-02';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -10626,45 +10832,45 @@ where [refTable].[datetime] = ?</property>
         <NodeLayout
           Size="145.6,41.6"
           Id="Package\DFT_Huminity"
-          TopLeft="123,40" />
+          TopLeft="30.1428569451887,28.294117645048" />
         <NodeLayout
           Size="144,41.6"
           Id="Package\DFT_Pressure"
-          TopLeft="310,42" />
+          TopLeft="199.285714050033,28" />
         <NodeLayout
-          Size="185.6,41.6"
+          Size="184.8,41.6"
           Id="Package\DFT_RedLightViolation"
-          TopLeft="305,129" />
+          TopLeft="549.285714805735,114.235294118317" />
         <NodeLayout
-          Size="180.8,41.6"
+          Size="172.8,41.6"
           Id="Package\DFT_SpeedViolation"
-          TopLeft="514,130" />
+          TopLeft="335.42857104844,116" />
         <NodeLayout
           Size="164.8,41.6"
           Id="Package\DFT_Temperature"
-          TopLeft="486,42" />
+          TopLeft="376.714285481645,29.5294117633653" />
         <NodeLayout
           Size="156,41.6"
           Id="Package\DFT_Windspeed"
-          TopLeft="125,131" />
+          TopLeft="564.285715220838,32.8823530149088" />
         <NodeLayout
           Size="163.2,41.6"
           Id="Package\Execute SQL Task"
-          TopLeft="127,219" />
+          TopLeft="134.142857158062,113.235294198082" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="269,62">
+          TopLeft="175.742856945189,48.947058822524">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="41,0"
+              EndConnector="23.542857104844,0"
               Start="0,0"
-              End="33.5,0">
+              End="16.042857104844,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="33.5,0" />
+                    End="16.042857104844,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10675,18 +10881,18 @@ where [refTable].[datetime] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="454,63">
+          TopLeft="343.285714050033,49.5647058816827">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32,0"
+              EndConnector="33.4285714316123,0"
               Start="0,0"
-              End="24.5,0">
+              End="25.9285714316123,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="24.5,0" />
+                    End="25.9285714316123,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10697,30 +10903,18 @@ where [refTable].[datetime] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="568.5,84">
+          TopLeft="541.514285481645,52.0058823891371">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-365.5,47"
+              EndConnector="22.7714297391933,0"
               Start="0,0"
-              End="-365.5,39.5">
+              End="15.2714297391933,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.5"
-                    Point2="0,23.5"
-                    Point3="-4,23.5" />
-                  <mssgle:LineSegment
-                    End="-361.5,23.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-361.5,23.5"
-                    Point2="-365.5,23.5"
-                    Point3="-365.5,27.5" />
-                  <mssgle:LineSegment
-                    End="-365.5,39.5" />
+                    End="15.2714297391933,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10731,18 +10925,18 @@ where [refTable].[datetime] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="281,151">
+          TopLeft="641.985715013286,74.4823530149088">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="24,0"
+              EndConnector="0,39.7529411034085"
               Start="0,0"
-              End="16.5,0">
+              End="0,32.2529411034085">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="16.5,0" />
+                    End="0,32.2529411034085" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10753,18 +10947,18 @@ where [refTable].[datetime] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="491,150.5">
+          TopLeft="549.285714805735,135.917647059159">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="23,0"
+              EndConnector="-41.0571437572948,0"
               Start="0,0"
-              End="15.5,0">
+              End="-33.5571437572948,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="15.5,0" />
+                    End="-33.5571437572948,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -10775,30 +10969,18 @@ where [refTable].[datetime] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="604.5,172">
+          TopLeft="335.42857104844,135.417647099041">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-396,47"
+              EndConnector="-38.0857138903775,0"
               Start="0,0"
-              End="-396,39.5">
+              End="-30.5857138903775,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.5"
-                    Point2="0,23.5"
-                    Point3="-4,23.5" />
-                  <mssgle:LineSegment
-                    End="-392,23.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-392,23.5"
-                    Point2="-396,23.5"
-                    Point3="-396,27.5" />
-                  <mssgle:LineSegment
-                    End="-396,39.5" />
+                    End="-30.5857138903775,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11022,29 +11204,55 @@ where [refTable].[datetime] = ?</property>
     design-time-name="Package\DFT_RedLightViolation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\DFT_RedLightViolation\Flat File Source"
+          TopLeft="382.857142852581,44.9411765416394" />
         <NodeLayout
           Size="176.8,41.6"
           Id="Package\DFT_RedLightViolation\OLE DB Destination"
           TopLeft="371,235" />
         <NodeLayout
-          Size="156,41.6"
-          Id="Package\DFT_RedLightViolation\Flat File Source"
-          TopLeft="385,126" />
+          Size="152.8,41.6"
+          Id="Package\DFT_RedLightViolation\Derived Column"
+          TopLeft="385.71428653537,133.823529294463" />
         <EdgeLayout
           Id="Package\DFT_RedLightViolation.Paths[Flat File Source Output]"
-          TopLeft="461.25,168">
+          TopLeft="461.485714693976,86.5411765416394">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,67"
+              EndConnector="0,47.2823527528238"
               Start="0,0"
-              End="0,59.5">
+              End="0,39.7823527528238">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,59.5" />
+                    End="0,39.7823527528238" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_RedLightViolation.Paths[Derived Column Output]"
+          TopLeft="460.757143267685,175.423529294463">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.5764707055368"
+              Start="0,0"
+              End="0,52.0764707055368">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.0764707055368" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11073,37 +11281,61 @@ where [refTable].[datetime] = ?</property>
     design-time-name="Package\DFT_SpeedViolation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="177,42"
+          Size="176.8,41.6"
           Id="Package\DFT_SpeedViolation\OLE DB Destination"
-          TopLeft="206,173" />
+          TopLeft="208.999999955297,279.999998405576" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\DFT_SpeedViolation\Flat File Source"
           TopLeft="217,74" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DFT_SpeedViolation\Derived Column"
+          TopLeft="222.999996677041,173.999997407198" />
         <EdgeLayout
           Id="Package\DFT_SpeedViolation.Paths[Flat File Source Output]"
-          TopLeft="294.75,116">
+          TopLeft="297.199998338521,115.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57"
+              EndConnector="0,58.399997407198"
               Start="0,0"
-              End="0,49.5">
+              End="0,50.899997407198">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49.5" />
+                    End="0,50.899997407198" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_SpeedViolation.Paths[Derived Column Output]"
+          TopLeft="298.399998316169,215.599997407198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.4000009983778"
+              Start="0,0"
+              End="0,56.9000009983778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.9000009983778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

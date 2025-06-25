@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DdsETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="70"
-  DTS:VersionGUID="{337F9849-4AEF-4766-82CC-BA96A8F801AD}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{0EB1FBC4-53E2-4405-9C48-C89FFFE0F35A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -4935,43 +4935,43 @@ where [refTable].[WeatherDate] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="160,41.6"
+          Size="159.2,41.6"
           Id="Package\DFT_DimAddress"
-          TopLeft="384,102" />
+          TopLeft="271.85714261842,20.1764706599568" />
         <NodeLayout
           Size="144,41.6"
           Id="Package\DFT_DimDate"
-          TopLeft="168,103" />
+          TopLeft="62.9999997764825,18.8823530149089" />
         <NodeLayout
           Size="161.6,41.6"
           Id="Package\DFT_DimWeather"
-          TopLeft="664,215" />
+          TopLeft="526.142856849395,111.764705972843" />
         <NodeLayout
-          Size="193.6,41.6"
+          Size="192.8,41.6"
           Id="Package\DFT_FactTrafficViolation"
-          TopLeft="384,214" />
+          TopLeft="278.999999776482,110.00000009116" />
         <NodeLayout
-          Size="239.2,41.6"
+          Size="238.4,41.6"
           Id="Package\SQL_Processed_Address_Location"
-          TopLeft="625,104" />
+          TopLeft="484.28571398617,19.1176471332262" />
         <NodeLayout
-          Size="227.2,41.6"
+          Size="226.4,41.6"
           Id="Package\SQL_Processed_TrafficViolation"
-          TopLeft="103,212" />
+          TopLeft="10.1428569451885,110.294117736208" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="312,123.5">
+          TopLeft="206.999999776482,40.3294118374328">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="72,0"
+              EndConnector="64.8571428419377,0"
               Start="0,0"
-              End="64.5,0">
+              End="57.3571428419377,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="64.5,0" />
+                    End="57.3571428419377,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4982,18 +4982,18 @@ where [refTable].[WeatherDate] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="544,124">
+          TopLeft="431.05714261842,40.4470588965915">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="81,0"
+              EndConnector="53.2285713677502,0"
               Start="0,0"
-              End="73.5,0">
+              End="45.7285713677502,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="73.5,0" />
+                    End="45.7285713677502,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5004,18 +5004,18 @@ where [refTable].[WeatherDate] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="744.75,146">
+          TopLeft="605.214285417783,60.7176471332262">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,69"
+              EndConnector="0,51.0470588396165"
               Start="0,0"
-              End="0,61.5">
+              End="0,43.5470588396165">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.5" />
+                    End="0,43.5470588396165" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5026,18 +5026,18 @@ where [refTable].[WeatherDate] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="664,235.5">
+          TopLeft="526.142856849395,131.682353032001">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-86,0"
+              EndConnector="-54.342857072913,0"
               Start="0,0"
-              End="-78.5,0">
+              End="-46.842857072913,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-78.5,0" />
+                    End="-46.842857072913,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5048,18 +5048,18 @@ where [refTable].[WeatherDate] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="384,234">
+          TopLeft="278.999999776482,130.947058913684">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-54,0"
+              EndConnector="-42.457142831294,0"
               Start="0,0"
-              End="-46.5,0">
+              End="-34.957142831294,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-46.5,0" />
+                    End="-34.957142831294,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5164,6 +5164,19 @@ where [refTable].[WeatherDate] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT_DimAddress\OLE DB Destination">
     <Properties>
       <Property>
@@ -5177,15 +5190,25 @@ where [refTable].[WeatherDate] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds">
+    design-time-name="Package\DFT_DimAddress\Lookup at DimAddress">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAddress]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">View</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5308,19 +5331,6 @@ where [refTable].[WeatherDate] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DFT_DimDate\OLE DB Destination">
     <Properties>
       <Property>
@@ -5353,6 +5363,19 @@ where [refTable].[WeatherDate] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5475,19 +5498,6 @@ where [refTable].[WeatherDate] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DFT_DimWeather\OLE DB Destination">
     <Properties>
       <Property>
@@ -5500,73 +5510,91 @@ where [refTable].[WeatherDate] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimWeather\Lookup at DimWeather">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimWeather]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\DFT_FactTrafficViolation">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="250,42"
+          Size="249.6,41.6"
           Id="Package\DFT_FactTrafficViolation\v_Unprocessed_TrafficViolation_Nds"
           TopLeft="417,61" />
         <NodeLayout
-          Size="170,42"
+          Size="171.2,41.6"
+          Id="Package\DFT_FactTrafficViolation\OLE DB Destination"
+          TopLeft="451,502" />
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\DFT_FactTrafficViolation\Lookup at DimAddress"
+          TopLeft="442,280" />
+        <NodeLayout
+          Size="187.2,41.6"
+          Id="Package\DFT_FactTrafficViolation\Lookup at DimWeather"
+          TopLeft="446,388" />
+        <NodeLayout
+          Size="169.6,41.6"
           Id="Package\DFT_FactTrafficViolation\Lookup at DimDate"
           TopLeft="456,161" />
         <EdgeLayout
-          Id="Package\DFT_FactTrafficViolation.Paths[OLE DB Source Output]"
-          TopLeft="541.5,103">
+          Id="Package\DFT_FactTrafficViolation.Paths[Lookup Match Output2]"
+          TopLeft="538,430">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58"
+              EndConnector="0,72"
               Start="0,0"
-              End="0,50.5">
+              End="0,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="185,42"
-          Id="Package\DFT_FactTrafficViolation\Lookup at DimAddress"
-          TopLeft="442,280" />
-        <EdgeLayout
-          Id="Package\DFT_FactTrafficViolation.Paths[Lookup Match Output]"
-          TopLeft="537.75,203">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,77"
-              Start="0,0"
-              End="0,69.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,69.5" />
+                    End="0,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,28.9453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,26.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="187,42"
-          Id="Package\DFT_FactTrafficViolation\Lookup at DimWeather"
-          TopLeft="446,388" />
         <EdgeLayout
           Id="Package\DFT_FactTrafficViolation.Paths[Lookup Match Output1]"
           TopLeft="537,322">
@@ -5591,32 +5619,50 @@ where [refTable].[WeatherDate] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\DFT_FactTrafficViolation\OLE DB Destination"
-          TopLeft="451,502" />
         <EdgeLayout
-          Id="Package\DFT_FactTrafficViolation.Paths[Lookup Match Output2]"
-          TopLeft="538,430">
+          Id="Package\DFT_FactTrafficViolation.Paths[Lookup Match Output]"
+          TopLeft="537.75,203">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,72"
+              EndConnector="0,77"
               Start="0,0"
-              End="0,64.5">
+              End="0,69.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,64.5" />
+                    End="0,69.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,26.4453125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,28.9453125,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_FactTrafficViolation.Paths[OLE DB Source Output]"
+          TopLeft="541.5,103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58"
+              Start="0,0"
+              End="0,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5714,52 +5760,6 @@ where [refTable].[WeatherDate] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAddress\Lookup at DimAddress">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimAddress]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimWeather\Lookup at DimWeather">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimWeather]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -1,6 +1,13 @@
 USE CityDW;
 GO
 
+--drop table [dbo].[TrafficViolation];
+--drop table [dbo].[Address];
+--drop table [dbo].[Location];
+--drop table [dbo].[StreetType];
+--drop table [dbo].[ViolationType];
+--drop table [dbo].[Weather];
+
 CREATE TABLE ViolationType (
   ViolationTypeKey INT IDENTITY(1,1) PRIMARY KEY,
   ViolationTypeName VARCHAR(50) UNIQUE NOT NULL
@@ -19,35 +26,8 @@ VALUES
 ('BOULEVARD'),
 ('DRIVE'),
 ('PARKWAY'),
-('PLACE'),
-('COURT'),
-('TERRACE'),
-('CIRCLE'),
-('WAY'),
-('SQUARE'),
-('LANE'),
-('TRAIL'),
 ('HIGHWAY'),
-('EXPRESSWAY'),
-('EXTENSION'),
-('ALLEY'),
 ('BROADWAY'),
-('CRESCENT'),
-('COVE'),
-('ROW'),
-('PIKE'),
-('PLAZA'),
-('TURNPIKE'),
-('RUN'),
-('WALK'),
-('CENTER'),
-('TRACE'),
-('VIEW'),
-('HEIGHTS'),
-('RIDGE'),
-('DALE'),
-('KNOLL'),
-('MEWS'),
 ('OTHER');
 
 CREATE TABLE Location (
@@ -186,9 +166,3 @@ GROUP BY
 
 
 
---drop table [dbo].[TrafficViolation];
---drop table [dbo].[Address];
---drop table [dbo].[Location];
---drop table [dbo].[StreetType];
---drop table [dbo].[ViolationType];
---drop table [dbo].[Weather];

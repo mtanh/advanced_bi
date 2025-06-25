@@ -1,6 +1,18 @@
 USE CitySTG;
 GO
 
+--drop table [dbo].[Humidity];
+--drop table [dbo].[Pressure];
+--drop table [dbo].[Temperature]
+--drop table [dbo].[WindSpeed]
+--drop table [dbo].[RedLightViolation];
+--drop table [dbo].[RedLightViolation_1];
+--drop table [dbo].[RedLightViolation_2];
+--drop table [dbo].[SpeedCameraViolation];
+--drop table [dbo].[SpeedCameraViolation_1];
+--drop table [dbo].[SpeedCameraViolation_2];
+
+
 CREATE TABLE Humidity (
   [datetime] VARCHAR(50) UNIQUE NULL,
   [Vancouver] VARCHAR(50) NULL,
@@ -171,10 +183,11 @@ CREATE TABLE WindSpeed (
   [Processed] BIT NOT NULL DEFAULT 0
 );
 
-CREATE TABLE RedLightViolation (
+CREATE TABLE RedLightViolation_1 (
   [INTERSECTION] VARCHAR(100) NULL,
   [CAMERA ID] VARCHAR(50) NULL,
   [ADDRESS] VARCHAR(100) NULL,
+  [STREET TYPE] VARCHAR(50) NULL,
   [VIOLATION DATE] VARCHAR(50) NULL,
   [VIOLATIONS] VARCHAR(50) NULL,
   [X COORDINATE] VARCHAR(50) NULL,
@@ -186,9 +199,71 @@ CREATE TABLE RedLightViolation (
   [Processed] BIT NOT NULL DEFAULT 0
 );
 
+CREATE TABLE RedLightViolation_2 (
+  [INTERSECTION] NVARCHAR(100) NULL,
+  [CAMERA ID] NVARCHAR(50) NULL,
+  [ADDRESS] NVARCHAR(100) NULL,
+  [STREET TYPE] NVARCHAR(50) NULL,
+  [VIOLATION DATE] NVARCHAR(50) NULL,
+  [VIOLATIONS] NVARCHAR(50) NULL,
+  [X COORDINATE] NVARCHAR(50) NULL,
+  [Y COORDINATE] NVARCHAR(50) NULL,
+  [LATITUDE] NVARCHAR(50) NULL,
+  [LONGITUDE] NVARCHAR(50) NULL,
+  [LOCATION] NVARCHAR(50) NULL,
+  [SourceFolder] NVARCHAR(50) NULL,
+  [Processed] NVARCHAR(50) NULL
+);
+
+CREATE TABLE RedLightViolation (
+  [INTERSECTION] VARCHAR(100) NULL,
+  [CAMERA ID] VARCHAR(50) NULL,
+  [ADDRESS] VARCHAR(100) NULL,
+  [STREET TYPE] VARCHAR(50) NULL,
+  [VIOLATION DATE] VARCHAR(50) NULL,
+  [VIOLATIONS] VARCHAR(50) NULL,
+  [X COORDINATE] VARCHAR(50) NULL,
+  [Y COORDINATE] VARCHAR(50) NULL,
+  [LATITUDE] VARCHAR(50) NULL,
+  [LONGITUDE] VARCHAR(50) NULL,
+  [LOCATION] VARCHAR(50) NULL,
+  [SourceFolder] VARCHAR(50) NULL,
+  [Processed] BIT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE SpeedCameraViolation_1 (
+  [ADDRESS] VARCHAR(100) NULL,
+  [STREET TYPE] VARCHAR(50) NULL,
+  [CAMERA ID] VARCHAR(50) NULL,
+  [VIOLATION DATE] VARCHAR(50) NULL,
+  [VIOLATIONS] VARCHAR(50) NULL,
+  [X COORDINATE] VARCHAR(50) NULL,
+  [Y COORDINATE] VARCHAR(50) NULL,
+  [LATITUDE] VARCHAR(50) NULL,
+  [LONGITUDE] VARCHAR(50) NULL,
+  [LOCATION] VARCHAR(50) NULL,
+  [SourceFolder] VARCHAR(50) NULL,
+  [Processed] BIT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE SpeedCameraViolation_2 (
+  [ADDRESS] NVARCHAR(100) NULL,
+  [STREET TYPE] NVARCHAR(50) NULL,
+  [CAMERA ID] NVARCHAR(50) NULL,
+  [VIOLATION DATE] NVARCHAR(50) NULL,
+  [VIOLATIONS] NVARCHAR(50) NULL,
+  [X COORDINATE] NVARCHAR(50) NULL,
+  [Y COORDINATE] NVARCHAR(50) NULL,
+  [LATITUDE] NVARCHAR(50) NULL,
+  [LONGITUDE] NVARCHAR(50) NULL,
+  [LOCATION] NVARCHAR(50) NULL,
+  [SourceFolder] NVARCHAR(50) NULL,
+  [Processed] NVARCHAR(50) NULL
+);
 
 CREATE TABLE SpeedCameraViolation (
   [ADDRESS] VARCHAR(100) NULL,
+  [STREET TYPE] VARCHAR(50) NULL,
   [CAMERA ID] VARCHAR(50) NULL,
   [VIOLATION DATE] VARCHAR(50) NULL,
   [VIOLATIONS] VARCHAR(50) NULL,
@@ -216,6 +291,24 @@ JOIN Temperature t ON h.[datetime] = t.[datetime]
 JOIN WindSpeed w ON h.[datetime] = w.[datetime]
 WHERE h.Processed = 0 AND p.Processed = 0 AND t.Processed = 0 AND w.Processed = 0;
 
+CREATE VIEW v_Unprocessed_RedLightViolation_1_Stage AS
+SELECT
+    [INTERSECTION],
+    [CAMERA ID],
+    [ADDRESS],
+    [STREET TYPE],
+    [VIOLATION DATE],
+    [VIOLATIONS],
+    [X COORDINATE],
+    [Y COORDINATE],
+    [LATITUDE],
+    [LONGITUDE],
+    [LOCATION],
+    [SourceFolder],
+    [Processed]
+FROM RedLightViolation_1
+WHERE Processed = 0;
+
 CREATE VIEW v_Unprocessed_RedLightViolation_Locations_Stage AS
 SELECT DISTINCT
   TRY_CAST([LATITUDE] AS VARCHAR(50)) AS Latitude,
@@ -240,6 +333,23 @@ SELECT
   [VIOLATIONS],
   [SourceFolder]
 FROM RedLightViolation
+WHERE Processed = 0;
+
+CREATE VIEW v_Unprocessed_SpeedViolation_1_Stage AS
+SELECT
+    [ADDRESS],
+    [STREET TYPE],
+    [CAMERA ID],
+    [VIOLATION DATE],
+    [VIOLATIONS],
+    [X COORDINATE],
+    [Y COORDINATE],
+    [LATITUDE],
+    [LONGITUDE],
+    [LOCATION],
+    [SourceFolder],
+    [Processed]
+FROM SpeedCameraViolation_1
 WHERE Processed = 0;
 
 CREATE VIEW v_Unprocessed_SpeedViolation_Locations_Stage AS
@@ -269,9 +379,3 @@ FROM SpeedCameraViolation
 WHERE Processed = 0;
 
 
---drop table [dbo].[Humidity];
---drop table [dbo].[Pressure];
---drop table [dbo].[Temperature]
---drop table [dbo].[WindSpeed]
---drop table [dbo].[RedLightViolation];
---drop table [dbo].[SpeedCameraViolation];
