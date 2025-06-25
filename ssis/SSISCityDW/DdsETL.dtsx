@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-CHFFD81\ma.truong.anh"
   DTS:DTSID="{3B49B184-13CD-41D4-89A6-10825EFC1208}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5685.1"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
   DTS:LocaleID="1033"
   DTS:ObjectName="DdsETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="58"
-  DTS:VersionGUID="{412000FD-8AE9-4D40-B38E-6D567C80256C}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{337F9849-4AEF-4766-82CC-BA96A8F801AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -31,6 +31,147 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\DFT_DimAddress\Lookup at DimAddress"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup at DimAddress"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimAddress]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimAddress]) [refTable]
+where [refTable].[AddressKeyOfNds] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AddressKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AddressKeyOfNds" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullAddress" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StreetTypeName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Location" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ValidFromDate" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ValidToDate" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsCurrent" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceSystemCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceFolder" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[AddressKey]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimAddress\Lookup at DimAddress.Connections[OleDbConnection]"
+                  connectionManagerID="{7177D4EC-41F7-4463-9643-91E0D73C6BA7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.WeatherTrafficDM]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimAddress\Lookup at DimAddress.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Lookup at DimAddress.Inputs[Lookup Input].Columns[AddressKey]"
+                      cachedDataType="i4"
+                      cachedName="AddressKey"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[AddressKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">AddressKeyOfNds</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimAddress\Lookup at DimAddress.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT_DimAddress\Lookup at DimAddress.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimAddress\Lookup at DimAddress.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT_DimAddress\Lookup at DimAddress.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimAddress\Lookup at DimAddress.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT_DimAddress\Lookup at DimAddress.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Lookup at DimAddress.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress\Lookup at DimAddress.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Lookup at DimAddress.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress\Lookup at DimAddress.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\DFT_DimAddress\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
@@ -109,8 +250,9 @@
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="FullAddress"
+                      cachedSortKeyPosition="4"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[FullAddress]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[FullAddress]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreetTypeName]"
                       cachedCodepage="1252"
@@ -118,55 +260,57 @@
                       cachedLength="50"
                       cachedName="StreetTypeName"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeName]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[StreetTypeName]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[StreetTypeName]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
                       cachedDataType="r8"
                       cachedName="Latitude"
+                      cachedSortKeyPosition="3"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[Latitude]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Latitude]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
                       cachedDataType="r8"
                       cachedName="Longitude"
+                      cachedSortKeyPosition="2"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[Longitude]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Longitude]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValidFromDate]"
                       cachedDataType="dbDate"
                       cachedName="ValidFromDate"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidFromDate]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidFromDate]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidFromDate]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValidToDate]"
                       cachedDataType="dbDate"
                       cachedName="ValidToDate"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidToDate]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidToDate]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidToDate]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsCurrent]"
                       cachedDataType="bool"
                       cachedName="IsCurrent"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[IsCurrent]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[IsCurrent]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreateTimeStamp]"
                       cachedDataType="dbTimeStamp"
                       cachedName="CreateTimeStamp"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[CreateTimeStamp]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdateTimeStamp]"
                       cachedDataType="dbTimeStamp"
                       cachedName="UpdateTimeStamp"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[UpdateTimeStamp]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[UpdateTimeStamp]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceSystemCode]"
                       cachedDataType="i4"
                       cachedName="SourceSystemCode"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[SourceSystemCode]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceFolder]"
                       cachedCodepage="1252"
@@ -174,21 +318,22 @@
                       cachedLength="50"
                       cachedName="SourceFolder"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[SourceFolder]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Location]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="104"
                       cachedName="Location"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[Location]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Location]" />
                     <inputColumn
                       refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressKey]"
                       cachedDataType="i4"
                       cachedName="AddressKey"
                       externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKeyOfNds]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[AddressKey]" />
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[AddressKey]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -279,6 +424,441 @@
                       lineageId="Package\DFT_DimAddress\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimAddress\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[AddressKey]"
+                      cachedDataType="i4"
+                      cachedName="AddressKey"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[AddressKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[FullAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="FullAddress"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[FullAddress]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[StreetTypeName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreetTypeName"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[StreetTypeName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[Latitude]"
+                      cachedDataType="r8"
+                      cachedName="Latitude"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[Latitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[Longitude]"
+                      cachedDataType="r8"
+                      cachedName="Longitude"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[Longitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[ValidFromDate]"
+                      cachedDataType="dbDate"
+                      cachedName="ValidFromDate"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidFromDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[ValidToDate]"
+                      cachedDataType="dbDate"
+                      cachedName="ValidToDate"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidToDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[IsCurrent]"
+                      cachedDataType="bool"
+                      cachedName="IsCurrent"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[IsCurrent]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[CreateTimeStamp]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreateTimeStamp"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[UpdateTimeStamp]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdateTimeStamp"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[UpdateTimeStamp]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[SourceSystemCode]"
+                      cachedDataType="i4"
+                      cachedName="SourceSystemCode"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[SourceFolder]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SourceFolder"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[Location]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="104"
+                      cachedName="Location"
+                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[Location]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[AddressKey]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[AddressKey]"
+                      name="AddressKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[AddressKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[FullAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[FullAddress]"
+                      name="FullAddress"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[FullAddress]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[StreetTypeName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[StreetTypeName]"
+                      name="StreetTypeName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[StreetTypeName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Latitude]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Latitude]"
+                      name="Latitude"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[Latitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Longitude]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Longitude]"
+                      name="Longitude"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[Longitude]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidFromDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidFromDate]"
+                      name="ValidFromDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidFromDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidToDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidToDate]"
+                      name="ValidToDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidToDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[IsCurrent]"
+                      dataType="bool"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[IsCurrent]"
+                      name="IsCurrent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[IsCurrent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[CreateTimeStamp]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[CreateTimeStamp]"
+                      name="CreateTimeStamp">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[UpdateTimeStamp]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[UpdateTimeStamp]"
+                      name="UpdateTimeStamp">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[UpdateTimeStamp]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[SourceSystemCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[SourceSystemCode]"
+                      name="SourceSystemCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[SourceFolder]"
+                      name="SourceFolder">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="104"
+                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Location]"
+                      name="Location"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[Location]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -633,10 +1213,20 @@
           </components>
           <paths>
             <path
+              refId="Package\DFT_DimAddress.Paths[Lookup No Match Output]"
+              endId="Package\DFT_DimAddress\Sort.Inputs[Sort Input]"
+              name="Lookup No Match Output"
+              startId="Package\DFT_DimAddress\Lookup at DimAddress.Outputs[Lookup No Match Output]" />
+            <path
               refId="Package\DFT_DimAddress.Paths[OLE DB Source Output]"
-              endId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\DFT_DimAddress\Lookup at DimAddress.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_DimAddress.Paths[Sort Output]"
+              endId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\DFT_DimAddress\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1133,7 +1723,7 @@ where [refTable].[Date] = ?</property>
                       cachedDataType="i4"
                       cachedName="SourceSystemCode"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
-                      lineageId="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[SourceSystemCode]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceFolder]"
                       cachedCodepage="1252"
@@ -1141,49 +1731,49 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="SourceFolder"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
-                      lineageId="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[SourceFolder]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayNumberOfWeek]"
                       cachedDataType="i4"
                       cachedName="DayNumberOfWeek"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNumberOfWeek]"
-                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNumberOfWeek]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNumberOfWeek]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayNumberOfMonth]"
                       cachedDataType="i4"
                       cachedName="DayNumberOfMonth"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNumberOfMonth]"
-                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNumberOfMonth]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNumberOfMonth]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayNumberOfYear]"
                       cachedDataType="i4"
                       cachedName="DayNumberOfYear"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNumberOfYear]"
-                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNumberOfYear]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNumberOfYear]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeekNumberOfYear]"
                       cachedDataType="i4"
                       cachedName="WeekNumberOfYear"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeekNumberOfYear]"
-                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[WeekNumberOfYear]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[WeekNumberOfYear]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CalendarQuarter]"
                       cachedDataType="i4"
                       cachedName="CalendarQuarter"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarQuarter]"
-                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[CalendarQuarter]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[CalendarQuarter]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CalendarYear]"
                       cachedDataType="i4"
                       cachedName="CalendarYear"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYear]"
-                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[CalendarYear]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[CalendarYear]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsWeekend]"
                       cachedDataType="i4"
                       cachedName="IsWeekend"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsWeekend]"
-                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[IsWeekend]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[IsWeekend]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MonthName]"
                       cachedCodepage="1252"
@@ -1191,7 +1781,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="MonthName"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
-                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[MonthName]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[MonthName]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DayNameOfWeek]"
                       cachedCodepage="1252"
@@ -1199,13 +1789,14 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="DayNameOfWeek"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DayNameOfWeek]"
-                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNameOfWeek]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNameOfWeek]" />
                     <inputColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ViolationDate]"
                       cachedDataType="dbDate"
                       cachedName="ViolationDate"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output].Columns[ViolationDate]" />
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[ViolationDate]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1298,6 +1889,405 @@ where [refTable].[Date] = ?</property>
                       lineageId="Package\DFT_DimDate\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimDate\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimDate\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[ViolationDate]"
+                      cachedDataType="dbDate"
+                      cachedName="ViolationDate"
+                      lineageId="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output].Columns[ViolationDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[SourceSystemCode]"
+                      cachedDataType="i4"
+                      cachedName="SourceSystemCode"
+                      lineageId="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[SourceFolder]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SourceFolder"
+                      lineageId="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[DayNumberOfWeek]"
+                      cachedDataType="i4"
+                      cachedName="DayNumberOfWeek"
+                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNumberOfWeek]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[DayNumberOfMonth]"
+                      cachedDataType="i4"
+                      cachedName="DayNumberOfMonth"
+                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNumberOfMonth]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[DayNumberOfYear]"
+                      cachedDataType="i4"
+                      cachedName="DayNumberOfYear"
+                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNumberOfYear]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[WeekNumberOfYear]"
+                      cachedDataType="i4"
+                      cachedName="WeekNumberOfYear"
+                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[WeekNumberOfYear]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[CalendarQuarter]"
+                      cachedDataType="i4"
+                      cachedName="CalendarQuarter"
+                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[CalendarQuarter]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[CalendarYear]"
+                      cachedDataType="i4"
+                      cachedName="CalendarYear"
+                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[CalendarYear]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[IsWeekend]"
+                      cachedDataType="i4"
+                      cachedName="IsWeekend"
+                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[IsWeekend]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[MonthName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MonthName"
+                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[MonthName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimDate\Sort.Inputs[Sort Input].Columns[DayNameOfWeek]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DayNameOfWeek"
+                      lineageId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNameOfWeek]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimDate\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[ViolationDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[ViolationDate]"
+                      name="ViolationDate"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output].Columns[ViolationDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[SourceSystemCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[SourceSystemCode]"
+                      name="SourceSystemCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[SourceFolder]"
+                      name="SourceFolder">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNumberOfWeek]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNumberOfWeek]"
+                      name="DayNumberOfWeek">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNumberOfWeek]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNumberOfMonth]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNumberOfMonth]"
+                      name="DayNumberOfMonth">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNumberOfMonth]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNumberOfYear]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNumberOfYear]"
+                      name="DayNumberOfYear">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNumberOfYear]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[WeekNumberOfYear]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[WeekNumberOfYear]"
+                      name="WeekNumberOfYear">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[WeekNumberOfYear]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[CalendarQuarter]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[CalendarQuarter]"
+                      name="CalendarQuarter">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[CalendarQuarter]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[CalendarYear]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[CalendarYear]"
+                      name="CalendarYear">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[CalendarYear]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[IsWeekend]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[IsWeekend]"
+                      name="IsWeekend">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[IsWeekend]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[MonthName]"
+                      name="MonthName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[MonthName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNameOfWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_DimDate\Sort.Outputs[Sort Output].Columns[DayNameOfWeek]"
+                      name="DayNameOfWeek">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output].Columns[DayNameOfWeek]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1455,7 +2445,7 @@ where [refTable].[Date] = ?</property>
           <paths>
             <path
               refId="Package\DFT_DimDate.Paths[Derived Column Output]"
-              endId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\DFT_DimDate\Sort.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\DFT_DimDate\DimData Attributes.Outputs[Derived Column Output]" />
             <path
@@ -1468,6 +2458,11 @@ where [refTable].[Date] = ?</property>
               endId="Package\DFT_DimDate\Lookup at DimDate.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_DimDate.Paths[Sort Output]"
+              endId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Sort Output"
+              startId="Package\DFT_DimDate\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1486,6 +2481,147 @@ where [refTable].[Date] = ?</property>
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\DFT_DimWeather\Lookup at DimWeather"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup at DimWeather"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimWeather]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimWeather]) [refTable]
+where [refTable].[WeatherDate] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="WeatherKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeatherDate" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaxHumidity" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MinHumidity" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AverageHumidity" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaxPressure" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MinPressure" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AveragePressure" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaxTemperature" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MinTemperature" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AverageTemperature" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MaxWindSpeed" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MinWindSpeed" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AverageWindSpeed" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TemperatureRangeName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="HumidityLevelName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CreateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceSystemCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceFolder" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[WeatherDate]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimWeather\Lookup at DimWeather.Connections[OleDbConnection]"
+                  connectionManagerID="{7177D4EC-41F7-4463-9643-91E0D73C6BA7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.WeatherTrafficDM]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimWeather\Lookup at DimWeather.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Lookup at DimWeather.Inputs[Lookup Input].Columns[WeatherDate]"
+                      cachedDataType="dbDate"
+                      cachedName="WeatherDate"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[WeatherDate]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">WeatherDate</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimWeather\Lookup at DimWeather.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\DFT_DimWeather\Lookup at DimWeather.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimWeather\Lookup at DimWeather.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\DFT_DimWeather\Lookup at DimWeather.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimWeather\Lookup at DimWeather.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\DFT_DimWeather\Lookup at DimWeather.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Lookup at DimWeather.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimWeather\Lookup at DimWeather.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Lookup at DimWeather.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimWeather\Lookup at DimWeather.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\DFT_DimWeather\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
@@ -1562,86 +2698,87 @@ where [refTable].[Date] = ?</property>
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WeatherDate]"
                       cachedDataType="dbDate"
                       cachedName="WeatherDate"
+                      cachedSortKeyPosition="1"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WeatherDate]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[WeatherDate]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[WeatherDate]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxHumidity]"
                       cachedDataType="r8"
                       cachedName="MaxHumidity"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxHumidity]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxHumidity]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxHumidity]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinHumidity]"
                       cachedDataType="r8"
                       cachedName="MinHumidity"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinHumidity]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinHumidity]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinHumidity]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageHumidity]"
                       cachedDataType="r8"
                       cachedName="AverageHumidity"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageHumidity]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxPressure]"
                       cachedDataType="r8"
                       cachedName="MaxPressure"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxPressure]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxPressure]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxPressure]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinPressure]"
                       cachedDataType="r8"
                       cachedName="MinPressure"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinPressure]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinPressure]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinPressure]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AveragePressure]"
                       cachedDataType="r8"
                       cachedName="AveragePressure"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AveragePressure]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AveragePressure]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AveragePressure]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxTemperature]"
                       cachedDataType="r8"
                       cachedName="MaxTemperature"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxTemperature]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxTemperature]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxTemperature]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinTemperature]"
                       cachedDataType="r8"
                       cachedName="MinTemperature"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinTemperature]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinTemperature]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinTemperature]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageTemperature]"
                       cachedDataType="r8"
                       cachedName="AverageTemperature"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageTemperature]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxWindSpeed]"
                       cachedDataType="r8"
                       cachedName="MaxWindSpeed"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxWindSpeed]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxWindSpeed]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxWindSpeed]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinWindSpeed]"
                       cachedDataType="r8"
                       cachedName="MinWindSpeed"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinWindSpeed]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinWindSpeed]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinWindSpeed]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AverageWindSpeed]"
                       cachedDataType="r8"
                       cachedName="AverageWindSpeed"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageWindSpeed]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageWindSpeed]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageWindSpeed]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceSystemCode]"
                       cachedDataType="i4"
                       cachedName="SourceSystemCode"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[SourceSystemCode]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceFolder]"
                       cachedCodepage="1252"
@@ -1649,7 +2786,7 @@ where [refTable].[Date] = ?</property>
                       cachedLength="50"
                       cachedName="SourceFolder"
                       externalMetadataColumnId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[SourceFolder]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TemperatureRangeName]"
                       cachedCodepage="1252"
@@ -1784,6 +2921,484 @@ where [refTable].[Date] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\DFT_DimWeather\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[WeatherDate]"
+                      cachedDataType="dbDate"
+                      cachedName="WeatherDate"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[WeatherDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MaxHumidity]"
+                      cachedDataType="r8"
+                      cachedName="MaxHumidity"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxHumidity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MinHumidity]"
+                      cachedDataType="r8"
+                      cachedName="MinHumidity"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinHumidity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[AverageHumidity]"
+                      cachedDataType="r8"
+                      cachedName="AverageHumidity"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MaxPressure]"
+                      cachedDataType="r8"
+                      cachedName="MaxPressure"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxPressure]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MinPressure]"
+                      cachedDataType="r8"
+                      cachedName="MinPressure"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinPressure]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[AveragePressure]"
+                      cachedDataType="r8"
+                      cachedName="AveragePressure"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AveragePressure]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MaxTemperature]"
+                      cachedDataType="r8"
+                      cachedName="MaxTemperature"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxTemperature]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MinTemperature]"
+                      cachedDataType="r8"
+                      cachedName="MinTemperature"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinTemperature]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[AverageTemperature]"
+                      cachedDataType="r8"
+                      cachedName="AverageTemperature"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MaxWindSpeed]"
+                      cachedDataType="r8"
+                      cachedName="MaxWindSpeed"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxWindSpeed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[MinWindSpeed]"
+                      cachedDataType="r8"
+                      cachedName="MinWindSpeed"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinWindSpeed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[AverageWindSpeed]"
+                      cachedDataType="r8"
+                      cachedName="AverageWindSpeed"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageWindSpeed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[SourceSystemCode]"
+                      cachedDataType="i4"
+                      cachedName="SourceSystemCode"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimWeather\Sort.Inputs[Sort Input].Columns[SourceFolder]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SourceFolder"
+                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[WeatherDate]"
+                      dataType="dbDate"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[WeatherDate]"
+                      name="WeatherDate"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[WeatherDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxHumidity]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxHumidity]"
+                      name="MaxHumidity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxHumidity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinHumidity]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinHumidity]"
+                      name="MinHumidity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinHumidity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]"
+                      name="AverageHumidity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxPressure]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxPressure]"
+                      name="MaxPressure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxPressure]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinPressure]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinPressure]"
+                      name="MinPressure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinPressure]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AveragePressure]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AveragePressure]"
+                      name="AveragePressure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AveragePressure]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxTemperature]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxTemperature]"
+                      name="MaxTemperature">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxTemperature]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinTemperature]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinTemperature]"
+                      name="MinTemperature">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinTemperature]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]"
+                      name="AverageTemperature">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxWindSpeed]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MaxWindSpeed]"
+                      name="MaxWindSpeed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MaxWindSpeed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinWindSpeed]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[MinWindSpeed]"
+                      name="MinWindSpeed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[MinWindSpeed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageWindSpeed]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageWindSpeed]"
+                      name="AverageWindSpeed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageWindSpeed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[SourceSystemCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[SourceSystemCode]"
+                      name="SourceSystemCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[SourceFolder]"
+                      name="SourceFolder">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[SourceFolder]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -1800,12 +3415,12 @@ where [refTable].[Date] = ?</property>
                       refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input].Columns[AverageHumidity]"
                       cachedDataType="r8"
                       cachedName="AverageHumidity"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]" />
                     <inputColumn
                       refId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input].Columns[AverageTemperature]"
                       cachedDataType="r8"
                       cachedName="AverageTemperature"
-                      lineageId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]" />
+                      lineageId="Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1833,7 +3448,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]} &gt; 303.15) ? "Hot" : (#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageTemperature]} &gt;= 293.15) ? "Warm" : "Cold")</property>
+                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt; 303.15) ? "Hot" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageTemperature]} &gt;= 293.15) ? "Warm" : "Cold")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -1857,7 +3472,7 @@ where [refTable].[Date] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]} &gt;= 80) ? "High" : (#{Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output].Columns[AverageHumidity]} &gt;= 50) ? "Medium" : "Low")</property>
+                          name="Expression">(DT_STR,50,1252)((#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 80) ? "High" : (#{Package\DFT_DimWeather\Sort.Outputs[Sort Output].Columns[AverageHumidity]} &gt;= 50) ? "Medium" : "Low")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -2266,10 +3881,20 @@ where [refTable].[Date] = ?</property>
               name="Derived Column Output"
               startId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Outputs[Derived Column Output]" />
             <path
+              refId="Package\DFT_DimWeather.Paths[Lookup No Match Output]"
+              endId="Package\DFT_DimWeather\Sort.Inputs[Sort Input]"
+              name="Lookup No Match Output"
+              startId="Package\DFT_DimWeather\Lookup at DimWeather.Outputs[Lookup No Match Output]" />
+            <path
               refId="Package\DFT_DimWeather.Paths[OLE DB Source Output]"
-              endId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input]"
+              endId="Package\DFT_DimWeather\Lookup at DimWeather.Inputs[Lookup Input]"
               name="OLE DB Source Output"
               startId="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\DFT_DimWeather.Paths[Sort Output]"
+              endId="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName.Inputs[Derived Column Input]"
+              name="Sort Output"
+              startId="Package\DFT_DimWeather\Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -3310,17 +4935,29 @@ where [refTable].[WeatherDate] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="144,42"
-          Id="Package\DFT_DimDate"
-          TopLeft="168,103" />
-        <NodeLayout
-          Size="160,42"
+          Size="160,41.6"
           Id="Package\DFT_DimAddress"
           TopLeft="384,102" />
         <NodeLayout
-          Size="239,42"
+          Size="144,41.6"
+          Id="Package\DFT_DimDate"
+          TopLeft="168,103" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\DFT_DimWeather"
+          TopLeft="664,215" />
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\DFT_FactTrafficViolation"
+          TopLeft="384,214" />
+        <NodeLayout
+          Size="239.2,41.6"
           Id="Package\SQL_Processed_Address_Location"
           TopLeft="625,104" />
+        <NodeLayout
+          Size="227.2,41.6"
+          Id="Package\SQL_Processed_TrafficViolation"
+          TopLeft="103,212" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="312,123.5">
@@ -3365,10 +5002,6 @@ where [refTable].[WeatherDate] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="162,42"
-          Id="Package\DFT_DimWeather"
-          TopLeft="664,215" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="744.75,146">
@@ -3391,10 +5024,6 @@ where [refTable].[WeatherDate] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="194,42"
-          Id="Package\DFT_FactTrafficViolation"
-          TopLeft="384,214" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="664,235.5">
@@ -3417,10 +5046,6 @@ where [refTable].[WeatherDate] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="227,42"
-          Id="Package\SQL_Processed_TrafficViolation"
-          TopLeft="103,212" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="384,234">
@@ -3447,16 +5072,142 @@ where [refTable].[WeatherDate] = ?</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\DFT_DimDate">
+    design-time-name="Package\DFT_DimAddress">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="323,42"
+          Size="303.2,41.6"
+          Id="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds"
+          TopLeft="111.285719139235,49.7142862996884" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DFT_DimAddress\OLE DB Destination"
+          TopLeft="176.714290531618,323.571426610861" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\DFT_DimAddress\Sort"
+          TopLeft="209.999996870756,235.285710779684" />
+        <EdgeLayout
+          Id="Package\DFT_DimAddress.Paths[Sort Output]"
+          TopLeft="260.357143701187,276.885710779684">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.6857158311774"
+              Start="0,0"
+              End="0,39.1857158311774">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.1857158311774" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\DFT_DimAddress\Lookup at DimAddress"
+          TopLeft="166.142854667136,128.714283796293" />
+        <EdgeLayout
+          Id="Package\DFT_DimAddress.Paths[OLE DB Source Output]"
+          TopLeft="260.514286903186,91.3142862996884">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.399997496605"
+              Start="0,0"
+              End="0,29.899997496605">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.899997496605" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimAddress.Paths[Lookup No Match Output]"
+          TopLeft="258.471425768946,170.314283796293">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.9714269833906"
+              Start="0,0"
+              End="0,57.4714269833906">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.4714269833906" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,22.9310259916953,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAddress\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_DimDate">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="323.2,41.6"
           Id="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds"
           TopLeft="335,60" />
         <NodeLayout
-          Size="170,42"
+          Size="171.2,41.6"
+          Id="Package\DFT_DimDate\OLE DB Destination"
+          TopLeft="408.892857144758,414.176470534612" />
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\DFT_DimDate\DimData Attributes"
+          TopLeft="411,261" />
+        <NodeLayout
+          Size="169.6,41.6"
           Id="Package\DFT_DimDate\Lookup at DimDate"
           TopLeft="408,158" />
         <EdgeLayout
@@ -3481,10 +5232,6 @@ where [refTable].[WeatherDate] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="169,42"
-          Id="Package\DFT_DimDate\DimData Attributes"
-          TopLeft="411,261" />
         <EdgeLayout
           Id="Package\DFT_DimDate.Paths[Lookup No Match Output]"
           TopLeft="494.25,200">
@@ -3510,23 +5257,23 @@ where [refTable].[WeatherDate] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="171,42"
-          Id="Package\DFT_DimDate\OLE DB Destination"
-          TopLeft="408,353" />
+          Size="97.6,41.6"
+          Id="Package\DFT_DimDate\Sort"
+          TopLeft="448.57142952632,341.05882323046" />
         <EdgeLayout
           Id="Package\DFT_DimDate.Paths[Derived Column Output]"
-          TopLeft="494.5,303">
+          TopLeft="496.38571476316,302.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50"
+              EndConnector="0,38.4588232304604"
               Start="0,0"
-              End="0,42.5">
+              End="0,30.9588232304604">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.5" />
+                    End="0,30.9588232304604" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3535,36 +5282,20 @@ where [refTable].[WeatherDate] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\DFT_DimAddress">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="303,42"
-          Id="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds"
-          TopLeft="437,89" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\DFT_DimAddress\OLE DB Destination"
-          TopLeft="500,192" />
         <EdgeLayout
-          Id="Package\DFT_DimAddress.Paths[OLE DB Source Output]"
-          TopLeft="587,131">
+          Id="Package\DFT_DimDate.Paths[Sort Output]"
+          TopLeft="495.932143335539,382.65882323046">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61"
+              EndConnector="0,31.5176473041513"
               Start="0,0"
-              End="0,53.5">
+              End="0,24.0176473041513">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.5" />
+                    End="0,24.0176473041513" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3590,29 +5321,6 @@ where [refTable].[WeatherDate] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimDate\Lookup at DimDate">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DFT_DimDate\OLE DB Destination">
     <Properties>
       <Property>
@@ -3626,28 +5334,25 @@ where [refTable].[WeatherDate] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds">
+    design-time-name="Package\DFT_DimDate\Lookup at DimDate">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">View</Value>
+          type="q4:string">0</Value>
       </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAddress\OLE DB Destination">
-    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -3655,29 +5360,33 @@ where [refTable].[WeatherDate] = ?</property>
     design-time-name="Package\DFT_DimWeather">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="300,42"
+          Size="300,41.6"
           Id="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds"
           TopLeft="468,60" />
         <NodeLayout
-          Size="297,42"
+          Size="171.2,41.6"
+          Id="Package\DFT_DimWeather\OLE DB Destination"
+          TopLeft="538.999999940395,435.999997466803" />
+        <NodeLayout
+          Size="296.8,41.6"
           Id="Package\DFT_DimWeather\TemperatureRangeName, HumidityLevelName"
-          TopLeft="467,168" />
+          TopLeft="472.999999910593,332.999997541308" />
         <EdgeLayout
-          Id="Package\DFT_DimWeather.Paths[OLE DB Source Output]"
-          TopLeft="616.75,102">
+          Id="Package\DFT_DimWeather.Paths[Derived Column Output]"
+          TopLeft="622.999999925494,374.599997541308">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,66"
+              EndConnector="0,61.3999999254942"
               Start="0,0"
-              End="0,58.5">
+              End="0,53.8999999254942">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.5" />
+                    End="0,53.8999999254942" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3687,29 +5396,79 @@ where [refTable].[WeatherDate] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="171,42"
-          Id="Package\DFT_DimWeather\OLE DB Destination"
-          TopLeft="535,266" />
+          Size="97.6,41.6"
+          Id="Package\DFT_DimWeather\Sort"
+          TopLeft="572.999991461635,241.999996393919" />
         <EdgeLayout
-          Id="Package\DFT_DimWeather.Paths[Derived Column Output]"
-          TopLeft="618,210">
+          Id="Package\DFT_DimWeather.Paths[Sort Output]"
+          TopLeft="621.599995686114,283.599996393919">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,56"
+              EndConnector="0,49.4000011473893"
               Start="0,0"
-              End="0,48.5">
+              End="0,41.9000011473893">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,48.5" />
+                    End="0,41.9000011473893" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\DFT_DimWeather\Lookup at DimWeather"
+          TopLeft="529.999992102385,152.999997720122" />
+        <EdgeLayout
+          Id="Package\DFT_DimWeather.Paths[OLE DB Source Output]"
+          TopLeft="620.599996051192,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.3999977201224"
+              Start="0,0"
+              End="0,43.8999977201224">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.8999977201224" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimWeather.Paths[Lookup No Match Output]"
+          TopLeft="622.49999178201,194.599997720122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.3999986737967"
+              Start="0,0"
+              End="0,39.8999986737967">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.8999986737967" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,14.1453118368983,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3864,6 +5623,29 @@ where [refTable].[WeatherDate] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT_FactTrafficViolation\Lookup at DimDate">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT_FactTrafficViolation\v_Unprocessed_TrafficViolation_Nds">
     <Properties>
       <Property>
@@ -3877,22 +5659,22 @@ where [refTable].[WeatherDate] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_FactTrafficViolation\Lookup at DimDate">
+    design-time-name="Package\DFT_FactTrafficViolation\Lookup at DimWeather">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimDate]</Value>
+          type="q3:string">[dbo].[DimWeather]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3901,6 +5683,42 @@ where [refTable].[WeatherDate] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_FactTrafficViolation\Lookup at DimAddress">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAddress]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_FactTrafficViolation\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAddress\Lookup at DimAddress">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -3923,7 +5741,7 @@ where [refTable].[WeatherDate] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_FactTrafficViolation\Lookup at DimWeather">
+    design-time-name="Package\DFT_DimWeather\Lookup at DimWeather">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -3942,19 +5760,6 @@ where [refTable].[WeatherDate] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_FactTrafficViolation\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

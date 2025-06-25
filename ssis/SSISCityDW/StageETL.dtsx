@@ -7,12 +7,12 @@
   DTS:CreatorName="G01\fj3577aq"
   DTS:DTSID="{3BB481D6-47C6-4F5F-BA68-525B12333789}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5685.1"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="116"
-  DTS:VersionGUID="{9FF96CAD-4132-4155-A550-8D65BCBA06F6}">
+  DTS:VersionBuild="153"
+  DTS:VersionGUID="{95093A72-B62B-4CBA-BCBF-F26EE5B8F620}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,6 +21,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{220D1E38-BAFF-492C-98D3-39C48069CFA1}"
       DTS:ObjectName="Huminity_CSV">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFolderFull] +  @[User::HuminityFileName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -30,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Code\advanced_bi\utils\2016-12-31\Humidity.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-03\\Humidity.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +41,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="datetime"
-              DTS:DTSID="{1F558738-1AB7-4AA1-ABE8-83A8606F3507}"
+              DTS:DTSID="{B0ACD864-0BF1-4A81-97AE-2D33E4898D8C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +50,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vancouver"
-              DTS:DTSID="{6B07CE84-262D-4800-8C2B-27E8DEDC52CA}"
+              DTS:DTSID="{30FB2AC5-DC93-4A45-A6FC-2FD8A08811F0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +59,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Portland"
-              DTS:DTSID="{F50747EC-8988-42D3-B153-8362ECC3B279}"
+              DTS:DTSID="{D35B33BE-59C7-494E-8C43-04C15829AE6D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +68,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Francisco"
-              DTS:DTSID="{C3F1083D-5318-429E-9278-F2BE08D6BD56}"
+              DTS:DTSID="{5AA1DE9F-3892-460C-A204-A74D15A31086}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +77,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Seattle"
-              DTS:DTSID="{9B73B986-415B-4938-8A79-CDA6AFEF8625}"
+              DTS:DTSID="{B9C68E53-3153-44ED-A870-9D527C14AF9F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +86,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Los Angeles"
-              DTS:DTSID="{0E1A7923-E706-43C5-BF21-EBF168C9CD13}"
+              DTS:DTSID="{8E2D1B02-0ED0-4F8D-9667-097B1C78D7D5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +95,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Diego"
-              DTS:DTSID="{D653CDF5-EA71-4548-918E-B51C4BE3F3F9}"
+              DTS:DTSID="{FBEFACD6-A057-479F-AB41-26405503E2BA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +104,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Las Vegas"
-              DTS:DTSID="{8A425092-1DC7-4985-99D1-753E71C6D2E1}"
+              DTS:DTSID="{0BA7016B-57DE-456A-86CD-076114A03726}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +113,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Phoenix"
-              DTS:DTSID="{AE9AB77D-7570-4B7A-BB09-AC1AC93AA508}"
+              DTS:DTSID="{DCFAC37C-2705-40D0-B748-26702492EEA6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +122,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Albuquerque"
-              DTS:DTSID="{C6F5EDC7-BB11-46CA-B962-25DEFDA66014}"
+              DTS:DTSID="{35C72866-2AA4-461F-9544-E36704AAA3CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +131,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Denver"
-              DTS:DTSID="{4DC90491-B548-4C43-B615-78036DB051FB}"
+              DTS:DTSID="{7443DBA1-40BF-4A25-A44C-2BB7DEB94E15}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +140,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Antonio"
-              DTS:DTSID="{D9C42FC4-9561-460D-89CA-8ABD58D58206}"
+              DTS:DTSID="{A18A0CD2-1A8B-420E-B06B-3535BC5DC7CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +149,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dallas"
-              DTS:DTSID="{8C774685-1CB8-45F4-B81A-07841CA1859C}"
+              DTS:DTSID="{C6B929CC-CDDC-4B3B-9B4C-507248D11CCB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +158,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Houston"
-              DTS:DTSID="{45BB5552-0FCD-4447-82A2-9552990DC7D2}"
+              DTS:DTSID="{C2040452-B123-4383-A594-27B16400011D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +167,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Kansas City"
-              DTS:DTSID="{83CE99C9-9000-4604-80DF-3CB509C1A264}"
+              DTS:DTSID="{ED61FF54-9D69-4784-81CB-AC03D88593F9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -174,7 +176,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Minneapolis"
-              DTS:DTSID="{FFEBAD5B-1AAA-41FD-B378-C74761B51568}"
+              DTS:DTSID="{A5126C31-60DF-4721-A434-A980A30016B5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -183,7 +185,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Saint Louis"
-              DTS:DTSID="{5ADFF318-4563-4D72-9EC2-A72AC9C9557B}"
+              DTS:DTSID="{6B1559DD-0AC6-41E3-B783-A59A6B728ACD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -192,7 +194,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Chicago"
-              DTS:DTSID="{D1EB8961-27A7-426B-ABE7-220DA46171C2}"
+              DTS:DTSID="{78339678-EE3D-42B0-B777-411C589C0734}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -201,7 +203,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nashville"
-              DTS:DTSID="{15C57B6E-231F-4C64-9290-37BEA4F7A9DC}"
+              DTS:DTSID="{ADADE163-3BB6-4324-BF0D-AD985890C653}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -210,7 +212,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Indianapolis"
-              DTS:DTSID="{F6B20155-44FB-4F74-9463-0181CD55922C}"
+              DTS:DTSID="{D41027D6-42E7-41EF-A9FC-AAC274F5FB8F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -219,7 +221,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Atlanta"
-              DTS:DTSID="{AA214ECA-584B-4B97-B4A8-B4CEF4D00141}"
+              DTS:DTSID="{F8445ABC-8B99-498E-A330-384068D1AD12}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -228,7 +230,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Detroit"
-              DTS:DTSID="{F1F831E4-7E2F-4B45-9778-BABFF6CA0F70}"
+              DTS:DTSID="{815D7756-1DAF-4532-BDE0-9F99A588B828}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -237,7 +239,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Jacksonville"
-              DTS:DTSID="{B5EA7908-D3C9-4810-9C14-F63F3F49E944}"
+              DTS:DTSID="{7E67C050-BDA3-4943-8989-AA1835FE2AE6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -246,7 +248,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Charlotte"
-              DTS:DTSID="{3F1B0214-41C2-41E2-88E2-62C2128945A9}"
+              DTS:DTSID="{753E5CC1-55C6-442C-86E6-7565A2F9F0AD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -255,7 +257,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Miami"
-              DTS:DTSID="{C88106D4-BF09-4D28-9C3B-0C37D23E35CF}"
+              DTS:DTSID="{C65CFB73-889E-4E7D-A0B9-8544D34B44C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -264,7 +266,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pittsburgh"
-              DTS:DTSID="{EA59A9FD-B368-4DEE-B8FC-548C67ED33DA}"
+              DTS:DTSID="{2AB8C582-686B-4B01-A651-E816C5F74E60}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -273,7 +275,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Toronto"
-              DTS:DTSID="{BFB81288-E3B2-4F8F-AB4B-4CC0F928E004}"
+              DTS:DTSID="{D96EA990-2917-4EEF-A5E2-710906D0051A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -282,7 +284,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Philadelphia"
-              DTS:DTSID="{A1D6C734-BC6D-46F3-83F6-FECC5817BD8D}"
+              DTS:DTSID="{BDF93FFD-71D2-4005-9F86-41389B077179}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -291,7 +293,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="New York"
-              DTS:DTSID="{2DC6C758-D17F-47A7-B3EF-D5F5806327F0}"
+              DTS:DTSID="{253620A8-E60C-4937-81E1-58874E4BC16F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -300,7 +302,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Montreal"
-              DTS:DTSID="{317D14F7-7BE9-4284-921A-7D478F93CBD8}"
+              DTS:DTSID="{7E49BA6E-864B-44E8-B483-F72818636E9F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -309,7 +311,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Boston"
-              DTS:DTSID="{8F41DEC1-A8F1-4C70-B187-E548BDD14437}"
+              DTS:DTSID="{5FC609B1-AFD4-4BC4-B8DD-1A250D374AB1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -318,7 +320,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Beersheba"
-              DTS:DTSID="{060E5331-EAFF-4B98-8A89-444A33F4F9AA}"
+              DTS:DTSID="{2B2713C4-C2F2-4123-B3A0-6620C17D27E7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -327,7 +329,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Tel Aviv District"
-              DTS:DTSID="{7C717ED1-5A4D-4051-BB2B-1751E271BA58}"
+              DTS:DTSID="{BFD38A91-A15E-425B-B388-AE50369F502C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -336,7 +338,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Eilat"
-              DTS:DTSID="{71511AA6-F307-4E9D-94EE-E8E84E77D0DD}"
+              DTS:DTSID="{B6E0CB5E-7629-4875-BDC3-2A512C990E14}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -345,7 +347,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Haifa"
-              DTS:DTSID="{1735962F-9683-4D50-A26A-30DC80E2A8C9}"
+              DTS:DTSID="{7274A5C0-15D7-4B71-B04A-A09219976964}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -354,7 +356,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nahariyya"
-              DTS:DTSID="{835D5824-230C-4271-B0F6-7229315D0D8A}"
+              DTS:DTSID="{B748CE6D-30E9-4E56-BA8D-5510536A2A00}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -363,7 +365,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Jerusalem"
-              DTS:DTSID="{1A93BCA3-E5DE-4A57-9210-31419FF3B6EA}"
+              DTS:DTSID="{DADD0CE8-6AF4-4D07-825C-A713F04FA63F}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -374,6 +376,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{75A173C0-9E9C-435B-B052-307785A6F232}"
       DTS:ObjectName="Pressure_CSV">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFolderFull] +  @[User::PressureFileName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -383,7 +387,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Code\advanced_bi\utils\2016-12-31\Pressure.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-03\\Pressure.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -392,7 +396,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="datetime"
-              DTS:DTSID="{77AE72C9-5520-4A02-81E4-880826736DE1}"
+              DTS:DTSID="{81D23DB9-8876-4954-B1B8-77C6D3F4D37D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -401,7 +405,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vancouver"
-              DTS:DTSID="{138F9C56-2C95-48BB-9B0E-1E7E60E4422F}"
+              DTS:DTSID="{4E0A92BE-80F4-4D7B-AC62-77EFD2109388}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -410,7 +414,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Portland"
-              DTS:DTSID="{7714A76D-A889-4773-8A98-1C8751D1DB20}"
+              DTS:DTSID="{34CEAEEA-BC28-4C01-89C4-2F2C3E8788CE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -419,7 +423,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Francisco"
-              DTS:DTSID="{E8D77654-CB53-455B-AAE3-6E65AFC28583}"
+              DTS:DTSID="{F29F9FEF-81AB-4868-A310-90D9955E3271}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -428,7 +432,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Seattle"
-              DTS:DTSID="{3F2147FB-CA7A-4340-A184-E243A5B45729}"
+              DTS:DTSID="{826CF378-92FA-4696-874F-FB1B0C827660}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -437,7 +441,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Los Angeles"
-              DTS:DTSID="{8AE57706-E83F-4A93-95A2-C6342801E280}"
+              DTS:DTSID="{B9041149-F025-482F-A495-5669F69898A0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -446,7 +450,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Diego"
-              DTS:DTSID="{144BE804-E84B-46DB-9006-A2B5A450A631}"
+              DTS:DTSID="{4A4775DD-0F38-4644-9B5C-62BE27994023}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -455,7 +459,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Las Vegas"
-              DTS:DTSID="{F656B6AA-5056-475B-8005-5E82754EDC0E}"
+              DTS:DTSID="{BFA530CB-EC11-49F0-8482-64BB58E31E6E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -464,7 +468,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Phoenix"
-              DTS:DTSID="{D5578672-CF52-463A-91B3-9043C1DE3652}"
+              DTS:DTSID="{CED873A4-575C-455F-8586-920D2BBC1FAB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -473,7 +477,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Albuquerque"
-              DTS:DTSID="{1715CA43-0999-4FA0-81AB-9BFEF1593481}"
+              DTS:DTSID="{DC083684-4FAA-45A3-849F-723F4785C869}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -482,7 +486,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Denver"
-              DTS:DTSID="{E01B8DFA-9978-4E54-BBE0-192C640C6F9B}"
+              DTS:DTSID="{FD076DCC-6B07-4848-915A-3E0A5C61A81E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -491,7 +495,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Antonio"
-              DTS:DTSID="{299CA1A3-9A91-4F1E-9741-1BC62697827C}"
+              DTS:DTSID="{27479B63-8D02-475D-A6A9-CCDA21E9ED63}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -500,7 +504,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dallas"
-              DTS:DTSID="{2CAC4303-5D51-4620-85EC-E3B1B5B8A6EB}"
+              DTS:DTSID="{156D6CA0-7F22-46FC-8F7B-B600A0FE07D2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -509,7 +513,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Houston"
-              DTS:DTSID="{EFD0D654-FF3B-4E21-94E3-D93868AC2D0E}"
+              DTS:DTSID="{12CC430F-0694-4E13-9EE2-FA439B95EC2D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -518,7 +522,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Kansas City"
-              DTS:DTSID="{41784133-590E-4FF7-BABF-494ACD01B118}"
+              DTS:DTSID="{F6F86A8D-6A5D-4D34-82DD-886A89AC13AC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -527,7 +531,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Minneapolis"
-              DTS:DTSID="{F75D4678-8C13-4DE8-8E4A-53657A705625}"
+              DTS:DTSID="{BCA90198-47B7-4B41-AAFB-9C4F1BC95038}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -536,7 +540,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Saint Louis"
-              DTS:DTSID="{18059150-1A83-4D6C-BFF3-DBCF618F55BE}"
+              DTS:DTSID="{D2D5B0D5-E7B6-4491-A838-D66E2AF3061F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -545,7 +549,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Chicago"
-              DTS:DTSID="{76BBE1CE-D26E-4DAB-82DE-F920E880EBD2}"
+              DTS:DTSID="{B34219D8-9CDA-4C26-B9FF-1C4135EA12B7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -554,7 +558,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nashville"
-              DTS:DTSID="{8A224ACF-E2F0-4CCC-998C-4BA714914953}"
+              DTS:DTSID="{85D26679-0945-4450-B7F9-B4F954BE2DC9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -563,7 +567,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Indianapolis"
-              DTS:DTSID="{05443CEE-9A0C-4BAB-A2E8-CCE8D09C50C3}"
+              DTS:DTSID="{9113C389-A9F0-4E19-9D63-817D8A031461}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -572,7 +576,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Atlanta"
-              DTS:DTSID="{0B073E81-FC0D-4C77-A6DB-3380BD6F02B3}"
+              DTS:DTSID="{0DEA2B10-361E-4AB8-A195-C609DA723A10}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -581,7 +585,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Detroit"
-              DTS:DTSID="{967427EC-A029-41C9-8C9A-8743F958F247}"
+              DTS:DTSID="{C8E0AB72-383C-4DCD-A15C-667A9D9070C0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -590,7 +594,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Jacksonville"
-              DTS:DTSID="{51A2494D-1103-4FCB-93B0-C2B350D443D7}"
+              DTS:DTSID="{53A05E6D-17B9-4335-970C-08A82160FBE2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -599,7 +603,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Charlotte"
-              DTS:DTSID="{B1A87581-614F-4B25-BB12-FA99E3014028}"
+              DTS:DTSID="{A88832B4-3446-49D4-8E3A-5F1AEEA912D0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -608,7 +612,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Miami"
-              DTS:DTSID="{D70234F2-13D4-4FE9-AEE9-956496BFA791}"
+              DTS:DTSID="{3BAA84D9-2DE5-45F6-BF98-96F2CDBF7C94}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -617,7 +621,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pittsburgh"
-              DTS:DTSID="{D130F3BC-FB4A-4806-9867-44ED17DA3090}"
+              DTS:DTSID="{13BAE057-44A5-4A15-A08C-11B887187624}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -626,7 +630,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Toronto"
-              DTS:DTSID="{C3AA83DF-E8D1-4128-8806-2E6C615111D4}"
+              DTS:DTSID="{2A0D1BD8-F09F-4603-B49A-428B8E4717F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -635,7 +639,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Philadelphia"
-              DTS:DTSID="{C1AC119C-2510-4502-93EC-1325980C46B8}"
+              DTS:DTSID="{DE81B6A9-7553-4938-B836-711F295B2BFE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -644,7 +648,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="New York"
-              DTS:DTSID="{FAF0FA80-F18F-4490-9385-377A176E5DEB}"
+              DTS:DTSID="{DCFB128B-4BA9-4AF9-BA53-36A0A72348AA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -653,7 +657,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Montreal"
-              DTS:DTSID="{2D6C2466-165B-477D-8EFF-E2C8F93F781F}"
+              DTS:DTSID="{0146871B-5B34-4B5E-96BD-D078B7DBE263}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -662,7 +666,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Boston"
-              DTS:DTSID="{80DB9C5D-06FC-4520-852A-EE558922D543}"
+              DTS:DTSID="{53AA3514-5678-4BD2-B559-0535612D236F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -671,7 +675,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Beersheba"
-              DTS:DTSID="{48F05B2E-98F0-4EA6-9F2E-357885FF0403}"
+              DTS:DTSID="{BEF939B7-34FB-439A-8AC1-7284D552DD6F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -680,7 +684,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Tel Aviv District"
-              DTS:DTSID="{1B9CD0BB-9D54-4007-9A88-40A8E675C553}"
+              DTS:DTSID="{1BBCD549-49FA-4AC9-9319-71D896A8C0A6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -689,7 +693,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Eilat"
-              DTS:DTSID="{30A9BDA9-41CE-4A8E-9792-04538D138F84}"
+              DTS:DTSID="{8D5BAAE7-E2B9-4B1A-9255-ADF8EE385F6F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -698,7 +702,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Haifa"
-              DTS:DTSID="{4340DAA5-89B9-4FD6-A77F-1C866EAB943C}"
+              DTS:DTSID="{F9564DF5-4E45-454B-90A6-2F13D1E72720}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -707,7 +711,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nahariyya"
-              DTS:DTSID="{8FC9153D-EAC8-4377-A8AF-1C77064DA240}"
+              DTS:DTSID="{1EAE3A6A-EDFA-4FE9-A53F-D0B469950955}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -716,7 +720,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Jerusalem"
-              DTS:DTSID="{3C5DE78B-77BC-4A82-AC59-67B501274D87}"
+              DTS:DTSID="{18F363D3-B255-4644-BBAC-F5E92AE9907A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -727,6 +731,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{D7F0A63D-46E1-4F79-97BE-AE33BCB18BB9}"
       DTS:ObjectName="RedLight_CSV">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFolderFull] +  @[User::RedLightViolationFileName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -736,7 +742,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Code\advanced_bi\utils\2016-12-31\RedLightViolation.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-03\\RedLightViolation.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -745,7 +751,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="INTERSECTION"
-              DTS:DTSID="{84C461E2-398E-48F7-856F-73F7D8B90F58}"
+              DTS:DTSID="{08C5A8EA-1292-441F-8BD9-96FF6E059B0A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -754,7 +760,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CAMERA ID"
-              DTS:DTSID="{53CB3F43-2CD4-439C-BAFA-A9D6467810DF}"
+              DTS:DTSID="{475DD2BB-09DB-47BC-BAE8-46A1EA3430B2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -763,7 +769,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ADDRESS"
-              DTS:DTSID="{CC8FDFE1-C1FB-4373-8D3C-C8AEDB0D66CE}"
+              DTS:DTSID="{AD4B258B-E44C-4BCF-9BE1-2572234D4390}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -772,7 +778,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="VIOLATION DATE"
-              DTS:DTSID="{06EA1408-FCF7-4C76-A724-937B2099D9E1}"
+              DTS:DTSID="{12BBC7D6-5F01-42D9-83F4-0FBA5720883B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -781,7 +787,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="VIOLATIONS"
-              DTS:DTSID="{60B25762-CD1A-4D94-A875-7F52B76D74A1}"
+              DTS:DTSID="{C6A679F4-B2F2-4C23-8895-15DE5A5DD085}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -790,7 +796,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="X COORDINATE"
-              DTS:DTSID="{AFB21BB2-4FEB-4C22-A92B-43D974D78A5F}"
+              DTS:DTSID="{63DEA73C-1D24-4635-8340-F37089B70E34}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -799,7 +805,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Y COORDINATE"
-              DTS:DTSID="{641DB171-C96F-4DEA-9940-86A49D28D2E1}"
+              DTS:DTSID="{9E1FC9F4-6503-4510-BC28-B35B65E53B98}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -808,7 +814,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LATITUDE"
-              DTS:DTSID="{6F6D5143-14BB-4BB2-B600-79E7A5C4D5F7}"
+              DTS:DTSID="{318E583E-CC1C-4AE1-AEC9-C4337B9E755E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -817,7 +823,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LONGITUDE"
-              DTS:DTSID="{BE8CA8C6-C40D-4C96-9F05-D24791FD813E}"
+              DTS:DTSID="{9AD5B8F4-BE06-4C5E-B2C7-D8C08F04FFF7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -826,7 +832,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LOCATION"
-              DTS:DTSID="{B5051D3E-F83A-4938-8A6F-47459406B3B3}"
+              DTS:DTSID="{84DA0313-0B02-4D5C-AFAF-6AF65295BEAB}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -837,6 +843,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{6A27A66B-BC0A-43B5-AEBB-CA4FB4331B18}"
       DTS:ObjectName="SpeedViolation_CSV">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFolderFull] +  @[User::SpeedViolationFileName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -846,7 +854,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Code\advanced_bi\utils\2016-12-31\SpeedViolation.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-03\\SpeedViolation.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -855,7 +863,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ADDRESS"
-              DTS:DTSID="{0D4DC234-848C-4E46-AD11-551D3FC9EA99}"
+              DTS:DTSID="{DEC0752A-2791-40AE-A912-02C81C828555}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -864,7 +872,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="CAMERA ID"
-              DTS:DTSID="{B5071F67-9293-4F30-8D74-95BF854D2007}"
+              DTS:DTSID="{63FB6AB7-038C-4C81-8F6B-C920D48E4B12}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -873,7 +881,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="VIOLATION DATE"
-              DTS:DTSID="{44040B63-901A-454A-A26C-06D49B22442B}"
+              DTS:DTSID="{16607987-97C7-4F3D-A331-DA117D42EF94}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -882,7 +890,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="VIOLATIONS"
-              DTS:DTSID="{75676F7D-1157-42B3-AE71-AA81D1A7EEEE}"
+              DTS:DTSID="{CD109F94-0A53-4E23-B544-393850D97660}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -891,7 +899,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="X COORDINATE"
-              DTS:DTSID="{3B47D345-E7CC-496F-85B2-E445E2D1E26B}"
+              DTS:DTSID="{5BA65C6A-6F27-44A8-9582-A155C6C0F96B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -900,7 +908,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Y COORDINATE"
-              DTS:DTSID="{ACB883C1-9EF0-4533-9D7B-10D3B4214C36}"
+              DTS:DTSID="{1E13ABE4-4EE6-4A00-9C68-511CB05D7349}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -909,7 +917,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LATITUDE"
-              DTS:DTSID="{E7C4D852-0DF2-4720-AA9D-E11CE7898634}"
+              DTS:DTSID="{D4F4360D-612A-4F70-A39E-D66CC61CA15E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -918,7 +926,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LONGITUDE"
-              DTS:DTSID="{BDD2D75A-BDFF-4FAF-8A4D-9008C86ED9E7}"
+              DTS:DTSID="{E28B96C1-DBF9-4672-B838-E0F8F49FA8F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -927,7 +935,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LOCATION"
-              DTS:DTSID="{95E5F6F8-7F92-4367-A13F-7A97A9B1E9F2}"
+              DTS:DTSID="{8FB1EA6D-7744-46F6-AD8D-17F51CF25937}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -938,6 +946,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{E8152F9B-D657-45B4-9D1D-17CEEBE3FB2B}"
       DTS:ObjectName="Temperature_CSV">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFolderFull] +  @[User::TemperatureFileName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -947,7 +957,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Code\advanced_bi\utils\2016-12-31\Temperature.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-03\\Temperature.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -956,7 +966,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="datetime"
-              DTS:DTSID="{FF2617FF-372D-430C-90A9-94B8B13D3F5F}"
+              DTS:DTSID="{E96787A4-166C-4A10-B2CB-E4C59BF7D45F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -965,7 +975,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vancouver"
-              DTS:DTSID="{CFABC33E-30A1-4431-B512-6037FFAD34B9}"
+              DTS:DTSID="{3F9B9187-140E-4976-A874-FBD969C2FEFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -974,7 +984,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Portland"
-              DTS:DTSID="{64A972CF-7EA1-4215-B1D5-204A1A4A0D04}"
+              DTS:DTSID="{FAE5BFFC-CDD9-4E43-A57E-2D3169C81806}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -983,7 +993,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Francisco"
-              DTS:DTSID="{0B3796E8-A292-4936-9982-0C4277E22609}"
+              DTS:DTSID="{7BF44C85-8187-4D00-8B76-F58A3D20EEBB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -992,7 +1002,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Seattle"
-              DTS:DTSID="{2C3DAD07-D126-4EE7-9AA9-5F2C5AF1421E}"
+              DTS:DTSID="{D5B4220A-F405-45AC-8B5F-464662C22053}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1001,7 +1011,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Los Angeles"
-              DTS:DTSID="{1E6D727F-EFFD-444D-81A8-52CBE1E0CD0B}"
+              DTS:DTSID="{E5F04BD9-781F-4B52-AF69-31D8CDB903AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1010,7 +1020,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Diego"
-              DTS:DTSID="{CBB49F10-F9ED-40D7-9D06-353FCC848D1E}"
+              DTS:DTSID="{258F2633-BFF5-4F18-982B-AD1F08670A4B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1019,7 +1029,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Las Vegas"
-              DTS:DTSID="{812A7993-8762-4E18-B9D3-536524990E54}"
+              DTS:DTSID="{F1E0E209-5A24-4DD8-BFD3-662A7F793695}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1028,7 +1038,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Phoenix"
-              DTS:DTSID="{9B42F0BA-F110-4A62-88C9-BADF4F45F96A}"
+              DTS:DTSID="{5F1B5146-AAFC-4919-BD38-8F12CD8D3D6C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1037,7 +1047,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Albuquerque"
-              DTS:DTSID="{9173D7BD-01D1-41F2-8385-7B65630B8C37}"
+              DTS:DTSID="{2854B94F-4AE7-4832-8D31-74498C3B220F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1046,7 +1056,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Denver"
-              DTS:DTSID="{1AB8B981-4C30-4C7B-B2CD-290B424E6A6D}"
+              DTS:DTSID="{BCCCF7C3-9ED1-4258-9DAC-E263E5054DB6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1055,7 +1065,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Antonio"
-              DTS:DTSID="{E755931C-3CD2-4F42-A463-366EBC17BF0B}"
+              DTS:DTSID="{40077B28-B49C-47D1-8489-F0B00B5E36B7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1064,7 +1074,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dallas"
-              DTS:DTSID="{D3A6ECA5-7EFA-46F6-B604-A6B90433E590}"
+              DTS:DTSID="{9B1AC828-FDC9-4C61-8858-D1A30833251F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1073,7 +1083,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Houston"
-              DTS:DTSID="{2AF6BB7D-F474-4973-9F29-BE7A2DC2F63E}"
+              DTS:DTSID="{EFF93EB3-6927-4DB5-ACE8-2B28E03F791D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1082,7 +1092,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Kansas City"
-              DTS:DTSID="{B26043C5-43D8-4C3A-8D10-EF8C38A83BB1}"
+              DTS:DTSID="{54FA0A72-FCE6-4643-BEAD-61B1EA49CA6C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1091,7 +1101,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Minneapolis"
-              DTS:DTSID="{7AE99E4F-2F3A-4243-B9A9-FB5CCA2B5F6F}"
+              DTS:DTSID="{0488D920-986F-450B-8055-1328DC446A0D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1100,7 +1110,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Saint Louis"
-              DTS:DTSID="{8730D332-FFB0-464B-A058-003EBD0FDDE3}"
+              DTS:DTSID="{C1207167-80A8-4C3D-8286-1B237BF9CF5E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1109,7 +1119,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Chicago"
-              DTS:DTSID="{B413AAE2-C86F-4FB3-80B0-306222D40CFE}"
+              DTS:DTSID="{7C94EB4F-61E0-4610-B047-0D71865C4EC8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1118,7 +1128,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nashville"
-              DTS:DTSID="{589A7973-D0BE-461F-AF8A-C132434E8B90}"
+              DTS:DTSID="{9901A9B0-BC38-4844-B1F2-64BB6B71F01D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1127,7 +1137,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Indianapolis"
-              DTS:DTSID="{3738FB69-6B77-444B-BB52-FF7554916058}"
+              DTS:DTSID="{82FCC5AB-8A5C-4CEC-B3F9-613AFBF1E084}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1136,7 +1146,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Atlanta"
-              DTS:DTSID="{B3AC87DC-65AD-48D0-B0BB-60AC4A7F38A3}"
+              DTS:DTSID="{FC2299B4-99FA-4FAE-BDFE-DBEBDD420D05}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1145,7 +1155,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Detroit"
-              DTS:DTSID="{B8B8539C-6C1F-4D59-A34C-080ABA097897}"
+              DTS:DTSID="{347198BB-87CD-4A28-B225-5702D49F14FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1154,7 +1164,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Jacksonville"
-              DTS:DTSID="{22498262-36AC-4982-ABE0-B1FDD6ED58C1}"
+              DTS:DTSID="{A918AB0E-7EAA-48A1-967A-72E852CA09BF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1163,7 +1173,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Charlotte"
-              DTS:DTSID="{22A8C3FE-C9FA-41D2-8F43-7CCE0876FAFA}"
+              DTS:DTSID="{2E5B4C53-A31B-464F-AB7F-BC4FDC52DF06}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1172,7 +1182,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Miami"
-              DTS:DTSID="{7FE13670-D005-4760-A837-207857BAE02A}"
+              DTS:DTSID="{57F5612C-30C8-41E9-9645-625D946E9E81}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1181,7 +1191,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pittsburgh"
-              DTS:DTSID="{250324B1-BA15-4752-A101-583567AC10F2}"
+              DTS:DTSID="{3EA9BD31-5847-410D-A081-828E2063DA1C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1190,7 +1200,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Toronto"
-              DTS:DTSID="{307FDD37-3598-48CE-A7E5-41951A6BCB69}"
+              DTS:DTSID="{94973F5E-9F63-4562-87F1-1F20DBE29F9E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1199,7 +1209,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Philadelphia"
-              DTS:DTSID="{603A0B38-E4E9-4282-8F2A-40B629019E5C}"
+              DTS:DTSID="{0318A30B-B4C5-4FF5-9E01-001DA483C1F4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1208,7 +1218,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="New York"
-              DTS:DTSID="{9F084751-E205-4E02-AE83-2F1EB3F667D0}"
+              DTS:DTSID="{8AAF1347-3FB5-49B1-B8AE-73CE52AA4DFA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1217,7 +1227,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Montreal"
-              DTS:DTSID="{02CF1E05-469D-4A09-834A-B3EC32CB21CF}"
+              DTS:DTSID="{8E5D03BA-617C-4D43-A90F-B279EBB02412}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1226,7 +1236,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Boston"
-              DTS:DTSID="{856C9AD7-8111-42C1-AED9-D5BF4078697E}"
+              DTS:DTSID="{938631B8-7743-438A-AD52-93FA7F5F68F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1235,7 +1245,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Beersheba"
-              DTS:DTSID="{38A94C01-E4DD-4C57-8FB8-4B46B3B4D794}"
+              DTS:DTSID="{22579260-D3E8-4427-869D-1B1ED5F21AF0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1244,7 +1254,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Tel Aviv District"
-              DTS:DTSID="{2B403B45-B9ED-4DBA-8449-6A1010AACCE0}"
+              DTS:DTSID="{F7C6D504-0C30-44D6-9E5A-4341E057D386}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1253,7 +1263,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Eilat"
-              DTS:DTSID="{D233F8B2-1B4C-4CBE-8291-5C9E62826AE0}"
+              DTS:DTSID="{6253E062-D863-4F2C-86AD-7C76F619DE80}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1262,7 +1272,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Haifa"
-              DTS:DTSID="{14D85355-C924-4E4B-BA41-A80AB6E4A416}"
+              DTS:DTSID="{4032EC28-17F2-4935-8F78-5487C4934744}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1271,7 +1281,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nahariyya"
-              DTS:DTSID="{69B1B364-1DD0-4BD3-BDF1-B46E4783961D}"
+              DTS:DTSID="{C47AD89E-CAF4-46EA-BE3E-92713BCF4345}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1280,7 +1290,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Jerusalem"
-              DTS:DTSID="{AB50E1B6-2099-47A8-9C4D-7EEDF01A0955}"
+              DTS:DTSID="{FB48FC62-F456-48C0-8303-0906674A14CA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1291,6 +1301,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{EBA94AAF-8780-4C97-8C92-2F262DE06084}"
       DTS:ObjectName="WinSpeed_CSV">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::SourceFolderFull] +  @[User::WindSpeedFileName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -1300,7 +1312,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="E:\Code\advanced_bi\utils\2016-12-31\WindSpeed.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-01-03\\WindSpeed.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1309,7 +1321,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="datetime"
-              DTS:DTSID="{7BD7353C-DE2D-4C9E-8937-9B6A4D33EE1D}"
+              DTS:DTSID="{0DA25078-5187-460E-9B1B-26E0F97E6DA1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1318,7 +1330,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vancouver"
-              DTS:DTSID="{2F91FF44-EC94-4E47-BBE0-F3E240880512}"
+              DTS:DTSID="{1BC84FCE-F400-4536-9E7C-D5FF2B1CDB9D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1327,7 +1339,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Portland"
-              DTS:DTSID="{F646108C-93A6-49C0-A54F-05A98CF21E8B}"
+              DTS:DTSID="{0670EB68-1994-4EE7-80BE-A96823EC13C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1336,7 +1348,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Francisco"
-              DTS:DTSID="{35DDD975-3889-4E06-94CD-37FF3430DA03}"
+              DTS:DTSID="{3FE0CF09-4003-457D-88E5-F133EF65BCA5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1345,7 +1357,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Seattle"
-              DTS:DTSID="{4BC625BE-E2CF-491E-BC45-E19D77C41F26}"
+              DTS:DTSID="{CEA13797-3C9C-49EC-8A5C-989A485E92D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1354,7 +1366,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Los Angeles"
-              DTS:DTSID="{45E29BE4-4436-415A-BB9D-76F7DFB707F0}"
+              DTS:DTSID="{85D8E397-621C-4E20-884E-3C32306980F9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1363,7 +1375,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Diego"
-              DTS:DTSID="{CCC0A13A-2DCF-438B-BDAB-A4A7AE86FCC5}"
+              DTS:DTSID="{77AE6FE0-7F34-4C38-9653-AD0A0616EA39}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1372,7 +1384,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Las Vegas"
-              DTS:DTSID="{2C7DE86A-5A18-4B44-8CAE-4DC7F201F09E}"
+              DTS:DTSID="{CF2F51A4-0956-49C5-BFA2-5CF5E0A2D14C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1381,7 +1393,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Phoenix"
-              DTS:DTSID="{FA671CF0-8361-43BC-8FC1-5273F902E702}"
+              DTS:DTSID="{AA0CE886-58BC-454D-91B0-03D39E67BFA7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1390,7 +1402,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Albuquerque"
-              DTS:DTSID="{43D6DAD5-1609-45B9-A05B-524FF5A3B006}"
+              DTS:DTSID="{163E7CBD-7C89-46F1-AC44-C76C9D0220DC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1399,7 +1411,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Denver"
-              DTS:DTSID="{4A0CD229-C71F-4124-8956-0344070CA354}"
+              DTS:DTSID="{9F0167B2-8439-4DAB-92F3-A260DF49ECAC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1408,7 +1420,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="San Antonio"
-              DTS:DTSID="{B0822017-B2AA-4601-BE64-B5F4B5C91642}"
+              DTS:DTSID="{6C92CBE2-7B32-4CCA-AEE6-5047F8FB8DCA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1417,7 +1429,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Dallas"
-              DTS:DTSID="{7B6E8DD3-7CA1-4884-8C8C-91138FBC9C2E}"
+              DTS:DTSID="{3D9A4658-3B30-48B6-A0BD-A15B9FECE06D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1426,7 +1438,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Houston"
-              DTS:DTSID="{0AC3F24E-8726-4861-BF7B-1705F62DA567}"
+              DTS:DTSID="{BC521052-79F8-4566-8A43-373AA30519C7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1435,7 +1447,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Kansas City"
-              DTS:DTSID="{D2EBF76B-2020-4AD2-9EC0-94F07F233AB0}"
+              DTS:DTSID="{27D05AC3-D76C-4ECF-98F3-422CAC7720D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1444,7 +1456,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Minneapolis"
-              DTS:DTSID="{9AACFDFE-C083-4026-BBFE-274EF8E2497C}"
+              DTS:DTSID="{9BFB456A-90DB-4808-B103-D5DA41928F79}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1453,7 +1465,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Saint Louis"
-              DTS:DTSID="{E8C84C4D-19D4-455F-8D77-A965ACCF2CA4}"
+              DTS:DTSID="{5DE58A13-FA83-4762-A1D2-97F6F9AB23DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1462,7 +1474,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Chicago"
-              DTS:DTSID="{268B7CC3-5876-452F-9318-D69EB93A69D3}"
+              DTS:DTSID="{76260113-581F-47EB-991E-110A2619CF1B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1471,7 +1483,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nashville"
-              DTS:DTSID="{34433272-752A-4B9C-97F3-075DEE46DDE2}"
+              DTS:DTSID="{4A0882E1-4C91-4390-9BE5-A863EF746A80}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1480,7 +1492,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Indianapolis"
-              DTS:DTSID="{AC7E0269-3BAF-48E7-A801-2223829B19E1}"
+              DTS:DTSID="{6FB11C21-EED4-48CE-8005-E3F68CA8E88F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1489,7 +1501,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Atlanta"
-              DTS:DTSID="{050DB8F8-9DEB-4889-9CB1-817E891941BB}"
+              DTS:DTSID="{67B0430F-FB62-4758-AB19-CC7ED1990BCB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1498,7 +1510,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Detroit"
-              DTS:DTSID="{B12D7094-557B-4B84-844E-B736456E4D38}"
+              DTS:DTSID="{71C8F695-94A6-44A9-ABC3-58150B786539}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1507,7 +1519,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Jacksonville"
-              DTS:DTSID="{951CF152-DF89-4EE8-966F-B6EA9947E0BF}"
+              DTS:DTSID="{D7D6ED12-5E25-44D7-8942-BB07A2FB5B33}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1516,7 +1528,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Charlotte"
-              DTS:DTSID="{E80EB88B-4FD9-4A82-806A-70707CFD4836}"
+              DTS:DTSID="{AF9123CF-BBEA-4354-BC04-6E420A0B8AA2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1525,7 +1537,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Miami"
-              DTS:DTSID="{46950289-4A85-4207-8139-8938314B20CA}"
+              DTS:DTSID="{12381468-B7E0-465F-BC93-B6D21B4456F1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1534,7 +1546,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pittsburgh"
-              DTS:DTSID="{919D49B5-3B8B-499F-8DC5-21F751CE39BE}"
+              DTS:DTSID="{D6D4590F-8AA3-4D64-871D-6C0D9D67A8DC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1543,7 +1555,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Toronto"
-              DTS:DTSID="{635390C3-A040-4A29-B7EF-E9C635BCBC4C}"
+              DTS:DTSID="{22248D8F-1D8C-4847-8AEB-A6843C04B579}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1552,7 +1564,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Philadelphia"
-              DTS:DTSID="{0682FD58-7E5C-46C3-9621-8FF58FE3E61B}"
+              DTS:DTSID="{482ACE94-3BF7-4D91-8D15-261E819DB8B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1561,7 +1573,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="New York"
-              DTS:DTSID="{3D1A04FF-CEA9-48C1-A02D-F5BE9357EEB5}"
+              DTS:DTSID="{50AE38B4-5EBB-4660-A208-9A2BCC38C25F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1570,7 +1582,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Montreal"
-              DTS:DTSID="{DD355650-2B32-46A0-A04B-E3BF082B9302}"
+              DTS:DTSID="{F3751C15-42C2-4879-9326-7E647FF3FCB5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1579,7 +1591,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Boston"
-              DTS:DTSID="{D4F2D597-C9E9-4920-AB51-B47689A57073}"
+              DTS:DTSID="{B8B24CE5-59D6-4513-BC02-28522A63A26B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1588,7 +1600,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Beersheba"
-              DTS:DTSID="{68BE8168-E7B5-427F-A4F0-2FA2E600DA55}"
+              DTS:DTSID="{EF246BAD-C533-47F9-B9D5-93C6D66FF18F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1597,7 +1609,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Tel Aviv District"
-              DTS:DTSID="{5546E7F3-D6F6-4AA1-86FE-CD19C2DCB39F}"
+              DTS:DTSID="{E0D617F9-ACC3-4519-BCB0-6DA262F993A8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1606,7 +1618,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Eilat"
-              DTS:DTSID="{50106E87-AE6E-4497-96F6-E3B54CDF895A}"
+              DTS:DTSID="{5B4466B0-DFBC-4774-BDD9-5DAFD77E4B3C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1615,7 +1627,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Haifa"
-              DTS:DTSID="{695FCD50-5DD5-4B3D-9DD8-3B871E5960CF}"
+              DTS:DTSID="{0E5952BB-87A0-4970-9973-12CA9E34765A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1624,7 +1636,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nahariyya"
-              DTS:DTSID="{7F55FFBC-84D3-4579-BE33-580BB507DACE}"
+              DTS:DTSID="{33B821A1-ADE2-486C-BE9D-910AB651966A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1633,14 +1645,78 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Jerusalem"
-              DTS:DTSID="{28BC4DE7-FBA4-4E5B-8DD5-928E339F568D}"
+              DTS:DTSID="{074481A3-C65D-4EA3-8274-428153B70BA2}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
-  <DTS:Variables />
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1D045D40-C61B-41F1-95EA-1E037C7C3FEB}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="HuminityFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">Humidity.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AD1793EC-503D-444B-ACB0-06FE481C87DE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PressureFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">Pressure.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0FC45351-303C-45D7-935E-210402238A49}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="RedLightViolationFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">RedLightViolation.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{796CD139-4EE9-4A23-9B10-E12B2B69B081}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SourceFolderFull">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\\Temp\\2017-01-03\\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0E035416-7BCE-4E1B-BF45-C3E873787F84}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SpeedViolationFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">SpeedViolation.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E955C0D3-B82D-493D-B795-F8C2013C2A3B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TemperatureFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">Temperature.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{35801528-2ACA-464B-9B7A-2E87B16BD060}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="WindSpeedFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">WindSpeed.csv</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\DFT_Huminity"
@@ -10481,7 +10557,7 @@ where [refTable].[datetime] = ?</property>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2016-12-31';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2017-01-03';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -10548,31 +10624,31 @@ where [refTable].[datetime] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="146,42"
+          Size="145.6,41.6"
           Id="Package\DFT_Huminity"
           TopLeft="123,40" />
         <NodeLayout
-          Size="144,42"
+          Size="144,41.6"
           Id="Package\DFT_Pressure"
           TopLeft="310,42" />
         <NodeLayout
-          Size="186,42"
+          Size="185.6,41.6"
           Id="Package\DFT_RedLightViolation"
           TopLeft="305,129" />
         <NodeLayout
-          Size="181,42"
+          Size="180.8,41.6"
           Id="Package\DFT_SpeedViolation"
           TopLeft="514,130" />
         <NodeLayout
-          Size="165,42"
+          Size="164.8,41.6"
           Id="Package\DFT_Temperature"
           TopLeft="486,42" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\DFT_Windspeed"
           TopLeft="125,131" />
         <NodeLayout
-          Size="163,42"
+          Size="163.2,41.6"
           Id="Package\Execute SQL Task"
           TopLeft="127,219" />
         <EdgeLayout
@@ -10740,15 +10816,15 @@ where [refTable].[datetime] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="115,42"
+          Size="115.2,41.6"
           Id="Package\DFT_Huminity\Lookup"
           TopLeft="289,147" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\DFT_Huminity\Flat File Source"
           TopLeft="265,70" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\DFT_Huminity\OLE DB Destination"
           TopLeft="266,240" />
         <EdgeLayout
@@ -10794,7 +10870,9 @@ where [refTable].[datetime] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10806,7 +10884,7 @@ where [refTable].[datetime] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10816,7 +10894,7 @@ where [refTable].[datetime] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10842,15 +10920,15 @@ where [refTable].[datetime] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="115,42"
+          Size="115.2,41.6"
           Id="Package\DFT_Pressure\Lookup"
           TopLeft="251,132" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\DFT_Pressure\Flat File Source"
           TopLeft="226,56" />
         <NodeLayout
-          Size="177,42"
+          Size="176.8,41.6"
           Id="Package\DFT_Pressure\OLE DB Destination"
           TopLeft="215,233" />
         <EdgeLayout
@@ -10896,7 +10974,9 @@ where [refTable].[datetime] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -10908,7 +10988,7 @@ where [refTable].[datetime] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -10918,7 +10998,7 @@ where [refTable].[datetime] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -10944,11 +11024,11 @@ where [refTable].[datetime] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="177,42"
+          Size="176.8,41.6"
           Id="Package\DFT_RedLightViolation\OLE DB Destination"
           TopLeft="371,235" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\DFT_RedLightViolation\Flat File Source"
           TopLeft="385,126" />
         <EdgeLayout
@@ -10993,7 +11073,7 @@ where [refTable].[datetime] = ?</property>
     design-time-name="Package\DFT_SpeedViolation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="177,42"
           Id="Package\DFT_SpeedViolation\OLE DB Destination"
@@ -11021,7 +11101,9 @@ where [refTable].[datetime] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11100,7 +11182,9 @@ where [refTable].[datetime] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11112,7 +11196,7 @@ where [refTable].[datetime] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -11122,7 +11206,7 @@ where [refTable].[datetime] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11202,7 +11286,9 @@ where [refTable].[datetime] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11214,7 +11300,7 @@ where [refTable].[datetime] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -11224,7 +11310,7 @@ where [refTable].[datetime] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

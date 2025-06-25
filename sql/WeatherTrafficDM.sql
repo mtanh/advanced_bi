@@ -3,7 +3,7 @@ GO
 
 CREATE TABLE DimDate (
   DateKey INT IDENTITY(1,1) PRIMARY KEY,
-  Date DATE,
+  Date DATE UNIQUE NOT NULL,
   DayNumberOfWeek INT,
   DayNumberOfMonth INT,
   DayNumberOfYear INT,
@@ -38,7 +38,7 @@ CREATE TABLE DimAddress (
 
 CREATE TABLE DimWeather (
   WeatherKey INT IDENTITY(1,1) PRIMARY KEY,
-  WeatherDate DATE,
+  WeatherDate DATE NOT NULL,
     
   MaxHumidity FLOAT,
   MinHumidity FLOAT,
@@ -63,7 +63,8 @@ CREATE TABLE DimWeather (
   UpdateTimeStamp DATETIME NULL DEFAULT NULL,
     
   SourceSystemCode INT NULL,
-  SourceFolder VARCHAR(50) NULL
+  SourceFolder VARCHAR(50) NULL,
+  FOREIGN KEY (WeatherDate) REFERENCES DimDate(Date)
 );
 
 CREATE TABLE FactTrafficViolation (
@@ -84,3 +85,8 @@ CREATE TABLE FactTrafficViolation (
   FOREIGN KEY (WeatherKey) REFERENCES DimWeather(WeatherKey),
   FOREIGN KEY (AddressKey) REFERENCES DimAddress(AddressKey)
 );
+
+--drop table [dbo].[FactTrafficViolation];
+--drop table [dbo].[DimAddress];
+--drop table [dbo].[DimDate];
+--drop table [dbo].[DimWeather];
