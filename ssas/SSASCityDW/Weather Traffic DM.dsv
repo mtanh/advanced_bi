@@ -1,0 +1,262 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a02170b3-da36-4c65-bea2-b8343553ef7e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Weather Traffic DM</ID>
+  <Name>Weather Traffic DM</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Weather Traffic DM</DataSourceID>
+  <Schema>
+    <xs:schema id="Weather_x0020_Traffic_x0020_DM" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Weather_x0020_Traffic_x0020_DM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="6d241318-3187-467f-ae68-30123158fe35">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_FactTrafficViolation" msprop:DbTableName="FactTrafficViolation" msprop:FriendlyName="FactTrafficViolation" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="f52348c6-f572-44bd-a7f1-590398f9b492">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DateKey" msprop:FriendlyName="DateKey" msprop:DbColumnName="DateKey" msprop:design-time-name="3716bc56-3120-4710-b0fb-ebf5c234e8b9" type="xs:int" />
+                  <xs:element name="WeatherKey" msprop:FriendlyName="WeatherKey" msprop:DbColumnName="WeatherKey" msprop:design-time-name="f862732d-3014-46d8-97ec-01049c186677" type="xs:int" />
+                  <xs:element name="AddressKey" msprop:FriendlyName="AddressKey" msprop:DbColumnName="AddressKey" msprop:design-time-name="f9787743-80f1-4344-9c1c-e8643a3d9419" type="xs:int" />
+                  <xs:element name="RedLightViolations" msprop:FriendlyName="RedLightViolations" msprop:DbColumnName="RedLightViolations" msprop:design-time-name="00548d0e-353c-465f-8eaa-5737a1506865" type="xs:int" minOccurs="0" />
+                  <xs:element name="SpeedingViolations" msprop:FriendlyName="SpeedingViolations" msprop:DbColumnName="SpeedingViolations" msprop:design-time-name="82db37c1-93d6-43f3-9837-33104824ef80" type="xs:int" minOccurs="0" />
+                  <xs:element name="TotalViolations" msprop:FriendlyName="TotalViolations" msprop:DbColumnName="TotalViolations" msprop:design-time-name="10128274-fb63-49b6-b263-cf853691394a" type="xs:int" minOccurs="0" />
+                  <xs:element name="CreateTimeStamp" msprop:FriendlyName="CreateTimeStamp" msprop:DbColumnName="CreateTimeStamp" msprop:design-time-name="39028e0c-58da-490b-9568-471a5f4d4f50" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdateTimeStamp" msprop:FriendlyName="UpdateTimeStamp" msprop:DbColumnName="UpdateTimeStamp" msprop:design-time-name="13dbf72c-ce94-4ebd-9023-50f19a0aba3a" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="SourceSystemCode" msprop:FriendlyName="SourceSystemCode" msprop:DbColumnName="SourceSystemCode" msprop:design-time-name="4ba9f2fc-10f0-4be8-a6f2-916d90023066" type="xs:int" minOccurs="0" />
+                  <xs:element name="SourceFolder" msprop:FriendlyName="SourceFolder" msprop:DbColumnName="SourceFolder" msprop:design-time-name="784aa5ec-a8e8-4773-a13f-0f2164fcd8ab" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimWeather" msprop:DbTableName="DimWeather" msprop:FriendlyName="DimWeather" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="2c6a5f24-cf3b-46cb-a840-675a84341c8d">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="WeatherKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="WeatherKey" msprop:DbColumnName="WeatherKey" msprop:design-time-name="ce21160e-b667-4b9f-8a0b-c33e6efea09a" type="xs:int" />
+                  <xs:element name="WeatherDate" msprop:FriendlyName="WeatherDate" msprop:DbColumnName="WeatherDate" msprop:design-time-name="22381cc1-dbbe-4782-b16d-b9aea0f5149e" type="xs:dateTime" />
+                  <xs:element name="AverageHumidity" msprop:FriendlyName="AverageHumidity" msprop:DbColumnName="AverageHumidity" msprop:design-time-name="2c24ed05-e273-4240-9aad-c6b780c16e22" type="xs:double" minOccurs="0" />
+                  <xs:element name="AveragePressure" msprop:FriendlyName="AveragePressure" msprop:DbColumnName="AveragePressure" msprop:design-time-name="ca11a287-a458-4852-bbc7-868cb0b20b7f" type="xs:double" minOccurs="0" />
+                  <xs:element name="AverageTemperature" msprop:FriendlyName="AverageTemperature" msprop:DbColumnName="AverageTemperature" msprop:design-time-name="a8fbe7df-5197-4c65-acb0-7ab8876bdc95" type="xs:double" minOccurs="0" />
+                  <xs:element name="AverageWindSpeed" msprop:FriendlyName="AverageWindSpeed" msprop:DbColumnName="AverageWindSpeed" msprop:design-time-name="01ebf226-c2db-4452-970f-0cbade133bba" type="xs:double" minOccurs="0" />
+                  <xs:element name="TemperatureRangeName" msprop:FriendlyName="TemperatureRangeName" msprop:DbColumnName="TemperatureRangeName" msprop:design-time-name="9f8fffde-0065-492c-9559-1e4dd566fa03" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HumidityLevelName" msprop:FriendlyName="HumidityLevelName" msprop:DbColumnName="HumidityLevelName" msprop:design-time-name="b1b1bac4-dfeb-4409-918b-c15d02e77f96" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PressureLevelName" msprop:FriendlyName="PressureLevelName" msprop:DbColumnName="PressureLevelName" msprop:design-time-name="7feaa6af-2cf4-4eea-a416-c440b150bc5a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WindLevelName" msprop:FriendlyName="WindLevelName" msprop:DbColumnName="WindLevelName" msprop:design-time-name="40bfb8b9-e2d1-4b00-8162-d8a83a509a08" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WeatherComfortLevel" msprop:FriendlyName="WeatherComfortLevel" msprop:DbColumnName="WeatherComfortLevel" msprop:design-time-name="e0fd1175-c05a-4b7b-95e4-87c71482f7f5" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OverallWeatherDescription" msprop:FriendlyName="OverallWeatherDescription" msprop:DbColumnName="OverallWeatherDescription" msprop:design-time-name="a4fd5a5f-d97c-4c61-a0b2-b16e06dd8767" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ComfortLevel" msprop:FriendlyName="ComfortLevel" msprop:DbColumnName="ComfortLevel" msprop:design-time-name="5356423a-3816-4151-addf-ad16023b8fde" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CreateTimeStamp" msprop:FriendlyName="CreateTimeStamp" msprop:DbColumnName="CreateTimeStamp" msprop:design-time-name="7a61fe52-f067-4479-adce-6b7367171d40" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdateTimeStamp" msprop:FriendlyName="UpdateTimeStamp" msprop:DbColumnName="UpdateTimeStamp" msprop:design-time-name="050e5714-0d90-443d-a3cf-182d74dcea63" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="SourceSystemCode" msprop:FriendlyName="SourceSystemCode" msprop:DbColumnName="SourceSystemCode" msprop:design-time-name="3bd17e68-6669-4277-947d-b974b31ef53f" type="xs:int" minOccurs="0" />
+                  <xs:element name="SourceFolder" msprop:FriendlyName="SourceFolder" msprop:DbColumnName="SourceFolder" msprop:design-time-name="fa74139c-b0c6-4c9d-b7f2-2ad559e9c3d7" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimDate" msprop:DbTableName="DimDate" msprop:FriendlyName="DimDate" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="7366359a-4d4f-4f5e-bc9a-7d2b8724cda8">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DateKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="DateKey" msprop:DbColumnName="DateKey" msprop:design-time-name="c60882f3-e473-4471-8275-349bdd10abd8" type="xs:int" />
+                  <xs:element name="Date" msprop:FriendlyName="Date" msprop:DbColumnName="Date" msprop:design-time-name="550f506d-b804-452d-80f3-63fd18471e38" type="xs:dateTime" />
+                  <xs:element name="DayNumberOfWeek" msprop:FriendlyName="DayNumberOfWeek" msprop:DbColumnName="DayNumberOfWeek" msprop:design-time-name="4538104c-ecff-4b6c-9520-c1cf57e3cad3" type="xs:int" minOccurs="0" />
+                  <xs:element name="DayNumberOfMonth" msprop:FriendlyName="DayNumberOfMonth" msprop:DbColumnName="DayNumberOfMonth" msprop:design-time-name="27954ded-fca9-4fca-8fe2-5dce6def0a96" type="xs:int" minOccurs="0" />
+                  <xs:element name="DayNumberOfYear" msprop:FriendlyName="DayNumberOfYear" msprop:DbColumnName="DayNumberOfYear" msprop:design-time-name="4e12975e-71f7-4c7a-b2d3-5736f59fcf12" type="xs:int" minOccurs="0" />
+                  <xs:element name="WeekNumberOfYear" msprop:FriendlyName="WeekNumberOfYear" msprop:DbColumnName="WeekNumberOfYear" msprop:design-time-name="00d73f64-d1cd-4b97-b1fa-83bbb90afca9" type="xs:int" minOccurs="0" />
+                  <xs:element name="DayNameOfWeek" msprop:FriendlyName="DayNameOfWeek" msprop:DbColumnName="DayNameOfWeek" msprop:design-time-name="ee49e2ec-62fa-40da-b2ac-b81a27d26206" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MonthName" msprop:FriendlyName="MonthName" msprop:DbColumnName="MonthName" msprop:design-time-name="2b2126ca-89f7-4e41-ae2c-4c9e57f168b7" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CalendarQuarter" msprop:FriendlyName="CalendarQuarter" msprop:DbColumnName="CalendarQuarter" msprop:design-time-name="3f2024ec-6b21-4b45-b3e1-80d48d0c2455" type="xs:int" minOccurs="0" />
+                  <xs:element name="CalendarYear" msprop:FriendlyName="CalendarYear" msprop:DbColumnName="CalendarYear" msprop:design-time-name="a09943a0-e465-4026-a89a-b4cd25c76f37" type="xs:int" minOccurs="0" />
+                  <xs:element name="IsWeekend" msprop:FriendlyName="IsWeekend" msprop:DbColumnName="IsWeekend" msprop:design-time-name="7bdad28c-99d5-41d0-9867-a5e58a7b5ec7" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="CreateTimeStamp" msprop:FriendlyName="CreateTimeStamp" msprop:DbColumnName="CreateTimeStamp" msprop:design-time-name="d6f4a8bc-d423-4bfa-8e6d-7f486d686d72" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdateTimeStamp" msprop:FriendlyName="UpdateTimeStamp" msprop:DbColumnName="UpdateTimeStamp" msprop:design-time-name="a26e5bbf-c7a3-4ea6-a271-55c24756bb9e" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="SourceSystemCode" msprop:FriendlyName="SourceSystemCode" msprop:DbColumnName="SourceSystemCode" msprop:design-time-name="8359e912-04a0-4f8f-85d0-bbb41f4d7b50" type="xs:int" minOccurs="0" />
+                  <xs:element name="SourceFolder" msprop:FriendlyName="SourceFolder" msprop:DbColumnName="SourceFolder" msprop:design-time-name="3a288358-4075-4073-8fbf-c08314766e78" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimAddress" msprop:DbTableName="DimAddress" msprop:FriendlyName="DimAddress" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="f55a112d-4366-478c-a664-ccec6a7e9df6">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="AddressKey" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="AddressKey" msprop:DbColumnName="AddressKey" msprop:design-time-name="fd1ad7b2-73e6-490f-b271-426345923663" type="xs:int" />
+                  <xs:element name="AddressKeyOfNds" msprop:FriendlyName="AddressKeyOfNds" msprop:DbColumnName="AddressKeyOfNds" msprop:design-time-name="059290e6-63bf-416f-a306-5c2443cab80c" type="xs:int" />
+                  <xs:element name="FullAddress" msprop:FriendlyName="FullAddress" msprop:DbColumnName="FullAddress" msprop:design-time-name="8639b008-fcce-4e26-be25-297301ae4e43" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="StreetTypeName" msprop:FriendlyName="StreetTypeName" msprop:DbColumnName="StreetTypeName" msprop:design-time-name="917e0a43-e450-4a35-8306-3bdbd0663850" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Latitude" msprop:FriendlyName="Latitude" msprop:DbColumnName="Latitude" msprop:design-time-name="51556141-beaf-4584-b09d-a47037fa5658" type="xs:double" minOccurs="0" />
+                  <xs:element name="Longitude" msprop:FriendlyName="Longitude" msprop:DbColumnName="Longitude" msprop:design-time-name="914c120b-74e0-42e6-8ba1-11f769af229f" type="xs:double" minOccurs="0" />
+                  <xs:element name="Location" msprop:FriendlyName="Location" msprop:DbColumnName="Location" msprop:design-time-name="1b7f6c51-4d96-4a99-aaac-039bea518aeb" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ValidFromDate" msprop:FriendlyName="ValidFromDate" msprop:DbColumnName="ValidFromDate" msprop:design-time-name="ad318469-bb77-4acf-810c-6816053008cd" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="ValidToDate" msprop:FriendlyName="ValidToDate" msprop:DbColumnName="ValidToDate" msprop:design-time-name="a8546274-25a5-47d8-9edf-08c595010a9b" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="IsCurrent" msprop:FriendlyName="IsCurrent" msprop:DbColumnName="IsCurrent" msprop:design-time-name="8ac318dd-f6de-4c2f-a71f-98bfdce170fb" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="CreateTimeStamp" msprop:FriendlyName="CreateTimeStamp" msprop:DbColumnName="CreateTimeStamp" msprop:design-time-name="c36a68c5-ddf0-49dc-82cc-41c5c705e618" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="UpdateTimeStamp" msprop:FriendlyName="UpdateTimeStamp" msprop:DbColumnName="UpdateTimeStamp" msprop:design-time-name="2b35163e-b4c2-4cb8-8fdb-8cdfa0dcdffb" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="SourceSystemCode" msprop:FriendlyName="SourceSystemCode" msprop:DbColumnName="SourceSystemCode" msprop:design-time-name="6d2445f3-eddb-42ad-b633-5c5d4369ef04" type="xs:int" minOccurs="0" />
+                  <xs:element name="SourceFolder" msprop:FriendlyName="SourceFolder" msprop:DbColumnName="SourceFolder" msprop:design-time-name="fbfc7d67-8cfb-4fa9-bf97-21ae34c8aa16" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimWeather" />
+          <xs:field xpath="WeatherKey" />
+        </xs:unique>
+        <xs:unique name="dbo_DimDate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimDate" />
+          <xs:field xpath="DateKey" />
+        </xs:unique>
+        <xs:unique name="Constraint2">
+          <xs:selector xpath=".//dbo_DimDate" />
+          <xs:field xpath="Date" />
+        </xs:unique>
+        <xs:unique name="dbo_DimAddress_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimAddress" />
+          <xs:field xpath="AddressKey" />
+        </xs:unique>
+        <xs:keyref name="FK__DimWeathe__Weath__2EA5EC27" refer="Constraint2">
+          <xs:selector xpath=".//dbo_DimWeather" />
+          <xs:field xpath="WeatherDate" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactTraff__Weath__36470DEF" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FactTrafficViolation" />
+          <xs:field xpath="WeatherKey" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactTraff__DateK__3552E9B6" refer="dbo_DimDate_Constraint1">
+          <xs:selector xpath=".//dbo_FactTrafficViolation" />
+          <xs:field xpath="DateKey" />
+        </xs:keyref>
+        <xs:keyref name="FK__FactTraff__Addre__373B3228" refer="dbo_DimAddress_Constraint1">
+          <xs:selector xpath=".//dbo_FactTrafficViolation" />
+          <xs:field xpath="AddressKey" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Weather_x0020_Traffic_x0020_DM xmlns="" />
+  </Schema>
+</DataSourceView>

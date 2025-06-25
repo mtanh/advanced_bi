@@ -5,3 +5,6 @@ ds/*.csv
 ssis/SSISCityDW/obj/
 ssis/SSISCityDW/bin/
 ssis/SSISCityDW/.vs/
+
+ssas/SSASCityDW/bin/
+ssas/SSASCityDW/obj/
