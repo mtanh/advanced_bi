@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Main"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{64B79F81-D458-4ADC-88E6-89699C431E15}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{4BB5F7E8-DEBA-4D12-912D-FA168A5F73E1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -72,7 +72,6 @@
       DTS:refId="Package\EPT_StageETL"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:Disabled="True"
       DTS:DTSID="{34F3FC5E-8E0B-42E1-A366-281327FD40DA}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
@@ -120,33 +119,33 @@
         <NodeLayout
           Size="147.2,41.6"
           Id="Package\EPT_Cleansing"
-          TopLeft="249.442857115488,45.9823529807238" />
+          TopLeft="221.585714199045,42.9235294539932" />
         <NodeLayout
           Size="137.6,41.6"
           Id="Package\EPT_DdsETL"
-          TopLeft="254.242857115488,249.182352980723" />
+          TopLeft="579.242857807328,44.2411766897737" />
         <NodeLayout
           Size="137.6,41.6"
           Id="Package\EPT_NdsETL"
-          TopLeft="254.242857115488,147.582352980723" />
+          TopLeft="405.671428866411,44.3470589535657" />
         <NodeLayout
           Size="146.4,41.6"
           Id="Package\EPT_StageETL"
           TopLeft="34.4285710484398,43.3529412857286" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="323.042857115488,87.5823529807237">
+          TopLeft="368.785714199045,64.4352942037794">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="36.8857146673665,0"
               Start="0,0"
-              End="0,52.5">
+              End="29.3857146673665,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="29.3857146673665,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -157,18 +156,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="323.042857115488,189.182352980723">
+          TopLeft="543.271428866411,65.0941178216697">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="35.9714289409166,0"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="28.4714289409166,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="28.4714289409166,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
