@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DdsETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="87"
-  DTS:VersionGUID="{DACEF92D-3694-495A-864C-3BBE6D1B26C3}">
+  DTS:VersionBuild="95"
+  DTS:VersionGUID="{02FD0BB3-BA8E-4C96-9CB6-2EB8DD574FF0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -83,7 +83,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AddressKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AddressKeyOfNds" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullAddress" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StreetTypeName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Location" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ValidFromDate" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ValidToDate" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsCurrent" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceSystemCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceFolder" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AddressKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AddressKeyOfNds" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullAddress" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="StreetTypeName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Latitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Longitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Location" dataType="DT_STR" length="200" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CreateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceSystemCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceFolder" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -173,11 +173,11 @@ where [refTable].[AddressKeyOfNds] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\DFT_DimAddress\OLE DB Destination"
+              refId="Package\DFT_DimAddress\OLE DB Destination 1"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="OLE DB Destination 1"
               usesDispositions="true"
               version="4">
               <properties>
@@ -230,7 +230,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\DFT_DimAddress\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\DFT_DimAddress\OLE DB Destination 1.Connections[OleDbConnection]"
                   connectionManagerID="{7177D4EC-41F7-4463-9643-91E0D73C6BA7}:external"
                   connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.WeatherTrafficDM]"
                   description="The OLE DB runtime connection used to access the database."
@@ -238,165 +238,128 @@ where [refTable].[AddressKeyOfNds] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FullAddress]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[FullAddress]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="FullAddress"
-                      cachedSortKeyPosition="4"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
+                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[FullAddress]" />
                     <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreetTypeName]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[StreetTypeName]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="StreetTypeName"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeName]"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeName]"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[StreetTypeName]" />
                     <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Latitude]"
                       cachedDataType="r8"
                       cachedName="Latitude"
-                      cachedSortKeyPosition="3"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Latitude]" />
                     <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Longitude]"
                       cachedDataType="r8"
                       cachedName="Longitude"
                       cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Longitude]" />
                     <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValidFromDate]"
-                      cachedDataType="dbDate"
-                      cachedName="ValidFromDate"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidFromDate]"
-                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidFromDate]" />
-                    <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ValidToDate]"
-                      cachedDataType="dbDate"
-                      cachedName="ValidToDate"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidToDate]"
-                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidToDate]" />
-                    <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IsCurrent]"
-                      cachedDataType="bool"
-                      cachedName="IsCurrent"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
-                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[IsCurrent]" />
-                    <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CreateTimeStamp]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[CreateTimeStamp]"
                       cachedDataType="dbTimeStamp"
                       cachedName="CreateTimeStamp"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
+                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[CreateTimeStamp]" />
                     <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UpdateTimeStamp]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdateTimeStamp"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[UpdateTimeStamp]" />
-                    <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceSystemCode]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[SourceSystemCode]"
                       cachedDataType="i4"
                       cachedName="SourceSystemCode"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
+                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[SourceSystemCode]" />
                     <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceFolder]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[SourceFolder]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="SourceFolder"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[SourceFolder]" />
                     <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Location]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[Location]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="104"
                       cachedName="Location"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Location]" />
                     <inputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AddressKey]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].Columns[AddressKey]"
                       cachedDataType="i4"
                       cachedName="AddressKey"
-                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKeyOfNds]"
+                      externalMetadataColumnId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AddressKeyOfNds]"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[AddressKey]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKey]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AddressKey]"
                       dataType="i4"
                       name="AddressKey" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKeyOfNds]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[AddressKeyOfNds]"
                       dataType="i4"
                       name="AddressKeyOfNds" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="FullAddress" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeName]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeName]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="StreetTypeName" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
                       dataType="r8"
                       name="Latitude" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
                       dataType="r8"
                       name="Longitude" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
                       codePage="1252"
                       dataType="str"
                       length="200"
                       name="Location" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidFromDate]"
-                      dataType="dbDate"
-                      name="ValidFromDate" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ValidToDate]"
-                      dataType="dbDate"
-                      name="ValidToDate" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
-                      dataType="bool"
-                      name="IsCurrent" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       name="CreateTimeStamp" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
                       dataType="dbTimeStamp"
                       name="UpdateTimeStamp" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
                       dataType="i4"
                       name="SourceSystemCode" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -406,22 +369,22 @@ where [refTable].[AddressKeyOfNds] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT_DimAddress\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\DFT_DimAddress\OLE DB Destination 1.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT_DimAddress\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DFT_DimAddress\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT_DimAddress\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\DFT_DimAddress\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT_DimAddress\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DFT_DimAddress\OLE DB Destination 1.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -483,7 +446,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">4</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -501,7 +464,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
+                          name="NewSortKeyPosition">3</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -517,7 +480,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">3</property>
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
@@ -537,74 +500,10 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[ValidFromDate]"
-                      cachedDataType="dbDate"
-                      cachedName="ValidFromDate"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidFromDate]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[ValidToDate]"
-                      cachedDataType="dbDate"
-                      cachedName="ValidToDate"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidToDate]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[IsCurrent]"
-                      cachedDataType="bool"
-                      cachedName="IsCurrent"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[IsCurrent]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
                       refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[CreateTimeStamp]"
                       cachedDataType="dbTimeStamp"
                       cachedName="CreateTimeStamp"
                       lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_DimAddress\Sort.Inputs[Sort Input].Columns[UpdateTimeStamp]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdateTimeStamp"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[UpdateTimeStamp]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -665,7 +564,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
@@ -697,8 +596,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       dataType="str"
                       length="100"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[FullAddress]"
-                      name="FullAddress"
-                      sortKeyPosition="4">
+                      name="FullAddress">
                       <properties>
                         <property
                           containsID="true"
@@ -713,7 +611,8 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       dataType="str"
                       length="50"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[StreetTypeName]"
-                      name="StreetTypeName">
+                      name="StreetTypeName"
+                      sortKeyPosition="3">
                       <properties>
                         <property
                           containsID="true"
@@ -727,7 +626,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       dataType="r8"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Latitude]"
                       name="Latitude"
-                      sortKeyPosition="3">
+                      sortKeyPosition="1">
                       <properties>
                         <property
                           containsID="true"
@@ -751,45 +650,6 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidFromDate]"
-                      dataType="dbDate"
-                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidFromDate]"
-                      name="ValidFromDate">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidFromDate]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidToDate]"
-                      dataType="dbDate"
-                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[ValidToDate]"
-                      name="ValidToDate">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidToDate]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[IsCurrent]"
-                      dataType="bool"
-                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[IsCurrent]"
-                      name="IsCurrent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[IsCurrent]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[CreateTimeStamp]"
@@ -800,19 +660,6 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[UpdateTimeStamp]"
-                      name="UpdateTimeStamp">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[UpdateTimeStamp]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -849,8 +696,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       dataType="str"
                       length="104"
                       lineageId="Package\DFT_DimAddress\Sort.Outputs[Sort Output].Columns[Location]"
-                      name="Location"
-                      sortKeyPosition="1">
+                      name="Location">
                       <properties>
                         <property
                           containsID="true"
@@ -975,33 +821,6 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       name="Longitude"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidFromDate]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[ValidFromDate]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidFromDate]"
-                      name="ValidFromDate"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidToDate]"
-                      dataType="dbDate"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[ValidToDate]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[ValidToDate]"
-                      name="ValidToDate"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[IsCurrent]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[IsCurrent]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[IsCurrent]"
-                      name="IsCurrent"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
@@ -1009,15 +828,6 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       externalMetadataColumnId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[CreateTimeStamp]"
                       lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]"
                       name="CreateTimeStamp"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[UpdateTimeStamp]"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[UpdateTimeStamp]"
-                      name="UpdateTimeStamp"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].Columns[SourceSystemCode]"
@@ -1078,25 +888,9 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       dataType="r8"
                       name="Longitude" />
                     <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[ValidFromDate]"
-                      dataType="dbDate"
-                      name="ValidFromDate" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[ValidToDate]"
-                      dataType="dbDate"
-                      name="ValidToDate" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[IsCurrent]"
-                      dataType="bool"
-                      name="IsCurrent" />
-                    <externalMetadataColumn
                       refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       name="CreateTimeStamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="UpdateTimeStamp" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output].ExternalColumns[SourceSystemCode]"
                       dataType="i4"
@@ -1157,30 +951,10 @@ where [refTable].[AddressKeyOfNds] = ?</property>
                       lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[Location]"
                       name="Location" />
                     <outputColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[ValidFromDate]"
-                      dataType="dbDate"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[ValidFromDate]"
-                      name="ValidFromDate" />
-                    <outputColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[ValidToDate]"
-                      dataType="dbDate"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[ValidToDate]"
-                      name="ValidToDate" />
-                    <outputColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[IsCurrent]"
-                      dataType="bool"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[IsCurrent]"
-                      name="IsCurrent" />
-                    <outputColumn
                       refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[CreateTimeStamp]"
                       name="CreateTimeStamp" />
-                    <outputColumn
-                      refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      lineageId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[UpdateTimeStamp]"
-                      name="UpdateTimeStamp" />
                     <outputColumn
                       refId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Error Output].Columns[SourceSystemCode]"
                       dataType="i4"
@@ -1224,7 +998,7 @@ where [refTable].[AddressKeyOfNds] = ?</property>
               startId="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\DFT_DimAddress.Paths[Sort Output]"
-              endId="Package\DFT_DimAddress\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
               name="Sort Output"
               startId="Package\DFT_DimAddress\Sort.Outputs[Sort Output]" />
           </paths>
@@ -1852,10 +1626,6 @@ where [refTable].[Date] = ?</property>
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       name="CreateTimeStamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="UpdateTimeStamp" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimDate\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
                       dataType="i4"
@@ -2838,10 +2608,6 @@ where [refTable].[WeatherDate] = ?</property>
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       name="CreateTimeStamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="UpdateTimeStamp" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimWeather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
                       dataType="i4"
@@ -4282,10 +4048,6 @@ where [refTable].[WeatherDate] = ?</property>
                       dataType="dbTimeStamp"
                       name="CreateTimeStamp" />
                     <externalMetadataColumn
-                      refId="Package\DFT_FactTrafficViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="UpdateTimeStamp" />
-                    <externalMetadataColumn
                       refId="Package\DFT_FactTrafficViolation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
                       dataType="i4"
                       name="SourceSystemCode" />
@@ -4821,91 +4583,87 @@ where [refTable].[WeatherDate] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\DFT_DimAddress\Sort"
-          TopLeft="209.999996870756,235.285710779684" />
-        <NodeLayout
           Size="303.2,41.6"
           Id="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds"
           TopLeft="111.285719139235,49.7142862996884" />
         <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\DFT_DimAddress\OLE DB Destination"
-          TopLeft="176.714290531618,323.571426610861" />
-        <NodeLayout
           Size="184,41.6"
           Id="Package\DFT_DimAddress\Lookup at DimAddress"
-          TopLeft="166.142854667136,128.714283796293" />
-        <EdgeLayout
-          Id="Package\DFT_DimAddress.Paths[Sort Output]"
-          TopLeft="260.357143701187,276.885710779684">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.6857158311774"
-              Start="0,0"
-              End="0,39.1857158311774">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.1857158311774" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="173.999997407198,139.999997913837" />
         <EdgeLayout
           Id="Package\DFT_DimAddress.Paths[OLE DB Source Output]"
-          TopLeft="260.514286903186,91.3142862996884">
+          TopLeft="264.442858273217,91.3142862996884">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.399997496605"
+              EndConnector="0,48.6857116141491"
               Start="0,0"
-              End="0,29.899997496605">
+              End="0,41.1857116141491">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.899997496605" />
+                    End="0,41.1857116141491" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\DFT_DimAddress\Sort"
+          TopLeft="219.999996721744,249.99999627471" />
+        <EdgeLayout
+          Id="Package\DFT_DimAddress.Paths[Lookup No Match Output]"
+          TopLeft="267.399997064471,181.599997913837">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.3999983608723"
+              Start="0,0"
+              End="0,60.8999983608723">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,60.8999983608723" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
+              BoundingBox="-55.80638671875,24.6453116804362,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\DFT_DimAddress\OLE DB Destination 1"
+          TopLeft="179.999997317791,345.999994844198" />
         <EdgeLayout
-          Id="Package\DFT_DimAddress.Paths[Lookup No Match Output]"
-          TopLeft="258.471425768946,170.314283796293">
+          Id="Package\DFT_DimAddress.Paths[Sort Output]"
+          TopLeft="269.199997019768,291.59999627471">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,64.9714269833906"
+              EndConnector="0,54.3999985694885"
               Start="0,0"
-              End="0,57.4714269833906">
+              End="0,46.8999985694885">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,57.4714269833906" />
+                    End="0,46.8999985694885" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,22.9310259916953,111.6127734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4921,42 +4679,6 @@ where [refTable].[WeatherDate] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAddress\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAddress\Lookup at DimAddress">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimAddress]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5004,9 +4726,7 @@ where [refTable].[WeatherDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5028,9 +4748,7 @@ where [refTable].[WeatherDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5076,9 +4794,7 @@ where [refTable].[WeatherDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5139,10 +4855,6 @@ where [refTable].[WeatherDate] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\DFT_DimWeather\OLE DB Destination"
-          TopLeft="131.142856215031,390.882350447527" />
-        <NodeLayout
           Size="204.8,41.6"
           Id="Package\DFT_DimWeather\Weather Qualitative Labels"
           TopLeft="120.14285630231,289.411762285397" />
@@ -5150,58 +4862,18 @@ where [refTable].[WeatherDate] = ?</property>
           Size="300,41.6"
           Id="Package\DFT_DimWeather\v_Unprocessed_TrafficViolation_Weathers_Nds"
           TopLeft="70.1428562959236,19.4705882708197" />
-        <EdgeLayout
-          Id="Package\DFT_DimWeather.Paths[Derived Column Output]"
-          TopLeft="219.64285625867,331.011762285397">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.8705881621297"
-              Start="0,0"
-              End="0,52.3705881621297">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.3705881621297" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\DFT_DimWeather\Lookup at DimWeather"
-          TopLeft="123.57142883448,109.611764630139" />
-        <EdgeLayout
-          Id="Package\DFT_DimWeather.Paths[OLE DB Source Output]"
-          TopLeft="218.457142565202,61.0705882708197">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.5411763593194"
-              Start="0,0"
-              End="0,41.0411763593194">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.0411763593194" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="171.2,41.6"
+          Id="Package\DFT_DimWeather\OLE DB Destination"
+          TopLeft="131.142856215031,390.882350447527" />
         <NodeLayout
           Size="97.6,41.6"
           Id="Package\DFT_DimWeather\Sort"
           TopLeft="170.714286077692,207.352941012248" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\DFT_DimWeather\Lookup at DimWeather"
+          TopLeft="123.57142883448,109.611764630139" />
         <EdgeLayout
           Id="Package\DFT_DimWeather.Paths[Lookup No Match Output]"
           TopLeft="218.142857456086,151.211764630139">
@@ -5227,6 +4899,28 @@ where [refTable].[WeatherDate] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\DFT_DimWeather.Paths[Derived Column Output]"
+          TopLeft="219.64285625867,331.011762285397">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.8705881621297"
+              Start="0,0"
+              End="0,52.3705881621297">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.3705881621297" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\DFT_DimWeather.Paths[Sort Output]"
           TopLeft="221.028571190001,248.952941012248">
           <EdgeLayout.Curve>
@@ -5248,6 +4942,28 @@ where [refTable].[WeatherDate] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimWeather.Paths[OLE DB Source Output]"
+          TopLeft="218.457142565202,61.0705882708197">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.5411763593194"
+              Start="0,0"
+              End="0,41.0411763593194">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.0411763593194" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -5261,6 +4977,29 @@ where [refTable].[WeatherDate] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimWeather\Lookup at DimWeather">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimWeather]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5393,9 +5132,7 @@ where [refTable].[WeatherDate] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5497,7 +5234,7 @@ where [refTable].[WeatherDate] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimWeather\Lookup at DimWeather">
+    design-time-name="Package\DFT_DimAddress\Lookup at DimAddress">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5507,7 +5244,7 @@ where [refTable].[WeatherDate] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimWeather]</Value>
+          type="q3:string">[dbo].[DimAddress]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -5516,6 +5253,19 @@ where [refTable].[WeatherDate] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAddress\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

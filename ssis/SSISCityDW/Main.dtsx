@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Main"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{4BB5F7E8-DEBA-4D12-912D-FA168A5F73E1}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{D9A6EC89-FFF6-4494-A09E-0DB1A370F726}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -72,6 +72,7 @@
       DTS:refId="Package\EPT_StageETL"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
+      DTS:Disabled="True"
       DTS:DTSID="{34F3FC5E-8E0B-42E1-A366-281327FD40DA}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"

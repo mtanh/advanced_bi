@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Cleansing"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{F4A91FC8-C960-4168-9AE6-81298650EAFD}">
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{1601BD25-A8B3-4C0C-A033-928FD450EAB8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -495,55 +495,68 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[INTERSECTION]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="INTERSECTION" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CAMERA ID]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="CAMERA ID" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ADDRESS]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="ADDRESS" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STREET TYPE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="STREET TYPE" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VIOLATION DATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="VIOLATION DATE" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VIOLATIONS]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="VIOLATIONS" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[X COORDINATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="X COORDINATE" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Y COORDINATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="Y COORDINATE" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LATITUDE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="LATITUDE" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LONGITUDE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="LONGITUDE" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LOCATION]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="LOCATION" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SourceFolder]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="SourceFolder" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Processed]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="Processed" />
                   </externalMetadataColumns>
                 </output>
@@ -554,67 +567,80 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[INTERSECTION]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[INTERSECTION]"
                       name="INTERSECTION" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CAMERA ID]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CAMERA ID]"
                       name="CAMERA ID" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESS]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESS]"
                       name="ADDRESS" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STREET TYPE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STREET TYPE]"
                       name="STREET TYPE" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VIOLATION DATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VIOLATION DATE]"
                       name="VIOLATION DATE" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VIOLATIONS]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VIOLATIONS]"
                       name="VIOLATIONS" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[X COORDINATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[X COORDINATE]"
                       name="X COORDINATE" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Y COORDINATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Y COORDINATE]"
                       name="Y COORDINATE" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
                       name="LATITUDE" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
                       name="LONGITUDE" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LOCATION]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LOCATION]"
                       name="LOCATION" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SourceFolder]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SourceFolder]"
                       name="SourceFolder" />
                     <outputColumn
                       refId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Processed]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_RedLightViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Processed]"
                       name="Processed" />
                     <outputColumn
@@ -1910,51 +1936,63 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ADDRESS]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="ADDRESS" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[STREET TYPE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="STREET TYPE" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CAMERA ID]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="CAMERA ID" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VIOLATION DATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="VIOLATION DATE" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VIOLATIONS]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="VIOLATIONS" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[X COORDINATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="X COORDINATE" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Y COORDINATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="Y COORDINATE" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LATITUDE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="LATITUDE" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LONGITUDE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="LONGITUDE" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LOCATION]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="LOCATION" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SourceFolder]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="SourceFolder" />
                     <externalMetadataColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Processed]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       name="Processed" />
                   </externalMetadataColumns>
                 </output>
@@ -1965,62 +2003,74 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESS]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ADDRESS]"
                       name="ADDRESS" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STREET TYPE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[STREET TYPE]"
                       name="STREET TYPE" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CAMERA ID]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CAMERA ID]"
                       name="CAMERA ID" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VIOLATION DATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VIOLATION DATE]"
                       name="VIOLATION DATE" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VIOLATIONS]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VIOLATIONS]"
                       name="VIOLATIONS" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[X COORDINATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[X COORDINATE]"
                       name="X COORDINATE" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Y COORDINATE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Y COORDINATE]"
                       name="Y COORDINATE" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
                       name="LATITUDE" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
                       name="LONGITUDE" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LOCATION]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LOCATION]"
                       name="LOCATION" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SourceFolder]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SourceFolder]"
                       name="SourceFolder" />
                     <outputColumn
                       refId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Processed]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="50"
                       lineageId="Package\DFT_SpeedViolation_Cleansing\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Processed]"
                       name="Processed" />
                     <outputColumn
@@ -2887,9 +2937,17 @@
           Id="Package\DFT_RedLightViolation_Cleansing"
           TopLeft="30.000000063862,29.0588235039406" />
         <NodeLayout
+          Size="223.2,41.6"
+          Id="Package\DFT_SpeedViolation_Cleansing"
+          TopLeft="315.000000670552,109.352941080618" />
+        <NodeLayout
           Size="225.6,41.6"
           Id="Package\Truncate RedLightViolation_1,2"
           TopLeft="310.714286375715,28.294117622258" />
+        <NodeLayout
+          Size="249.6,41.6"
+          Id="Package\Truncate SpeedCameraViolation_1,2"
+          TopLeft="23.5714286216058,105.529411672205" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="266.000000063862,49.4764705630993">
@@ -2912,14 +2970,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="223.2,41.6"
-          Id="Package\DFT_SpeedViolation_Cleansing"
-          TopLeft="315.000000670552,109.352941080618" />
-        <NodeLayout
-          Size="249.6,41.6"
-          Id="Package\Truncate SpeedCameraViolation_1,2"
-          TopLeft="23.5714286216058,105.529411672205" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="425.057143523134,69.894117622258">
@@ -2973,6 +3023,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\DFT_RedLightViolation_Cleansing\OLE DB Source"
+          TopLeft="318.571429249584,31.3529411489885" />
+        <NodeLayout
           Size="170.4,41.6"
           Id="Package\DFT_RedLightViolation_Cleansing\OLE DB Destination"
           TopLeft="310.000000659909,299.764705619598" />
@@ -2984,10 +3038,6 @@
           Size="107.2,41.6"
           Id="Package\DFT_RedLightViolation_Cleansing\WSTR"
           TopLeft="340.00000072377,119.294117542493" />
-        <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\DFT_RedLightViolation_Cleansing\OLE DB Source"
-          TopLeft="318.571429249584,31.3529411489885" />
         <EdgeLayout
           Id="Package\DFT_RedLightViolation_Cleansing.Paths[Data Conversion Output1]"
           TopLeft="393.942857839258,243.482352764219">
@@ -3058,7 +3108,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_RedLightViolation_Cleansing\OLE DB Destination">
+    design-time-name="Package\DFT_RedLightViolation_Cleansing\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3071,7 +3121,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_RedLightViolation_Cleansing\OLE DB Source">
+    design-time-name="Package\DFT_RedLightViolation_Cleansing\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3089,39 +3139,21 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\DFT_SpeedViolation_Cleansing\OLE DB Source"
-          TopLeft="330.999995067716,35.4615379331204" />
-        <NodeLayout
           Size="107.2,41.6"
           Id="Package\DFT_SpeedViolation_Cleansing\WSTR"
           TopLeft="357.461533134946,135.384613367227" />
-        <EdgeLayout
-          Id="Package\DFT_SpeedViolation_Cleansing.Paths[OLE DB Source Output]"
-          TopLeft="408.430764101331,77.0615379331204">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.3230754341071"
-              Start="0,0"
-              End="0,50.8230754341071">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.8230754341071" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="96.8,41.6"
           Id="Package\DFT_SpeedViolation_Cleansing\STR"
           TopLeft="364.615379182192,233.076919603806" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DFT_SpeedViolation_Cleansing\OLE DB Destination"
+          TopLeft="319.999995231628,319.23076447386" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\DFT_SpeedViolation_Cleansing\OLE DB Source"
+          TopLeft="330.999995067716,35.4615379331204" />
         <EdgeLayout
           Id="Package\DFT_SpeedViolation_Cleansing.Paths[Data Conversion Output]"
           TopLeft="412.038456158569,176.984613367227">
@@ -3144,10 +3176,28 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\DFT_SpeedViolation_Cleansing\OLE DB Destination"
-          TopLeft="319.999995231628,319.23076447386" />
+        <EdgeLayout
+          Id="Package\DFT_SpeedViolation_Cleansing.Paths[OLE DB Source Output]"
+          TopLeft="408.430764101331,77.0615379331204">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.3230754341071"
+              Start="0,0"
+              End="0,50.8230754341071">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.8230754341071" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_SpeedViolation_Cleansing.Paths[Data Conversion Output1]"
           TopLeft="409.10768720691,274.676919603806">
@@ -3174,7 +3224,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_SpeedViolation_Cleansing\OLE DB Source">
+    design-time-name="Package\DFT_SpeedViolation_Cleansing\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3187,7 +3237,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_SpeedViolation_Cleansing\OLE DB Destination">
+    design-time-name="Package\DFT_SpeedViolation_Cleansing\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

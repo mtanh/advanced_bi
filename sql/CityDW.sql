@@ -43,11 +43,7 @@ CREATE TABLE Address (
   StreetTypeKey INT NOT NULL,
   LocationKey INT UNIQUE NOT NULL,
   FullAddress VARCHAR(100) NOT NULL,
-  ValidFromDate DATETIME NULL DEFAULT GETDATE(),
-  ValidToDate DATETIME NULL DEFAULT NULL,
-  IsCurrent BIT NULL DEFAULT 1,
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
-  UpdateTimeStamp DATETIME NULL DEFAULT NULL,
   SourceSystemCode INT NULL,
   SourceFolder VARCHAR(50) NULL,
   Processed BIT NOT NULL DEFAULT 0,
@@ -62,7 +58,6 @@ CREATE TABLE TrafficViolation (
   ViolationDate DATETIME NULL,
   ViolationCount INT NULL,
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
-  UpdateTimeStamp DATETIME NULL DEFAULT NULL,
   SourceSystemCode INT NULL,
   SourceFolder VARCHAR(50) NULL,
   Processed BIT NOT NULL DEFAULT 0,
@@ -78,7 +73,6 @@ CREATE TABLE Weather (
   Temperature FLOAT NULL,
   WindSpeed FLOAT NULL,
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
-  UpdateTimeStamp DATETIME NULL,
   SourceSystemCode INT NULL,
   SourceFolder VARCHAR(50) NULL,
   Processed BIT NOT NULL DEFAULT 0
@@ -102,11 +96,7 @@ SELECT
   TRY_CAST(L.Latitude AS FLOAT) AS Latitude,
   TRY_CAST(L.Longitude AS FLOAT) AS Longitude,
   CONCAT('(', L.Latitude, ', ', L.Longitude, ')') AS Location,
-  CAST(A.ValidFromDate AS DATE) AS ValidFromDate,
-  CAST(A.ValidToDate AS DATE) AS ValidToDate,
-  A.IsCurrent,
   A.CreateTimeStamp,
-  A.UpdateTimeStamp,
   A.SourceSystemCode,
   A.SourceFolder
 FROM Address A
@@ -124,12 +114,13 @@ SELECT
   AVG(W.Temperature) AS AverageTemperature,
   AVG(W.WindSpeed) AS AverageWindSpeed,
 
-  MIN(TV.SourceSystemCode) AS SourceSystemCode,
+  MIN(W.SourceSystemCode) AS SourceSystemCode,
   MIN(TV.SourceFolder) AS SourceFolder
 FROM Weather W
 JOIN TrafficViolation TV ON CAST(W.DateTime AS DATE) = CAST(TV.ViolationDate AS DATE)
 WHERE W.Processed = 0 AND TV.Processed = 0
 GROUP BY CAST(W.DateTime AS DATE);
+
 
 CREATE VIEW v_Unprocessed_TrafficViolation_CountEx_Nds AS
 SELECT
@@ -152,6 +143,3 @@ GROUP BY
   AddressKey,
   SourceSystemCode,
   SourceFolder;
-
-
-

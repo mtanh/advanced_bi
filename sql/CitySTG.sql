@@ -311,8 +311,8 @@ WHERE Processed = 0;
 
 CREATE VIEW v_Unprocessed_RedLightViolation_Locations_Stage AS
 SELECT DISTINCT
-  TRY_CAST([LATITUDE] AS VARCHAR(50)) AS Latitude,
-  TRY_CAST([LONGITUDE] AS VARCHAR(50)) AS Longitude
+  [LATITUDE],
+  [LONGITUDE]
 FROM RedLightViolation
 WHERE Processed = 0;
 
@@ -355,8 +355,8 @@ WHERE Processed = 0;
 
 CREATE VIEW v_Unprocessed_SpeedViolation_Locations_Stage AS
 SELECT DISTINCT
-  TRY_CAST([LATITUDE] AS VARCHAR(50)) AS Latitude,
-  TRY_CAST([LONGITUDE] AS VARCHAR(50)) AS Longitude
+  [LATITUDE],
+  [LONGITUDE]
 FROM SpeedCameraViolation
 WHERE Processed = 0;
 

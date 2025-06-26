@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="NdsETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="192"
-  DTS:VersionGUID="{42BEEC63-A47D-4BBD-A1F1-597E8150103C}">
+  DTS:VersionBuild="196"
+  DTS:VersionGUID="{DAFFB5F6-8EDE-4588-8938-3156EC056D37}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1345,7 +1345,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]};#{Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]};</property>
+                  name="ParameterMap">#{Package\DFT_RedLight_Location\63:invalid};#{Package\DFT_RedLight_Location\64:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1369,12 +1369,12 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Location\Lookup at Location.Inputs[Lookup Input].Columns[Latitude]"
+                      refId="Package\DFT_RedLight_Location\Lookup at Location.Inputs[Lookup Input].Columns[LATITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Latitude"
-                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]">
+                      cachedName="LATITUDE"
+                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LATITUDE]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1387,12 +1387,12 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Location\Lookup at Location.Inputs[Lookup Input].Columns[Longitude]"
+                      refId="Package\DFT_RedLight_Location\Lookup at Location.Inputs[Lookup Input].Columns[LONGITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Longitude"
-                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]">
+                      cachedName="LONGITUDE"
+                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LONGITUDE]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1522,21 +1522,21 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Location\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      refId="Package\DFT_RedLight_Location\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LATITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Latitude"
+                      cachedName="LATITUDE"
                       externalMetadataColumnId="Package\DFT_RedLight_Location\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
-                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]" />
+                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LATITUDE]" />
                     <inputColumn
-                      refId="Package\DFT_RedLight_Location\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      refId="Package\DFT_RedLight_Location\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LONGITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Longitude"
+                      cachedName="LONGITUDE"
                       externalMetadataColumnId="Package\DFT_RedLight_Location\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
-                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]" />
+                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LONGITUDE]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1650,42 +1650,42 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]"
+                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LATITUDE]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      externalMetadataColumnId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[LATITUDE]"
                       length="50"
-                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]"
-                      name="Latitude"
+                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LATITUDE]"
+                      name="LATITUDE"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]"
+                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LONGITUDE]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      externalMetadataColumnId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[LONGITUDE]"
                       length="50"
-                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]"
-                      name="Longitude"
+                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LONGITUDE]"
+                      name="LONGITUDE"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[LATITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Latitude" />
+                      name="LATITUDE" />
                     <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[LONGITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Longitude" />
+                      name="LONGITUDE" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1694,19 +1694,19 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[Latitude]"
+                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[Latitude]"
-                      name="Latitude" />
+                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
+                      name="LATITUDE" />
                     <outputColumn
-                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[Longitude]"
+                      refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[Longitude]"
-                      name="Longitude" />
+                      lineageId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
+                      name="LONGITUDE" />
                     <outputColumn
                       refId="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2747,25 +2747,9 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                       length="100"
                       name="FullAddress" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Speed_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[ValidFromDate]"
-                      dataType="dbTimeStamp"
-                      name="ValidFromDate" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Speed_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[ValidToDate]"
-                      dataType="dbTimeStamp"
-                      name="ValidToDate" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Speed_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
-                      dataType="bool"
-                      name="IsCurrent" />
-                    <externalMetadataColumn
                       refId="Package\DFT_Speed_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       name="CreateTimeStamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Speed_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="UpdateTimeStamp" />
                     <externalMetadataColumn
                       refId="Package\DFT_Speed_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
                       dataType="i4"
@@ -3932,7 +3916,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]};#{Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]};</property>
+                  name="ParameterMap">#{Package\DFT_Speed_Location\63:invalid};#{Package\DFT_Speed_Location\64:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3956,12 +3940,12 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_Speed_Location\Lookup at Location.Inputs[Lookup Input].Columns[Latitude]"
+                      refId="Package\DFT_Speed_Location\Lookup at Location.Inputs[Lookup Input].Columns[LATITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Latitude"
-                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]">
+                      cachedName="LATITUDE"
+                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LATITUDE]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -3974,12 +3958,12 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_Speed_Location\Lookup at Location.Inputs[Lookup Input].Columns[Longitude]"
+                      refId="Package\DFT_Speed_Location\Lookup at Location.Inputs[Lookup Input].Columns[LONGITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Longitude"
-                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]">
+                      cachedName="LONGITUDE"
+                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LONGITUDE]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -4109,21 +4093,21 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_Speed_Location\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      refId="Package\DFT_Speed_Location\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LATITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Latitude"
+                      cachedName="LATITUDE"
                       externalMetadataColumnId="Package\DFT_Speed_Location\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
-                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]" />
+                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LATITUDE]" />
                     <inputColumn
-                      refId="Package\DFT_Speed_Location\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      refId="Package\DFT_Speed_Location\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LONGITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Longitude"
+                      cachedName="LONGITUDE"
                       externalMetadataColumnId="Package\DFT_Speed_Location\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
-                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]" />
+                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LONGITUDE]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4237,42 +4221,42 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]"
+                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LATITUDE]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      externalMetadataColumnId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[LATITUDE]"
                       length="50"
-                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Latitude]"
-                      name="Latitude"
+                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LATITUDE]"
+                      name="LATITUDE"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]"
+                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LONGITUDE]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      externalMetadataColumnId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[LONGITUDE]"
                       length="50"
-                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[Longitude]"
-                      name="Longitude"
+                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].Columns[LONGITUDE]"
+                      name="LONGITUDE"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[LATITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Latitude" />
+                      name="LATITUDE" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Output].ExternalColumns[LONGITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Longitude" />
+                      name="LONGITUDE" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -4281,19 +4265,19 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[Latitude]"
+                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[Latitude]"
-                      name="Latitude" />
+                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[LATITUDE]"
+                      name="LATITUDE" />
                     <outputColumn
-                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[Longitude]"
+                      refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[Longitude]"
-                      name="Longitude" />
+                      lineageId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[LONGITUDE]"
+                      name="LONGITUDE" />
                     <outputColumn
                       refId="Package\DFT_Speed_Location\v_Unprocessed_SpeedViolation_Locations_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -4482,10 +4466,6 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                       refId="Package\DFT_Speed_TrafficViolation\Insert Into TrafficViolation.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       name="CreateTimeStamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_Speed_TrafficViolation\Insert Into TrafficViolation.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="UpdateTimeStamp" />
                     <externalMetadataColumn
                       refId="Package\DFT_Speed_TrafficViolation\Insert Into TrafficViolation.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
                       dataType="i4"
@@ -5355,10 +5335,6 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                       dataType="dbTimeStamp"
                       name="CreateTimeStamp" />
                     <externalMetadataColumn
-                      refId="Package\DFT_Weather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="UpdateTimeStamp" />
-                    <externalMetadataColumn
                       refId="Package\DFT_Weather\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
                       dataType="i4"
                       name="SourceSystemCode" />
@@ -6025,13 +6001,21 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\DFT_RedLight_Address\Insert Into Address"
-          TopLeft="76.999999457172,209.235294391797" />
+          Size="168,41.6"
+          Id="Package\DFT_RedLight_Address\SourceSystemCode"
+          TopLeft="640.285715050539,101.588235404046" />
         <NodeLayout
           Size="323.2,41.6"
           Id="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage"
           TopLeft="33.4285709526466,15.7647059158676" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\DFT_RedLight_Address\Insert Into Address"
+          TopLeft="76.999999457172,209.235294391797" />
+        <NodeLayout
+          Size="284,41.6"
+          Id="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey"
+          TopLeft="303.714285758381,103.000000193715" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\DFT_RedLight_Address\Lookup at Location"
@@ -6041,13 +6025,31 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
           Id="Package\DFT_RedLight_Address\Lookup at Address"
           TopLeft="77.1428565833033,106.058823800211" />
         <NodeLayout
-          Size="168,41.6"
-          Id="Package\DFT_RedLight_Address\SourceSystemCode"
-          TopLeft="640.285715050539,101.588235404046" />
-        <NodeLayout
-          Size="284,41.6"
-          Id="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey"
-          TopLeft="303.714285758381,103.000000193715" />
+          Size="179.2,41.6"
+          Id="Package\DFT_RedLight_Address\Lookup at StreetType"
+          TopLeft="636.428572783361,19.9294118089453" />
+        <EdgeLayout
+          Id="Package\DFT_RedLight_Address.Paths[Sort Output]"
+          TopLeft="303.714285758381,125.329411996963">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-56.9714291750774,0"
+              Start="0,0"
+              End="-49.4714291750774,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-49.4714291750774,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_RedLight_Address.Paths[OLE DB Source Output]"
           TopLeft="356.628570952647,37.8882353641634">
@@ -6095,53 +6097,29 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_RedLight_Address.Paths[Derived Column Output]"
-          TopLeft="640.285715050539,123.094117798881">
+          Id="Package\DFT_RedLight_Address.Paths[Lookup Match Output1]"
+          TopLeft="725.15714391695,61.5294118089453">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-52.5714292921583,0"
+              EndConnector="0,40.0588235951005"
               Start="0,0"
-              End="-45.0714292921583,0">
+              End="0,32.5588235951005">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-45.0714292921583,0" />
+                    End="0,32.5588235951005" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.4747242975503,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_RedLight_Address.Paths[Sort Output]"
-          TopLeft="303.714285758381,125.329411996963">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-56.9714291750774,0"
-              Start="0,0"
-              End="-49.4714291750774,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-49.4714291750774,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\DFT_RedLight_Address\Lookup at StreetType"
-          TopLeft="636.428572783361,19.9294118089453" />
         <EdgeLayout
           Id="Package\DFT_RedLight_Address.Paths[Lookup Match Output]"
           TopLeft="578.142857307074,39.9705883107022">
@@ -6167,45 +6145,30 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_RedLight_Address.Paths[Lookup Match Output1]"
-          TopLeft="725.15714391695,61.5294118089453">
+          Id="Package\DFT_RedLight_Address.Paths[Derived Column Output]"
+          TopLeft="640.285715050539,123.094117798881">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.0588235951005"
+              EndConnector="-52.5714292921583,0"
               Start="0,0"
-              End="0,32.5588235951005">
+              End="-45.0714292921583,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5588235951005" />
+                    End="-45.0714292921583,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.4747242975503,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_RedLight_Address\Insert Into Address">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage">
     <Properties>
@@ -6220,12 +6183,25 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT_RedLight_Address\Insert Into Address">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT_RedLight_Address\Lookup at Location">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6248,12 +6224,35 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[Address]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_RedLight_Address\Lookup at StreetType">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[StreetType]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -6388,23 +6387,23 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="323,42"
+          Size="323.2,41.6"
           Id="Package\DFT_RedLight_TrafficViolation\v_UnprocessedRedLightViolationDateCountStage"
           TopLeft="360,66" />
         <NodeLayout
-          Size="172,42"
+          Size="172,41.6"
           Id="Package\DFT_RedLight_TrafficViolation\Lookup at Location"
           TopLeft="439,163" />
         <NodeLayout
-          Size="269,42"
+          Size="268.8,41.6"
           Id="Package\DFT_RedLight_TrafficViolation\SourceSystemCode, ViolationTypeKey"
           TopLeft="397,364" />
         <NodeLayout
-          Size="204,42"
+          Size="204,41.6"
           Id="Package\DFT_RedLight_TrafficViolation\Insert Into TrafficViolation"
           TopLeft="430,469" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\DFT_RedLight_TrafficViolation\Lookup at Address"
           TopLeft="443,264" />
         <EdgeLayout
@@ -6474,9 +6473,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6498,9 +6495,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6584,13 +6579,21 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="169.6,41.6"
-          Id="Package\DFT_Speed_Address\Insert Into Address"
-          TopLeft="125.320518031143,218.243594627541" />
+          Size="168,41.6"
+          Id="Package\DFT_Speed_Address\SourceSystemCode"
+          TopLeft="644.461535057196,116.923079204101" />
         <NodeLayout
           Size="310.4,41.6"
           Id="Package\DFT_Speed_Address\v_Unprocessed_SpeedViolation_Addresses_Stage"
           TopLeft="19.2435953725985,21.2051286044029" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\DFT_Speed_Address\Insert Into Address"
+          TopLeft="125.320518031143,218.243594627541" />
+        <NodeLayout
+          Size="273.6,41.6"
+          Id="Package\DFT_Speed_Address\Sort and Remove duplication LocationKey"
+          TopLeft="326.448719283136,116.217952350585" />
         <NodeLayout
           Size="168,41.6"
           Id="Package\DFT_Speed_Address\Lookup at Location"
@@ -6600,13 +6603,31 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
           Id="Package\DFT_Speed_Address\Lookup at Address"
           TopLeft="120.102569331343,117.692312644078" />
         <NodeLayout
-          Size="168,41.6"
-          Id="Package\DFT_Speed_Address\SourceSystemCode"
-          TopLeft="644.461535057196,116.923079204101" />
-        <NodeLayout
-          Size="273.6,41.6"
-          Id="Package\DFT_Speed_Address\Sort and Remove duplication LocationKey"
-          TopLeft="326.448719283136,116.217952350585" />
+          Size="179.2,41.6"
+          Id="Package\DFT_Speed_Address\Lookup at StreetType"
+          TopLeft="632.727263298902,22.7692308525939" />
+        <EdgeLayout
+          Id="Package\DFT_Speed_Address.Paths[Sort Output]"
+          TopLeft="326.448719283136,137.755132497331">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40.7461499517926,0"
+              Start="0,0"
+              End="-33.2461499517926,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-33.2461499517926,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_Speed_Address.Paths[OLE DB Source Output]"
           TopLeft="329.643595372598,42.5319358907692">
@@ -6654,53 +6675,29 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Speed_Address.Paths[Derived Column Output]"
-          TopLeft="644.461535057196,137.370515777343">
+          Id="Package\DFT_Speed_Address.Paths[Lookup Match Output1]"
+          TopLeft="725.394399178049,64.3692308525939">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-44.4128157740605,0"
+              EndConnector="0,52.5538483515069"
               Start="0,0"
-              End="-36.9128157740605,0">
+              End="0,45.0538483515069">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-36.9128157740605,0" />
+                    End="0,45.0538483515069" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,16.7222366757534,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Speed_Address.Paths[Sort Output]"
-          TopLeft="326.448719283136,137.755132497331">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-40.7461499517926,0"
-              Start="0,0"
-              End="-33.2461499517926,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-33.2461499517926,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179.2,41.6"
-          Id="Package\DFT_Speed_Address\Lookup at StreetType"
-          TopLeft="632.727263298902,22.7692308525939" />
         <EdgeLayout
           Id="Package\DFT_Speed_Address.Paths[Lookup Match Output]"
           TopLeft="564.837996413293,43.3139870148647">
@@ -6726,45 +6723,30 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_Speed_Address.Paths[Lookup Match Output1]"
-          TopLeft="725.394399178049,64.3692308525939">
+          Id="Package\DFT_Speed_Address.Paths[Derived Column Output]"
+          TopLeft="644.461535057196,137.370515777343">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.5538483515069"
+              EndConnector="-44.4128157740605,0"
               Start="0,0"
-              End="0,45.0538483515069">
+              End="-36.9128157740605,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.0538483515069" />
+                    End="-36.9128157740605,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,16.7222366757534,96.3827734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Speed_Address\Insert Into Address">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_Speed_Address\v_Unprocessed_SpeedViolation_Addresses_Stage">
     <Properties>
@@ -6779,12 +6761,25 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT_Speed_Address\Insert Into Address">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT_Speed_Address\Lookup at Location">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6794,7 +6789,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6807,12 +6802,35 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[Address]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Speed_Address\Lookup at StreetType">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[StreetType]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -6947,23 +6965,23 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="335,42"
+          Size="335.2,41.6"
           Id="Package\DFT_Speed_TrafficViolation\v_Unprocessed_SpeedViolation_Date_Count_Stage"
           TopLeft="420,70" />
         <NodeLayout
-          Size="172,42"
+          Size="172,41.6"
           Id="Package\DFT_Speed_TrafficViolation\Lookup at Location"
           TopLeft="505,169" />
         <NodeLayout
-          Size="269,42"
+          Size="268.8,41.6"
           Id="Package\DFT_Speed_TrafficViolation\SourceSystemCode, ViolationTypeKey"
           TopLeft="461,381" />
         <NodeLayout
-          Size="204,42"
+          Size="204,41.6"
           Id="Package\DFT_Speed_TrafficViolation\Insert Into TrafficViolation"
           TopLeft="489,482" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\DFT_Speed_TrafficViolation\Lookup at Address"
           TopLeft="510,280" />
         <EdgeLayout
@@ -7033,9 +7051,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7057,9 +7073,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7141,49 +7155,35 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
     design-time-name="Package\DFT_Weather">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="157,42"
+          Size="156.8,41.6"
           Id="Package\DFT_Weather\OLE DB Source"
           TopLeft="241,62" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\DFT_Weather\OLE DB Destination"
-          TopLeft="259,182" />
+          TopLeft="237.000000327826,175.000000104308" />
         <EdgeLayout
           Id="Package\DFT_Weather.Paths[OLE DB Source Output]"
-          TopLeft="319.5,104">
+          TopLeft="321.000000163913,103.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="25,78"
+              EndConnector="0,71.4000001043081"
               Start="0,0"
-              End="25,70.5">
+              End="0,63.9000001043081">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35"
-                    Point2="0,39"
-                    Point3="4,39" />
-                  <mssgle:LineSegment
-                    End="21,39" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21,39"
-                    Point2="25,39"
-                    Point3="25,43" />
-                  <mssgle:LineSegment
-                    End="25,70.5" />
+                    End="0,63.9000001043081" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7212,52 +7212,6 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_RedLight_Address\Lookup at StreetType">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[StreetType]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Speed_Address\Lookup at StreetType">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[StreetType]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

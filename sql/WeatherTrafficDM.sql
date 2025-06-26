@@ -19,7 +19,6 @@ CREATE TABLE DimDate (
   CalendarYear INT,
   IsWeekend BIT,
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
-  UpdateTimeStamp DATETIME NULL DEFAULT NULL,
   SourceSystemCode INT NULL,
   SourceFolder VARCHAR(50) NULL
 );
@@ -32,9 +31,6 @@ CREATE TABLE DimAddress (
   Latitude FLOAT,
   Longitude FLOAT,
   Location VARCHAR(200),
-  ValidFromDate DATE NULL DEFAULT GETDATE(),
-  ValidToDate DATE NULL DEFAULT NULL,
-  IsCurrent BIT DEFAULT 1,
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
   UpdateTimeStamp DATETIME NULL DEFAULT NULL,
   SourceSystemCode INT NULL,
@@ -59,8 +55,6 @@ CREATE TABLE DimWeather (
   ComfortLevel VARCHAR(50) NULL,
 
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
-  UpdateTimeStamp DATETIME NULL DEFAULT NULL,
-    
   SourceSystemCode INT NULL,
   SourceFolder VARCHAR(50) NULL,
   FOREIGN KEY (WeatherDate) REFERENCES DimDate(Date)
@@ -76,7 +70,6 @@ CREATE TABLE FactTrafficViolation (
   TotalViolations INT DEFAULT 0,
 
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
-  UpdateTimeStamp DATETIME NULL DEFAULT NULL,
 
   SourceSystemCode INT NULL,
   SourceFolder VARCHAR(50) NULL,
@@ -84,5 +77,3 @@ CREATE TABLE FactTrafficViolation (
   FOREIGN KEY (WeatherKey) REFERENCES DimWeather(WeatherKey),
   FOREIGN KEY (AddressKey) REFERENCES DimAddress(AddressKey)
 );
-
-
