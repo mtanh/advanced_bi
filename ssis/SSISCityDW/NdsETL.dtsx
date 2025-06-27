@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="NdsETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="196"
-  DTS:VersionGUID="{DAFFB5F6-8EDE-4588-8938-3156EC056D37}">
+  DTS:VersionBuild="238"
+  DTS:VersionGUID="{2BF06B64-566F-4C23-866B-F4D6401BD91F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -32,188 +32,72 @@
           version="1">
           <components>
             <component
-              refId="Package\DFT_RedLight_Address\Insert Into Address"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Insert Into Address"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Address]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DFT_RedLight_Address\Insert Into Address.Connections[OleDbConnection]"
-                  connectionManagerID="{70315D05-A6E7-4DBA-8FE5-423391D75D7B}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CityDW]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
+              refId="Package\DFT_RedLight_Address\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
+                  refId="Package\DFT_RedLight_Address\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].Columns[SourceFolder]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="SourceFolder"
-                      externalMetadataColumnId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[SourceFolder]" />
-                    <inputColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].Columns[LocationKey]"
-                      cachedDataType="i4"
-                      cachedName="LocationKey"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[LocationKey]"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[LocationKey]" />
-                    <inputColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].Columns[SourceSystemCode]"
-                      cachedDataType="i4"
-                      cachedName="SourceSystemCode"
-                      externalMetadataColumnId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[SourceSystemCode]" />
-                    <inputColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].Columns[StreetTypeKey]"
+                      refId="Package\DFT_RedLight_Address\Derived Column.Inputs[Derived Column Input].Columns[StreetTypeKey]"
                       cachedDataType="i4"
                       cachedName="StreetTypeKey"
-                      externalMetadataColumnId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeKey]"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[StreetTypeKey]" />
-                    <inputColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].Columns[ADDRESS]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="100"
-                      cachedName="ADDRESS"
-                      externalMetadataColumnId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[ADDRESS]" />
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_RedLight_Address\Lookup at StreetType.Outputs[Lookup Match Output].Columns[StreetTypeKey]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\DFT_RedLight_Address\Lookup at StreetType.Outputs[Lookup Match Output].Columns[StreetTypeKey]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">StreetTypeKey</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[AddressKey]"
-                      dataType="i4"
-                      name="AddressKey" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeKey]"
-                      dataType="i4"
-                      name="StreetTypeKey" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[LocationKey]"
-                      dataType="i4"
-                      name="LocationKey" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="FullAddress" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[ValidFromDate]"
-                      dataType="dbTimeStamp"
-                      name="ValidFromDate" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[ValidToDate]"
-                      dataType="dbTimeStamp"
-                      name="ValidToDate" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[IsCurrent]"
-                      dataType="bool"
-                      name="IsCurrent" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="CreateTimeStamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="UpdateTimeStamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
-                      dataType="i4"
-                      name="SourceSystemCode" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="SourceFolder" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input].ExternalColumns[Processed]"
-                      dataType="bool"
-                      name="Processed" />
-                  </externalMetadataColumns>
+                  <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT_RedLight_Address\Insert Into Address.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\DFT_RedLight_Address\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_RedLight_Address\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_RedLight_Address\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input]">
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_RedLight_Address\Derived Column.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\DFT_RedLight_Address\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\DFT_RedLight_Address\Insert Into Address.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\DFT_RedLight_Address\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\DFT_RedLight_Address\Insert Into Address.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\DFT_RedLight_Address\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\DFT_RedLight_Address\Insert Into Address.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\DFT_RedLight_Address\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -242,7 +126,7 @@
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Address]) [refTable]
-where [refTable].[LocationKey] = ?</property>
+where [refTable].[FullAddress] = ? and [refTable].[LocationKey] = ? and [refTable].[StreetTypeKey] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -273,12 +157,12 @@ where [refTable].[LocationKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AddressKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StreetTypeKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullAddress" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ValidFromDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ValidToDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IsCurrent" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceSystemCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceFolder" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Processed" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AddressKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="StreetTypeKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullAddress" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CreateTimeStamp" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceSystemCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceFolder" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Processed" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[LocationKey]};</property>
+                  name="ParameterMap">#{Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[ADDRESS]};#{Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[LocationKey]};#{Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[StreetTypeKey]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -306,12 +190,46 @@ where [refTable].[LocationKey] = ?</property>
                       cachedDataType="i4"
                       cachedName="LocationKey"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[LocationKey]">
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[LocationKey]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
                           name="JoinToReferenceColumn">LocationKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Lookup at Address.Inputs[Lookup Input].Columns[StreetTypeKey]"
+                      cachedDataType="i4"
+                      cachedName="StreetTypeKey"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[StreetTypeKey]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">StreetTypeKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Lookup at Address.Inputs[Lookup Input].Columns[ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ADDRESS"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[ADDRESS]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">FullAddress</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -700,11 +618,185 @@ where [refTable].[StreetTypeName] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey"
+              refId="Package\DFT_RedLight_Address\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Address]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_RedLight_Address\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{70315D05-A6E7-4DBA-8FE5-423391D75D7B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CityDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceFolder]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SourceFolder"
+                      externalMetadataColumnId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[SourceFolder]" />
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LocationKey]"
+                      cachedDataType="i4"
+                      cachedName="LocationKey"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocationKey]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[LocationKey]" />
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StreetTypeKey]"
+                      cachedDataType="i4"
+                      cachedName="StreetTypeKey"
+                      externalMetadataColumnId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeKey]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[StreetTypeKey]" />
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ADDRESS"
+                      externalMetadataColumnId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[ADDRESS]" />
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SourceSystemCode]"
+                      cachedDataType="i4"
+                      cachedName="SourceSystemCode"
+                      externalMetadataColumnId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
+                      lineageId="Package\DFT_RedLight_Address\SourceSystemCode.Outputs[Derived Column Output].Columns[SourceSystemCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKey]"
+                      dataType="i4"
+                      name="AddressKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeKey]"
+                      dataType="i4"
+                      name="StreetTypeKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocationKey]"
+                      dataType="i4"
+                      name="LocationKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="FullAddress" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
+                      dataType="dbTimeStamp"
+                      name="CreateTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
+                      dataType="i4"
+                      name="SourceSystemCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceFolder" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Processed]"
+                      dataType="bool"
+                      name="Processed" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_RedLight_Address\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_RedLight_Address\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_RedLight_Address\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_RedLight_Address\Sort"
               componentClassID="Microsoft.Sort"
               contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort and Remove duplication LocationKey"
+              name="Sort"
               version="1">
               <properties>
                 <property
@@ -719,16 +811,16 @@ where [refTable].[StreetTypeName] = ?</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Inputs[Sort Input]"
+                  refId="Package\DFT_RedLight_Address\Sort.Inputs[Sort Input]"
                   name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Inputs[Sort Input].Columns[ADDRESS]"
+                      refId="Package\DFT_RedLight_Address\Sort.Inputs[Sort Input].Columns[ADDRESS]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="ADDRESS"
-                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[ADDRESS]">
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[ADDRESS]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -741,12 +833,12 @@ where [refTable].[StreetTypeName] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Inputs[Sort Input].Columns[LATITUDE]"
+                      refId="Package\DFT_RedLight_Address\Sort.Inputs[Sort Input].Columns[LATITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="LATITUDE"
-                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[LATITUDE]">
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LATITUDE]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -759,12 +851,12 @@ where [refTable].[StreetTypeName] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Inputs[Sort Input].Columns[LONGITUDE]"
+                      refId="Package\DFT_RedLight_Address\Sort.Inputs[Sort Input].Columns[LONGITUDE]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="LONGITUDE"
-                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[LONGITUDE]">
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LONGITUDE]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -777,12 +869,12 @@ where [refTable].[StreetTypeName] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Inputs[Sort Input].Columns[SourceFolder]"
+                      refId="Package\DFT_RedLight_Address\Sort.Inputs[Sort Input].Columns[SourceFolder]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="SourceFolder"
-                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[SourceFolder]">
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[SourceFolder]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -795,10 +887,28 @@ where [refTable].[StreetTypeName] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Inputs[Sort Input].Columns[LocationKey]"
+                      refId="Package\DFT_RedLight_Address\Sort.Inputs[Sort Input].Columns[STREET TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STREET TYPE"
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[STREET TYPE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Sort.Inputs[Sort Input].Columns[LocationKey]"
                       cachedDataType="i4"
                       cachedName="LocationKey"
-                      lineageId="Package\DFT_RedLight_Address\Lookup at Location.Outputs[Lookup Match Output].Columns[LocationKey]">
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LocationKey]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -811,26 +921,10 @@ where [refTable].[StreetTypeName] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Inputs[Sort Input].Columns[SourceSystemCode]"
-                      cachedDataType="i4"
-                      cachedName="SourceSystemCode"
-                      lineageId="Package\DFT_RedLight_Address\SourceSystemCode.Outputs[Derived Column Output].Columns[SourceSystemCode]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Inputs[Sort Input].Columns[StreetTypeKey]"
+                      refId="Package\DFT_RedLight_Address\Sort.Inputs[Sort Input].Columns[StreetTypeKey]"
                       cachedDataType="i4"
                       cachedName="StreetTypeKey"
-                      lineageId="Package\DFT_RedLight_Address\Lookup at StreetType.Outputs[Lookup Match Output].Columns[StreetTypeKey]">
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[StreetTypeKey]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -848,74 +942,89 @@ where [refTable].[StreetTypeName] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output]"
+                  refId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output]"
                   isSorted="true"
                   name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[ADDRESS]"
+                      refId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[ADDRESS]"
                       codePage="1252"
                       dataType="str"
                       length="100"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[ADDRESS]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[ADDRESS]"
                       name="ADDRESS">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[ADDRESS]}</property>
+                          name="SortColumnId">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[ADDRESS]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[LATITUDE]"
+                      refId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[LATITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[LATITUDE]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[LATITUDE]"
                       name="LATITUDE">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[LATITUDE]}</property>
+                          name="SortColumnId">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LATITUDE]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[LONGITUDE]"
+                      refId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[LONGITUDE]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[LONGITUDE]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[LONGITUDE]"
                       name="LONGITUDE">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[LONGITUDE]}</property>
+                          name="SortColumnId">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LONGITUDE]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[SourceFolder]"
+                      refId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[SourceFolder]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[SourceFolder]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[SourceFolder]"
                       name="SourceFolder">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[SourceFolder]}</property>
+                          name="SortColumnId">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[SourceFolder]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[LocationKey]"
+                      refId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[STREET TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[STREET TYPE]"
+                      name="STREET TYPE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[STREET TYPE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[LocationKey]"
                       dataType="i4"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[LocationKey]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[LocationKey]"
                       name="LocationKey"
                       sortKeyPosition="1">
                       <properties>
@@ -923,33 +1032,20 @@ where [refTable].[StreetTypeName] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_RedLight_Address\Lookup at Location.Outputs[Lookup Match Output].Columns[LocationKey]}</property>
+                          name="SortColumnId">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LocationKey]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[SourceSystemCode]"
+                      refId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[StreetTypeKey]"
                       dataType="i4"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[SourceSystemCode]"
-                      name="SourceSystemCode">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_RedLight_Address\SourceSystemCode.Outputs[Derived Column Output].Columns[SourceSystemCode]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[StreetTypeKey]"
-                      dataType="i4"
-                      lineageId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output].Columns[StreetTypeKey]"
+                      lineageId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output].Columns[StreetTypeKey]"
                       name="StreetTypeKey">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\DFT_RedLight_Address\Lookup at StreetType.Outputs[Lookup Match Output].Columns[StreetTypeKey]}</property>
+                          name="SortColumnId">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[StreetTypeKey]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1025,6 +1121,367 @@ where [refTable].[StreetTypeName] = ?</property>
                       lineageId="Package\DFT_RedLight_Address\SourceSystemCode.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_RedLight_Address\StreetTypeKey(9)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="StreetTypeKey(9)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT_RedLight_Address\StreetTypeKey(9).Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\DFT_RedLight_Address\StreetTypeKey(9).Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Output].Columns[StreetTypeKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Output].Columns[StreetTypeKey]"
+                      name="StreetTypeKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">9</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">9</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\DFT_RedLight_Address\StreetTypeKey(9).Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_RedLight_Address\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 1].Columns[ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ADDRESS"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[ADDRESS]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[ADDRESS]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 1].Columns[LATITUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LATITUDE"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[LATITUDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LATITUDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 1].Columns[LONGITUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LONGITUDE"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[LONGITUDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LONGITUDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 1].Columns[SourceFolder]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SourceFolder"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[SourceFolder]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[SourceFolder]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 1].Columns[STREET TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STREET TYPE"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[STREET TYPE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[STREET TYPE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 1].Columns[LocationKey]"
+                      cachedDataType="i4"
+                      cachedName="LocationKey"
+                      lineageId="Package\DFT_RedLight_Address\Lookup at Location.Outputs[Lookup Match Output].Columns[LocationKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LocationKey]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 1].Columns[StreetTypeKey]"
+                      cachedDataType="i4"
+                      cachedName="StreetTypeKey"
+                      lineageId="Package\DFT_RedLight_Address\Lookup at StreetType.Outputs[Lookup Match Output].Columns[StreetTypeKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[StreetTypeKey]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 2].Columns[ADDRESS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="ADDRESS"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[ADDRESS]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[ADDRESS]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 2].Columns[LATITUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LATITUDE"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[LATITUDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LATITUDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 2].Columns[LONGITUDE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LONGITUDE"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[LONGITUDE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LONGITUDE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 2].Columns[SourceFolder]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SourceFolder"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[SourceFolder]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[SourceFolder]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 2].Columns[STREET TYPE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STREET TYPE"
+                      lineageId="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage.Outputs[OLE DB Source Output].Columns[STREET TYPE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[STREET TYPE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 2].Columns[LocationKey]"
+                      cachedDataType="i4"
+                      cachedName="LocationKey"
+                      lineageId="Package\DFT_RedLight_Address\Lookup at Location.Outputs[Lookup Match Output].Columns[LocationKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LocationKey]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 2].Columns[StreetTypeKey]"
+                      cachedDataType="i4"
+                      cachedName="StreetTypeKey"
+                      lineageId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Output].Columns[StreetTypeKey]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[StreetTypeKey]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[ADDRESS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[ADDRESS]"
+                      name="ADDRESS" />
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LATITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LATITUDE]"
+                      name="LATITUDE" />
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LONGITUDE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LONGITUDE]"
+                      name="LONGITUDE" />
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[SourceFolder]"
+                      name="SourceFolder" />
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[STREET TYPE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[STREET TYPE]"
+                      name="STREET TYPE" />
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LocationKey]"
+                      dataType="i4"
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[LocationKey]"
+                      name="LocationKey" />
+                    <outputColumn
+                      refId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[StreetTypeKey]"
+                      dataType="i4"
+                      lineageId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1].Columns[StreetTypeKey]"
+                      name="StreetTypeKey" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1242,9 +1699,19 @@ where [refTable].[StreetTypeName] = ?</property>
           <paths>
             <path
               refId="Package\DFT_RedLight_Address.Paths[Derived Column Output]"
-              endId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Inputs[Sort Input]"
+              endId="Package\DFT_RedLight_Address\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DFT_RedLight_Address\SourceSystemCode.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_RedLight_Address.Paths[Derived Column Output1]"
+              endId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\DFT_RedLight_Address\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_RedLight_Address.Paths[Derived Column Output2]"
+              endId="Package\DFT_RedLight_Address\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\DFT_RedLight_Address\StreetTypeKey(9).Outputs[Derived Column Output]" />
             <path
               refId="Package\DFT_RedLight_Address.Paths[Lookup Match Output]"
               endId="Package\DFT_RedLight_Address\Lookup at StreetType.Inputs[Lookup Input]"
@@ -1252,12 +1719,17 @@ where [refTable].[StreetTypeName] = ?</property>
               startId="Package\DFT_RedLight_Address\Lookup at Location.Outputs[Lookup Match Output]" />
             <path
               refId="Package\DFT_RedLight_Address.Paths[Lookup Match Output1]"
-              endId="Package\DFT_RedLight_Address\SourceSystemCode.Inputs[Derived Column Input]"
+              endId="Package\DFT_RedLight_Address\Derived Column.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\DFT_RedLight_Address\Lookup at StreetType.Outputs[Lookup Match Output]" />
             <path
               refId="Package\DFT_RedLight_Address.Paths[Lookup No Match Output]"
-              endId="Package\DFT_RedLight_Address\Insert Into Address.Inputs[OLE DB Destination Input]"
+              endId="Package\DFT_RedLight_Address\StreetTypeKey(9).Inputs[Derived Column Input]"
+              name="Lookup No Match Output"
+              startId="Package\DFT_RedLight_Address\Lookup at StreetType.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\DFT_RedLight_Address.Paths[Lookup No Match Output1]"
+              endId="Package\DFT_RedLight_Address\SourceSystemCode.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
               startId="Package\DFT_RedLight_Address\Lookup at Address.Outputs[Lookup No Match Output]" />
             <path
@@ -1269,7 +1741,12 @@ where [refTable].[StreetTypeName] = ?</property>
               refId="Package\DFT_RedLight_Address.Paths[Sort Output]"
               endId="Package\DFT_RedLight_Address\Lookup at Address.Inputs[Lookup Input]"
               name="Sort Output"
-              startId="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey.Outputs[Sort Output]" />
+              startId="Package\DFT_RedLight_Address\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\DFT_RedLight_Address.Paths[Union All Output 1]"
+              endId="Package\DFT_RedLight_Address\Sort.Inputs[Sort Input]"
+              name="Union All Output 1"
+              startId="Package\DFT_RedLight_Address\Union All.Outputs[Union All Output 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1345,7 +1822,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\DFT_RedLight_Location\63:invalid};#{Package\DFT_RedLight_Location\64:invalid};</property>
+                  name="ParameterMap">#{Package\DFT_RedLight_Location\277:invalid};#{Package\DFT_RedLight_Location\278:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1895,10 +2372,6 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                       refId="Package\DFT_RedLight_TrafficViolation\Insert Into TrafficViolation.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
                       dataType="dbTimeStamp"
                       name="CreateTimeStamp" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_RedLight_TrafficViolation\Insert Into TrafficViolation.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
-                      dataType="dbTimeStamp"
-                      name="UpdateTimeStamp" />
                     <externalMetadataColumn
                       refId="Package\DFT_RedLight_TrafficViolation\Insert Into TrafficViolation.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
                       dataType="i4"
@@ -3916,7 +4389,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\DFT_Speed_Location\63:invalid};#{Package\DFT_Speed_Location\64:invalid};</property>
+                  name="ParameterMap">#{Package\DFT_Speed_Location\279:invalid};#{Package\DFT_Speed_Location\280:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -5757,57 +6230,57 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         <NodeLayout
           Size="187.2,41.6"
           Id="Package\DFT_RedLight_Address"
-          TopLeft="656.000000564115,27.1764705915868" />
+          TopLeft="515.285714550286,116.647058748457" />
         <NodeLayout
           Size="189.6,41.6"
           Id="Package\DFT_RedLight_Location"
-          TopLeft="421.000000574759,28" />
+          TopLeft="736.000001245311,116.705882275187" />
         <NodeLayout
           Size="220.8,41.6"
           Id="Package\DFT_RedLight_TrafficViolation"
-          TopLeft="639.857142884512,120.411764630139" />
+          TopLeft="271.285713528492,115.058823458361" />
         <NodeLayout
           Size="175.2,41.6"
           Id="Package\DFT_Speed_Address"
-          TopLeft="115.142856551372,200.882352878169" />
+          TopLeft="242.285713964883,202.411764641534" />
         <NodeLayout
           Size="177.6,41.6"
           Id="Package\DFT_Speed_Location"
-          TopLeft="116.7142856413,118.823529419808" />
+          TopLeft="35.2857140393885,202.176470523216" />
         <NodeLayout
           Size="208,41.6"
           Id="Package\DFT_Speed_TrafficViolation"
-          TopLeft="348.999999403953,200.352941114804" />
+          TopLeft="440.428571027152,203.411764641535" />
         <NodeLayout
           Size="143.2,41.6"
           Id="Package\DFT_Weather"
-          TopLeft="25.4285711335892,27.9999999088399" />
+          TopLeft="31.8571425758454,27.9999999088399" />
         <NodeLayout
           Size="237.6,41.6"
           Id="Package\SQL_Processed_RedLightViolation"
-          TopLeft="342.857141628557,119.411764630139" />
+          TopLeft="3.5714266205925,114.05882345836" />
         <NodeLayout
           Size="225.6,41.6"
           Id="Package\SQL_Processed_SpeedViolation"
-          TopLeft="617.571427919122,200.470588168265" />
+          TopLeft="697.571428089421,200.470588168265" />
         <NodeLayout
           Size="196,41.6"
           Id="Package\SQL_Processed_Weather"
-          TopLeft="195.857142511983,26.99999990884" />
+          TopLeft="725.142857924408,24.705882263792" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="168.628571133589,48.29999990884">
+          TopLeft="175.057142575845,47.152941086316">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="27.2285713783941,0"
+              EndConnector="550.085715348562,0"
               Start="0,0"
-              End="19.7285713783941,0">
+              End="542.585715348562,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="19.7285713783941,0" />
+                    End="542.585715348562,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5818,18 +6291,18 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="610.600000574759,48.3882352957934">
+          TopLeft="736.000001245311,137.476470511822">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="45.3999999893563,0"
+              EndConnector="-33.5142866950256,0"
               Start="0,0"
-              End="37.8999999893563,0">
+              End="-26.0142866950256,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="37.8999999893563,0" />
+                    End="-26.0142866950256,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5840,18 +6313,18 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="749.928571724314,68.7764705915868">
+          TopLeft="515.285714550286,136.652941103409">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.6352940385523"
+              EndConnector="-23.2000010217939,0"
               Start="0,0"
-              End="0,44.1352940385523">
+              End="-15.7000010217939,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.1352940385523" />
+                    End="-15.7000010217939,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5862,18 +6335,18 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="639.857142884512,140.711764630139">
+          TopLeft="271.285713528492,135.35882345836">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-59.4000012559549,0"
+              EndConnector="-30.1142869078993,0"
               Start="0,0"
-              End="-51.9000012559549,0">
+              End="-22.6142869078993,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-51.9000012559549,0" />
+                    End="-22.6142869078993,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5884,18 +6357,18 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="204.128571096336,160.423529419808">
+          TopLeft="212.885714039389,223.094117582375">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.4588234583605"
+              EndConnector="29.3999999254944,0"
               Start="0,0"
-              End="0,32.9588234583605">
+              End="21.8999999254944,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.9588234583605" />
+                    End="21.8999999254944,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5906,18 +6379,18 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="342.857141628557,139.917647024974">
+          TopLeft="123.228570329991,155.65882345836">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-48.5428559872568,0"
+              EndConnector="0,46.5176470648559"
               Start="0,0"
-              End="-41.0428559872568,0">
+              End="0,39.0176470648559">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-41.0428559872568,0" />
+                    End="0,39.0176470648559" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5928,18 +6401,18 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="391.857142511983,48.29999995442">
+          TopLeft="826.971429584859,66.305882263792">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="29.1428580627759,0"
+              EndConnector="0,50.4000000113949"
               Start="0,0"
-              End="21.6428580627759,0">
+              End="0,42.9000000113949">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="21.6428580627759,0" />
+                    End="0,42.9000000113949" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5950,18 +6423,18 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="290.342856551372,221.417646996486">
+          TopLeft="417.485713964883,223.711764641534">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58.6571428525812,0"
+              EndConnector="22.942857062269,0"
               Start="0,0"
-              End="51.1571428525812,0">
+              End="15.442857062269,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="51.1571428525812,0" />
+                    End="15.442857062269,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5972,18 +6445,18 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="556.999999403953,221.211764641534">
+          TopLeft="648.428571027152,222.7411764049">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="60.571428515169,0"
+              EndConnector="49.1428570622688,0"
               Start="0,0"
-              End="53.071428515169,0">
+              End="41.6428570622688,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="53.071428515169,0" />
+                    End="41.6428570622688,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5999,23 +6472,15 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
     design-time-name="Package\DFT_RedLight_Address">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="168,41.6"
           Id="Package\DFT_RedLight_Address\SourceSystemCode"
-          TopLeft="640.285715050539,101.588235404046" />
+          TopLeft="122.428571091014,209.411764721299" />
         <NodeLayout
           Size="323.2,41.6"
           Id="Package\DFT_RedLight_Address\v_UnprocessedRedLightViolationAddressesStage"
           TopLeft="33.4285709526466,15.7647059158676" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\DFT_RedLight_Address\Insert Into Address"
-          TopLeft="76.999999457172,209.235294391797" />
-        <NodeLayout
-          Size="284,41.6"
-          Id="Package\DFT_RedLight_Address\Sort and Remove duplication LocationKey"
-          TopLeft="303.714285758381,103.000000193715" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\DFT_RedLight_Address\Lookup at Location"
@@ -6023,33 +6488,11 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         <NodeLayout
           Size="169.6,41.6"
           Id="Package\DFT_RedLight_Address\Lookup at Address"
-          TopLeft="77.1428565833033,106.058823800211" />
+          TopLeft="120.714285247484,104.529412036846" />
         <NodeLayout
           Size="179.2,41.6"
           Id="Package\DFT_RedLight_Address\Lookup at StreetType"
-          TopLeft="636.428572783361,19.9294118089453" />
-        <EdgeLayout
-          Id="Package\DFT_RedLight_Address.Paths[Sort Output]"
-          TopLeft="303.714285758381,125.329411996963">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-56.9714291750774,0"
-              Start="0,0"
-              End="-49.4714291750774,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-49.4714291750774,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="702.142858637535,17.6352941638974" />
         <EdgeLayout
           Id="Package\DFT_RedLight_Address.Paths[OLE DB Source Output]"
           TopLeft="356.628570952647,37.8882353641634">
@@ -6073,91 +6516,271 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_RedLight_Address.Paths[Lookup No Match Output]"
-          TopLeft="162.271428020238,147.658823800211">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,61.5764705915864"
-              Start="0,0"
-              End="0,54.0764705915864">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.0764705915864" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,21.2335477957932,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_RedLight_Address.Paths[Lookup Match Output1]"
-          TopLeft="725.15714391695,61.5294118089453">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.0588235951005"
-              Start="0,0"
-              End="0,32.5588235951005">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5588235951005" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.4747242975503,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\DFT_RedLight_Address.Paths[Lookup Match Output]"
-          TopLeft="578.142857307074,39.9705883107022">
+          TopLeft="578.142857307074,38.8235294881782">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58.2857154762868,0"
+              EndConnector="124.000001330461,0"
               Start="0,0"
-              End="50.7857154762868,0">
+              End="116.500001330461,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50.7857154762868,0" />
+                    End="116.500001330461,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-22.7985289806066,5,96.3827734375,11.609375"
+              BoundingBox="10.0586139464806,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\DFT_RedLight_Address\StreetTypeKey(9)"
+          TopLeft="745.714287301716,173.588235141961" />
+        <EdgeLayout
+          Id="Package\DFT_RedLight_Address.Paths[Lookup No Match Output]"
+          TopLeft="823.195239636292,59.2352941638974">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,114.352940978064"
+              Start="0,0"
+              End="0,106.852940978064">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,106.852940978064" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,47.6217829890318,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\DFT_RedLight_Address\Sort"
+          TopLeft="395.714286556657,266.117646825561" />
+        <EdgeLayout
+          Id="Package\DFT_RedLight_Address.Paths[Sort Output]"
+          TopLeft="444.514286556657,266.117646825561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-212.06666797584,-119.988234788715"
+              Start="0,0"
+              End="-212.06666797584,-112.488234788715">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-67.320109650115" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-67.320109650115"
+                    Point2="0,-71.320109650115"
+                    Point3="-4,-71.320109650115" />
+                  <mssgle:LineSegment
+                    End="-208.06666797584,-71.320109650115" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-208.06666797584,-71.320109650115"
+                    Point2="-212.06666797584,-71.320109650115"
+                    Point3="-212.06666797584,-75.320109650115" />
+                  <mssgle:LineSegment
+                    End="-212.06666797584,-112.488234788715" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\DFT_RedLight_Address\OLE DB Destination"
+          TopLeft="117.85714310803,295.176470329502" />
+        <EdgeLayout
+          Id="Package\DFT_RedLight_Address.Paths[Lookup No Match Output1]"
+          TopLeft="205.971428169249,146.129412036846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.2823526844535"
+              Start="0,0"
+              End="0,55.7823526844535">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.7823526844535" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,22.0864888422267,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_RedLight_Address.Paths[Derived Column Output]"
-          TopLeft="640.285715050539,123.094117798881">
+          TopLeft="204.742857099522,251.011764721299">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-52.5714292921583,0"
+              EndConnector="0,44.1647056082024"
               Start="0,0"
-              End="-45.0714292921583,0">
+              End="0,36.6647056082024">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-45.0714292921583,0" />
+                    End="0,36.6647056082024" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\DFT_RedLight_Address\Derived Column"
+          TopLeft="522.857143970168,178.176470432057" />
+        <EdgeLayout
+          Id="Package\DFT_RedLight_Address.Paths[Lookup Match Output1]"
+          TopLeft="763.209525304202,59.2352941638974">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-163.952381334034,118.941176268159"
+              Start="0,0"
+              End="-163.952381334034,111.441176268159">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.2080165759442" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.2080165759442"
+                    Point2="0,48.2080165759442"
+                    Point3="-4,48.2080165759442" />
+                  <mssgle:LineSegment
+                    End="-159.952381334034,48.2080165759442" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-159.952381334034,48.2080165759442"
+                    Point2="-163.952381334034,48.2080165759442"
+                    Point3="-163.952381334034,52.2080165759442" />
+                  <mssgle:LineSegment
+                    End="-163.952381334034,111.441176268159" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-130.167577385767,53.2080165759442,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\DFT_RedLight_Address\Union All"
+          TopLeft="654.285715678517,266.117646825561" />
+        <EdgeLayout
+          Id="Package\DFT_RedLight_Address.Paths[Derived Column Output1]"
+          TopLeft="599.257143970168,219.776470432057">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="96.361905041682,46.3411763935044"
+              Start="0,0"
+              End="96.361905041682,38.8411763935044">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.4388544435224" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.4388544435224"
+                    Point2="0,27.4388544435224"
+                    Point3="4,27.4388544435224" />
+                  <mssgle:LineSegment
+                    End="92.361905041682,27.4388544435224" />
+                  <mssgle:CubicBezierSegment
+                    Point1="92.361905041682,27.4388544435224"
+                    Point2="96.361905041682,27.4388544435224"
+                    Point3="96.361905041682,31.4388544435224" />
+                  <mssgle:LineSegment
+                    End="96.361905041682,38.8411763935044" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_RedLight_Address.Paths[Derived Column Output2]"
+          TopLeft="826.114287301716,215.188235141961">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-93.1619049565321,50.9294116836002"
+              Start="0,0"
+              End="-93.1619049565321,43.4294116836002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.1555727073949" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.1555727073949"
+                    Point2="0,30.1555727073949"
+                    Point3="-4,30.1555727073949" />
+                  <mssgle:LineSegment
+                    End="-89.1619049565321,30.1555727073949" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-89.1619049565321,30.1555727073949"
+                    Point2="-93.1619049565321,30.1555727073949"
+                    Point3="-93.1619049565321,34.1555727073949" />
+                  <mssgle:LineSegment
+                    End="-93.1619049565321,43.4294116836002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_RedLight_Address.Paths[Union All Output 1]"
+          TopLeft="654.285715678517,286.917646825561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-160.97142912186,0"
+              Start="0,0"
+              End="-153.47142912186,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-153.47142912186,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6183,7 +6806,30 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_RedLight_Address\Insert Into Address">
+    design-time-name="Package\DFT_RedLight_Address\Lookup at Address">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Address]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_RedLight_Address\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -6207,29 +6853,6 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[Location]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_RedLight_Address\Lookup at Address">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Address]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -6270,15 +6893,15 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="336,42"
+          Size="336,41.6"
           Id="Package\DFT_RedLight_Location\v_Unprocessed_RedLightViolation_Locations_Stage"
           TopLeft="252,92" />
         <NodeLayout
-          Size="172,42"
+          Size="172,41.6"
           Id="Package\DFT_RedLight_Location\Lookup at Location"
           TopLeft="332,174" />
         <NodeLayout
-          Size="177,42"
+          Size="176.8,41.6"
           Id="Package\DFT_RedLight_Location\OLE DB Destination"
           TopLeft="336,308" />
         <EdgeLayout
@@ -6300,9 +6923,7 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6748,55 +7369,6 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_Speed_Address\v_Unprocessed_SpeedViolation_Addresses_Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Speed_Address\Insert Into Address">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Speed_Address\Lookup at Location">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Location]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\DFT_Speed_Address\Lookup at Address">
     <Properties>
       <Property>
@@ -6839,6 +7411,55 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Speed_Address\v_Unprocessed_SpeedViolation_Addresses_Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Speed_Address\Lookup at Location">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Location]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Speed_Address\Insert Into Address">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -7080,15 +7701,25 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_Speed_TrafficViolation\v_Unprocessed_SpeedViolation_Date_Count_Stage">
+    design-time-name="Package\DFT_Speed_TrafficViolation\Lookup at Address">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Address]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">View</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -7129,25 +7760,15 @@ where [refTable].[Latitude] = ? and [refTable].[Longitude] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\DFT_Speed_TrafficViolation\Lookup at Address">
+    design-time-name="Package\DFT_Speed_TrafficViolation\v_Unprocessed_SpeedViolation_Date_Count_Stage">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Address]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">View</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

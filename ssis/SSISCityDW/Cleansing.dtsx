@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Cleansing"
   DTS:PackageType="5"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{1601BD25-A8B3-4C0C-A033-928FD450EAB8}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{F88CA313-F166-43A2-A57A-E1A898434019}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />

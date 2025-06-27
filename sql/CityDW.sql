@@ -41,7 +41,7 @@ CREATE TABLE Location (
 CREATE TABLE Address (
   AddressKey INT IDENTITY(1,1) PRIMARY KEY,
   StreetTypeKey INT NOT NULL,
-  LocationKey INT UNIQUE NOT NULL,
+  LocationKey INT NOT NULL,
   FullAddress VARCHAR(100) NOT NULL,
   CreateTimeStamp DATETIME NULL DEFAULT GETDATE(),
   SourceSystemCode INT NULL,

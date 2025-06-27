@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DdsETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="95"
-  DTS:VersionGUID="{02FD0BB3-BA8E-4C96-9CB6-2EB8DD574FF0}">
+  DTS:VersionBuild="106"
+  DTS:VersionGUID="{743F8256-CDA0-459F-8116-056F05FDCA98}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,6 +21,7 @@
       DTS:refId="Package\DFT_DimAddress"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{FFE1F128-141F-44C0-B9A9-5FEBE6FF3FDE}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1001,6 +1002,879 @@ where [refTable].[AddressKeyOfNds] = ?</property>
               endId="Package\DFT_DimAddress\OLE DB Destination 1.Inputs[OLE DB Destination Input]"
               name="Sort Output"
               startId="Package\DFT_DimAddress\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DFT_DimAddress_SCD"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EDE04219-1734-4AA8-BE3C-2EFAF480B82A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT_DimAddress_SCD"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT_DimAddress_SCD\Insert Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimAddress]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimAddress_SCD\Insert Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{7177D4EC-41F7-4463-9643-91E0D73C6BA7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.WeatherTrafficDM]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[FullAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="FullAddress"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullAddress]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[StreetTypeName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreetTypeName"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeName]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[StreetTypeName]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      cachedDataType="r8"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      cachedDataType="r8"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[Location]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="104"
+                      cachedName="Location"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[CreateTimeStamp]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreateTimeStamp"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[SourceSystemCode]"
+                      cachedDataType="i4"
+                      cachedName="SourceSystemCode"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[SourceSystemCode]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[SourceFolder]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SourceFolder"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[SourceFolder]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].Columns[AddressKey]"
+                      cachedDataType="i4"
+                      cachedName="AddressKey"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKeyOfNds]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[AddressKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKey]"
+                      dataType="i4"
+                      name="AddressKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[AddressKeyOfNds]"
+                      dataType="i4"
+                      name="AddressKeyOfNds" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="FullAddress" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[StreetTypeName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreetTypeName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="Location" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CreateTimeStamp]"
+                      dataType="dbTimeStamp"
+                      name="CreateTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[UpdateTimeStamp]"
+                      dataType="dbTimeStamp"
+                      name="UpdateTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceSystemCode]"
+                      dataType="i4"
+                      name="SourceSystemCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceFolder" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress_SCD\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress_SCD\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimAddress_SCD\OLE DB Command"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimAddress] SET [FullAddress] = ?,[StreetTypeName] = ?,[UpdateTimeStamp] = GETDATE() WHERE [Latitude] = ? AND [Longitude] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimAddress_SCD\OLE DB Command.Connections[OleDbConnection]"
+                  connectionManagerID="{7177D4EC-41F7-4463-9643-91E0D73C6BA7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.WeatherTrafficDM]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].Columns[FullAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="FullAddress"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullAddress]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].Columns[Latitude]"
+                      cachedDataType="r8"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].Columns[Longitude]"
+                      cachedDataType="r8"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].Columns[StreetTypeName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreetTypeName"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[StreetTypeName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="r8"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="r8"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\OLE DB Command.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimAddress_SCD\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[v_Unprocessed_TrafficViolation_Addresses_Nds]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimAddress_SCD\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="{70315D05-A6E7-4DBA-8FE5-423391D75D7B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.CityDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[AddressKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AddressKey]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[AddressKey]"
+                      name="AddressKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FullAddress]"
+                      length="100"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullAddress]"
+                      name="FullAddress"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[StreetTypeName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StreetTypeName]"
+                      length="50"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[StreetTypeName]"
+                      name="StreetTypeName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Location]"
+                      length="104"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Location]"
+                      name="Location"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreateTimeStamp]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[CreateTimeStamp]"
+                      name="CreateTimeStamp"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[SourceSystemCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SourceSystemCode]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[SourceSystemCode]"
+                      name="SourceSystemCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SourceFolder]"
+                      length="50"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[SourceFolder]"
+                      name="SourceFolder"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AddressKey]"
+                      dataType="i4"
+                      name="AddressKey" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FullAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="FullAddress" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[StreetTypeName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreetTypeName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="104"
+                      name="Location" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CreateTimeStamp]"
+                      dataType="dbTimeStamp"
+                      name="CreateTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SourceSystemCode]"
+                      dataType="i4"
+                      name="SourceSystemCode" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SourceFolder" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AddressKey]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AddressKey]"
+                      name="AddressKey" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FullAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FullAddress]"
+                      name="FullAddress" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StreetTypeName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[StreetTypeName]"
+                      name="StreetTypeName" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Latitude]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Latitude]"
+                      name="Latitude" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Longitude]"
+                      dataType="r8"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Longitude]"
+                      name="Longitude" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Location]"
+                      codePage="1252"
+                      dataType="str"
+                      length="104"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Location]"
+                      name="Location" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreateTimeStamp]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CreateTimeStamp]"
+                      name="CreateTimeStamp" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SourceSystemCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SourceSystemCode]"
+                      name="SourceSystemCode" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SourceFolder]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SourceFolder]"
+                      name="SourceFolder" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [FullAddress], [Latitude], [Longitude], [StreetTypeName] FROM [dbo].[DimAddress]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Connections[LookupConnection]"
+                  connectionManagerID="{7177D4EC-41F7-4463-9643-91E0D73C6BA7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-CHFFD81_DIMENSIONAL2022.WeatherTrafficDM]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[FullAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="FullAddress"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[FullAddress]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[FullAddress]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Latitude]"
+                      cachedDataType="r8"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Latitude]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Longitude]"
+                      cachedDataType="r8"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Longitude]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitude]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[StreetTypeName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StreetTypeName"
+                      externalMetadataColumnId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[StreetTypeName]"
+                      lineageId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output].Columns[StreetTypeName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[FullAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="FullAddress" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[StreetTypeName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="StreetTypeName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT_DimAddress_SCD.Paths[Changing Attribute Updates Output]"
+              endId="Package\DFT_DimAddress_SCD\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\DFT_DimAddress_SCD.Paths[New Output]"
+              endId="Package\DFT_DimAddress_SCD\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Outputs[New Output]" />
+            <path
+              refId="Package\DFT_DimAddress_SCD.Paths[OLE DB Source Output]"
+              endId="Package\DFT_DimAddress_SCD\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT_DimAddress_SCD\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -4427,6 +5301,22 @@ where [refTable].[WeatherDate] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
       DTS:To="Package\SQL_Processed_TrafficViolation" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{B4DC821E-71AC-4C93-AFB7-E9C0FE562D29}"
+      DTS:From="Package\DFT_DimDate"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\DFT_DimAddress_SCD" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{F92CB347-2FE5-409E-B798-077410C8E7ED}"
+      DTS:From="Package\DFT_DimAddress_SCD"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\SQL_Processed_Address_Location" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -4443,7 +5333,11 @@ where [refTable].[WeatherDate] = ?</property>
         <NodeLayout
           Size="159.2,41.6"
           Id="Package\DFT_DimAddress"
-          TopLeft="271.85714261842,20.1764706599568" />
+          TopLeft="277.57142834487,10.2352941980824" />
+        <NodeLayout
+          Size="184.8,41.6"
+          Id="Package\DFT_DimAddress_SCD"
+          TopLeft="262.857143416697,61.1764705346118" />
         <NodeLayout
           Size="144,41.6"
           Id="Package\DFT_DimDate"
@@ -4466,18 +5360,18 @@ where [refTable].[WeatherDate] = ?</property>
           TopLeft="10.1428569451885,110.294117736208" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="206.999999776482,40.3294118374328">
+          TopLeft="206.999999776482,32.5588236064956">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="64.8571428419377,0"
+              EndConnector="70.5714285683873,0"
               Start="0,0"
-              End="57.3571428419377,0">
+              End="63.0714285683873,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="57.3571428419377,0" />
+                    End="63.0714285683873,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4488,18 +5382,18 @@ where [refTable].[WeatherDate] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="431.05714261842,40.4470588965915">
+          TopLeft="436.77142834487,32.6764706656543">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="53.2285713677502,0"
+              EndConnector="47.5142856413003,0"
               Start="0,0"
-              End="45.7285713677502,0">
+              End="40.0142856413003,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="45.7285713677502,0" />
+                    End="40.0142856413003,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4574,6 +5468,74 @@ where [refTable].[WeatherDate] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="206.999999776482,45.2823530149089">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.8571436402142,36.6941175197029"
+              Start="0,0"
+              End="48.3571436402142,36.6941175197029">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="19.5841273147571,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.5841273147571,0"
+                    Point2="23.5841273147571,0"
+                    Point3="23.5841273147571,4" />
+                  <mssgle:LineSegment
+                    End="23.5841273147571,32.6941175197029" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.5841273147571,32.6941175197029"
+                    Point2="23.5841273147571,36.6941175197029"
+                    Point3="27.5841273147571,36.6941175197029" />
+                  <mssgle:LineSegment
+                    End="48.3571436402142,36.6941175197029" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="447.657143416697,81.9764705346117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="36.6285705694734,-36.4588234013856"
+              Start="0,0"
+              End="29.1285705694734,-36.4588234013856">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="17.1631741068068,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.1631741068068,0"
+                    Point2="21.1631741068068,0"
+                    Point3="21.1631741068068,-4" />
+                  <mssgle:LineSegment
+                    End="21.1631741068068,-32.4588234013856" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.1631741068068,-32.4588234013856"
+                    Point2="21.1631741068068,-36.4588234013856"
+                    Point3="25.1631741068068,-36.4588234013856" />
+                  <mssgle:LineSegment
+                    End="29.1285705694734,-36.4588234013856" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -4585,25 +5547,25 @@ where [refTable].[WeatherDate] = ?</property>
         <NodeLayout
           Size="303.2,41.6"
           Id="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds"
-          TopLeft="111.285719139235,49.7142862996884" />
+          TopLeft="378.833327770233,55.4999992549419" />
         <NodeLayout
           Size="184,41.6"
           Id="Package\DFT_DimAddress\Lookup at DimAddress"
-          TopLeft="173.999997407198,139.999997913837" />
+          TopLeft="438.433327770233,157.099999254942" />
         <EdgeLayout
           Id="Package\DFT_DimAddress.Paths[OLE DB Source Output]"
-          TopLeft="264.442858273217,91.3142862996884">
+          TopLeft="530.433327770233,97.0999992549419">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.6857116141491"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,41.1857116141491">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.1857116141491" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4615,49 +5577,49 @@ where [refTable].[WeatherDate] = ?</property>
         <NodeLayout
           Size="97.6,41.6"
           Id="Package\DFT_DimAddress\Sort"
-          TopLeft="219.999996721744,249.99999627471" />
+          TopLeft="481.633327770233,258.699999254942" />
         <EdgeLayout
           Id="Package\DFT_DimAddress.Paths[Lookup No Match Output]"
-          TopLeft="267.399997064471,181.599997913837">
+          TopLeft="530.433327770233,198.699999254942">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,68.3999983608723"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,60.8999983608723">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.8999983608723" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,24.6453116804362,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,20.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
           Size="179.2,41.6"
           Id="Package\DFT_DimAddress\OLE DB Destination 1"
-          TopLeft="179.999997317791,345.999994844198" />
+          TopLeft="440.833327770233,360.299999254942" />
         <EdgeLayout
           Id="Package\DFT_DimAddress.Paths[Sort Output]"
-          TopLeft="269.199997019768,291.59999627471">
+          TopLeft="530.433327770233,300.299999254942">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,54.3999985694885"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,46.8999985694885">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,46.8999985694885" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4670,6 +5632,42 @@ where [refTable].[WeatherDate] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAddress\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAddress\Lookup at DimAddress">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAddress]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT_DimAddress\v_Unprocessed_TrafficViolation_Addresses_Nds">
     <Properties>
       <Property>
@@ -4679,6 +5677,149 @@ where [refTable].[WeatherDate] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\DFT_DimAddress_SCD">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\DFT_DimAddress_SCD\OLE DB Source"
+          TopLeft="492.733326980472,45.0000002235174" />
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\DFT_DimAddress_SCD\Slowly Changing Dimension"
+          TopLeft="454.699993778766,158.266666716337" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\DFT_DimAddress_SCD\Insert Destination"
+          TopLeft="228.999997481704,264.866666641831" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\DFT_DimAddress_SCD\OLE DB Command"
+          TopLeft="712.633326928317,262.200000014901" />
+        <EdgeLayout
+          Id="Package\DFT_DimAddress_SCD.Paths[OLE DB Source Output]"
+          TopLeft="567.533326980472,86.6000002235174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.83333320170595,71.6666664928194"
+              Start="0,0"
+              End="-8.83333320170595,64.1666664928194">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.8333332464097" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.8333332464097"
+                    Point2="0,35.8333332464097"
+                    Point3="-4,35.8333332464097" />
+                  <mssgle:LineSegment
+                    End="-4.83333320170595,35.8333332464097" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.83333320170595,35.8333332464097"
+                    Point2="-8.83333320170595,35.8333332464097"
+                    Point3="-8.83333320170595,39.8333332464097" />
+                  <mssgle:LineSegment
+                    End="-8.83333320170595,64.1666664928194" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimAddress_SCD.Paths[New Output]"
+          TopLeft="525.366660445432,199.866666716337">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-215.166662963729,64.9999999254946"
+              Start="0,0"
+              End="-215.166662963729,57.4999999254946">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2977098935207" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2977098935207"
+                    Point2="0,26.2977098935207"
+                    Point3="-4,26.2977098935207" />
+                  <mssgle:LineSegment
+                    End="-211.166662963729,26.2977098935207" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-211.166662963729,26.2977098935207"
+                    Point2="-215.166662963729,26.2977098935207"
+                    Point3="-215.166662963729,30.2977098935207" />
+                  <mssgle:LineSegment
+                    End="-215.166662963729,57.4999999254946" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-134.674718200614,31.2977098935207,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimAddress_SCD.Paths[Changing Attribute Updates Output]"
+          TopLeft="592.033327112099,199.866666716337">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="202.999999816218,62.3333332985647"
+              Start="0,0"
+              End="202.999999816218,54.8333332985647">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.2188295024727" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.2188295024727"
+                    Point2="0,25.2188295024727"
+                    Point3="4,25.2188295024727" />
+                  <mssgle:LineSegment
+                    End="198.999999816218,25.2188295024727" />
+                  <mssgle:CubicBezierSegment
+                    Point1="198.999999816218,25.2188295024727"
+                    Point2="202.999999816218,25.2188295024727"
+                    Point3="202.999999816218,29.2188295024727" />
+                  <mssgle:LineSegment
+                    End="202.999999816218,54.8333332985647" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="22.9660936581089,30.2188295024727,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimAddress_SCD\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -4801,6 +5942,19 @@ where [refTable].[WeatherDate] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\DFT_DimDate\OLE DB Destination">
     <Properties>
       <Property>
@@ -4833,19 +5987,6 @@ where [refTable].[WeatherDate] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimDate\v_Unprocessed_TrafficViolation_Distinct_Dates_Nds">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">View</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5222,42 +6363,6 @@ where [refTable].[WeatherDate] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_FactTrafficViolation\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAddress\Lookup at DimAddress">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimAddress]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimAddress\OLE DB Destination 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

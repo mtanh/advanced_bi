@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="203"
-  DTS:VersionGUID="{705CBA3E-8817-468C-ADFA-8E465A783C76}">
+  DTS:VersionBuild="223"
+  DTS:VersionGUID="{DD0F9390-06FA-48CC-AFBA-03C15D489818}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
