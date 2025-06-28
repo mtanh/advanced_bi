@@ -1,4 +1,5 @@
 utils/venv/
+dm/venv/
 
 ds/*.csv
 
@@ -8,3 +9,4 @@ ssis/SSISCityDW/.vs/
 
 ssas/SSASCityDW/bin/
 ssas/SSASCityDW/obj/
+
