@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StageETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="223"
-  DTS:VersionGUID="{DD0F9390-06FA-48CC-AFBA-03C15D489818}">
+  DTS:VersionBuild="226"
+  DTS:VersionGUID="{5DAA5CC9-8AE5-4270-A381-DEAA74D0966F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -32,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\Humidity.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-09-30\\Humidity.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -387,7 +387,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\Pressure.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-09-30\\Pressure.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -742,7 +742,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\RedLightViolation.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-09-30\\RedLightViolation.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -854,7 +854,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\SpeedViolation.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-09-30\\SpeedViolation.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -957,7 +957,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\Temperature.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-09-30\\Temperature.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1312,7 +1312,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\\Temp\\2017-01-02\\WindSpeed.csv">
+          DTS:ConnectionString="C:\\Temp\\2017-09-30\\WindSpeed.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1687,7 +1687,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="SourceFolderFull">
       <DTS:VariableValue
-        DTS:DataType="8">C:\\Temp\\2017-01-02\\</DTS:VariableValue>
+        DTS:DataType="8">C:\\Temp\\2017-09-30\\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -10763,7 +10763,7 @@ where [refTable].[datetime] = ?</property>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{EAB363C9-0197-45FB-89BE-5F3E3E387AB0}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2017-01-02';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation_1&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation_1&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DECLARE @SourceFolder VARCHAR(50) = '2017-09-30';&#xA;&#xA;UPDATE Humidity&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Pressure&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE Temperature&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;UPDATE WindSpeed&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE RedLightViolation_1&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;&#xA;&#xA;&#xA;UPDATE SpeedCameraViolation_1&#xA;SET&#xA;    SourceFolder = @SourceFolder&#xA;WHERE&#xA;    Processed = 0;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -11052,7 +11052,9 @@ where [refTable].[datetime] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
