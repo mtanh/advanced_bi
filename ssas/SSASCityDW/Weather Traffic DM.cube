@@ -1,4 +1,4 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="175afa5d-da51-49cc-89c7-00e3507cbfb3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="89969a89-9320-4a47-9e38-4c44f9f67650" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Weather Traffic DM</ID>
   <Name>Weather Traffic DM</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1967" scrolltop="-4341" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="117" x="23982" y="15790" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="18" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-113" scrolltop="-4341" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="117" x="20976" y="15790" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
@@ -160,7 +160,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>-1967</Value>
+      <Value>-113</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
@@ -182,78 +182,83 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="ae449cf6-9eb8-41bb-9cea-8c2986cd4f01">
+    <Dimension dwd:design-time-name="8f3fbdfd-e621-47e1-b11c-d791c61e1466">
       <ID>Dim Address</ID>
       <Name>Dim Address</Name>
       <DimensionID>Dim Address</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="9ac625fb-8d45-4678-bc0c-21676c69c520">
+        <Attribute dwd:design-time-name="5d5fa237-492c-42fe-a900-a720d0d5d16d">
           <AttributeID>Address Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="3316b558-dfd2-40ed-aba2-bf581a72de50">
+        <Attribute dwd:design-time-name="9f072ef6-c518-4dff-9161-74a5267fb2c8">
           <AttributeID>Street Type Name</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="19555307-9338-48f6-a484-e44be6575acb">
+    <Dimension dwd:design-time-name="ad5ffb8b-4b96-4ba3-8de2-2260077fdb48">
       <ID>Dim Date</ID>
       <Name>Dim Date</Name>
       <DimensionID>Dim Date</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="2aebb372-74cb-403c-b2c4-a7390e84b65f">
+        <Attribute dwd:design-time-name="c491a82e-ddd2-4eff-8c2a-c31ede9b145e">
           <AttributeID>Date Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="c53e01c9-9a84-4b73-a6e4-930e33035de8">
+        <Attribute dwd:design-time-name="79f06aae-bca3-49f9-a819-72d0fd04f450">
           <AttributeID>Month Name</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="384d8cc6-12e9-4dbe-8966-422fb6e7df0c">
+        <Attribute dwd:design-time-name="f9793693-cda0-4c30-b518-18d9cd776ed7">
           <AttributeID>Is Weekend</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="01cb1164-57a0-413f-9e03-71161eb1e1be">
+        <Attribute dwd:design-time-name="87495a8e-e1f2-43e7-81bb-79ab8f6228ab">
           <AttributeID>Calendar Year</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="c5f262b4-8106-4da9-9ed2-324d8f9fada3">
+        <Attribute dwd:design-time-name="891c52f7-06bf-40f5-b33a-08b55298fe3f">
           <AttributeID>Day Number Of Week</AttributeID>
         </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="49e7431c-d7c7-4983-96a9-2866227952f0">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="8aa36291-7e2e-42fe-9173-154068149206">
+    <Dimension dwd:design-time-name="4dc4f40d-9caa-4765-9075-e496b9317edf">
       <ID>Dim Weather</ID>
       <Name>Dim Weather</Name>
       <DimensionID>Dim Weather</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="c93c2d07-dd03-4c6b-bf41-9f2fd5681245">
+        <Attribute dwd:design-time-name="5a8173c7-413f-4b0f-85db-dd69cb68c881">
           <AttributeID>Weather Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="1a496089-d797-4c6c-9a56-65c5bb0851fc">
+        <Attribute dwd:design-time-name="c7ec5e17-97d0-497f-a437-a7484a3fad5e">
           <AttributeID>Weather Date</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="cb0baf21-537c-4001-a6ea-014edc18f0e4">
+        <Attribute dwd:design-time-name="e02c0779-bc66-4581-8491-16e424d629f6">
           <AttributeID>Temperature Range Name</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="abb59c54-0c3c-4fff-ab72-3cc75c0624e6">
+        <Attribute dwd:design-time-name="4ffbf7c0-fdd9-42f5-a748-297492978a16">
           <AttributeID>Humidity Level Name</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="1f4a0114-0404-43e1-95cc-7c248399ed72">
+        <Attribute dwd:design-time-name="0efbe1f0-1f0d-4ddb-8559-aabe0c4c4be5">
           <AttributeID>Pressure Level Name</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="08a293c5-0fc6-4429-b8bd-988a7024bbcd">
+        <Attribute dwd:design-time-name="8952b16c-9664-4868-9853-8fb3e3e4e70d">
           <AttributeID>Wind Level Name</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="aaef331d-c365-4cb4-94e0-7533cf72b34b">
+        <Attribute dwd:design-time-name="46df65d5-0385-4411-a0d2-b5566c477bae">
           <AttributeID>Weather Comfort Level</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="bf9a25bd-5da7-4d51-8642-35ef688256d9">
+        <Attribute dwd:design-time-name="ddd2f48a-4d79-45da-9bc5-01e40995bbb8">
           <AttributeID>Overall Weather Description</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="4394b7ad-589f-490a-8b4e-3185389530d6">
+        <Attribute dwd:design-time-name="7a7b6dd1-c3a3-4a13-9346-5ee24622e8e6">
           <AttributeID>Comfort Level</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="6ec357eb-9aa5-4ccc-8d29-ce6da04e2cfe">
+    <MeasureGroup dwd:design-time-name="28b1e180-e42a-456a-aa21-ce1a4ff50168">
       <ID>Fact Traffic Violation</ID>
       <Name>Fact Traffic Violation</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -261,58 +266,58 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="12ca73d2-8887-40b8-8838-787d7c90121f">
+        <Measure dwd:design-time-name="7d33b0dc-1b7e-461d-ad67-1de6c390a7a9">
           <ID>Red Light Violations</ID>
           <Name>Red Light Violations</Name>
-          <Source dwd:design-time-name="b56ca193-ae3b-43d7-822a-70f3175834d3">
+          <Source dwd:design-time-name="078af44a-4078-423f-bf20-48b155810000">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="88adc4cd-3f98-4594-ad96-95f370349077">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="966826b3-b233-402a-b8c2-2f6e506b39cc">
               <TableID>dbo_FactTrafficViolation</TableID>
               <ColumnID>RedLightViolations</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="0f775ec4-2961-4247-818c-55ce5f6694c7">
+        <Measure dwd:design-time-name="ea613d36-159c-486b-8ba6-347564aeb291">
           <ID>Speeding Violations</ID>
           <Name>Speeding Violations</Name>
-          <Source dwd:design-time-name="139ab5a0-b803-4d99-89ce-bc5037fb8e06">
+          <Source dwd:design-time-name="698fd04e-9ed5-4126-b707-844609be8e26">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="81b77848-d1cd-4847-bd42-0a8999c9a7a8">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7f011dcc-ac3c-4387-9d63-8ca71cbe651f">
               <TableID>dbo_FactTrafficViolation</TableID>
               <ColumnID>SpeedingViolations</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="65e9b4de-2fa7-420e-bed2-bba33b277f98">
+        <Measure dwd:design-time-name="4cbb9e7d-02b6-4b69-ba18-4f142f8e5cf4">
           <ID>Total Violations</ID>
           <Name>Total Violations</Name>
-          <Source dwd:design-time-name="2700afec-37d0-4a9f-8b2e-c8c9730d576e">
+          <Source dwd:design-time-name="dafcfbce-8b11-40eb-bbce-a959be1b7b92">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="a5ef9bdf-a3ea-4abb-b6b7-51c56bc11708">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ea27bbbb-5bbb-4491-8a2a-72d3a284e4ef">
               <TableID>dbo_FactTrafficViolation</TableID>
               <ColumnID>TotalViolations</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="7e210e34-c8bb-4e49-a913-f55b1993d7e9">
+        <Measure dwd:design-time-name="46b844fe-b576-41ec-abd1-e3adcea7a689">
           <ID>Source System Code</ID>
           <Name>Source System Code</Name>
-          <Source dwd:design-time-name="a1b518b3-b565-446f-8cd0-aaa4586305d3">
+          <Source dwd:design-time-name="ad5edbd4-a174-4ee1-ae2b-ed360db78e35">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="0eb521d7-27bd-44f1-886d-53d15729585b">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9fada209-33f6-4ec8-94bf-b294640a5fcf">
               <TableID>dbo_FactTrafficViolation</TableID>
               <ColumnID>SourceSystemCode</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="bd7e6bb6-eb5c-4684-b8fa-3c2605acd538">
+        <Measure dwd:design-time-name="b07c1249-d49f-4151-bded-a1261b839528">
           <ID>Fact Traffic Violation Count</ID>
           <Name>Fact Traffic Violation Count</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="46f05105-a2c4-469d-bb85-c066aea0f98e">
+          <Source dwd:design-time-name="a1423a81-869f-4159-9f5a-a02f138b5521">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="49cb70c8-b383-4038-b286-c10919a845e9">
+            <Source xsi:type="RowBinding" dwd:design-time-name="21d4740e-0c5e-419d-877e-44b1808413f4">
               <TableID>dbo_FactTrafficViolation</TableID>
             </Source>
           </Source>
@@ -321,15 +326,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3dd8c61b-1989-4873-8673-dd54c27c65b5">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="47397aec-dbac-4664-a35a-bb6cf70985a7">
           <CubeDimensionID>Dim Address</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="2ba85e77-b0fc-4fc5-8e1b-6d14190f8634">
+            <Attribute dwd:design-time-name="b299aa36-71c9-404b-9c22-e08bd51b85f0">
               <AttributeID>Address Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="ce403962-72d7-4549-b5bd-123fb57f83bc">
+                <KeyColumn dwd:design-time-name="26721925-d176-46b5-a36c-6ccdc11e09af">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="063f5359-8ee3-4d9b-9407-29c9711767c2">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a9d98532-dc13-4905-8fa5-164af0c8ecff">
                     <TableID>dbo_FactTrafficViolation</TableID>
                     <ColumnID>AddressKey</ColumnID>
                   </Source>
@@ -339,15 +344,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c6835e25-33c1-472a-a505-6948754efc97">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="74e7fa8d-dec2-4123-8fea-4dd83b7799bf">
           <CubeDimensionID>Dim Date</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="4bbc8d24-3a7c-413d-9d41-6133e8ae9533">
+            <Attribute dwd:design-time-name="2d81dae6-100a-4ecd-a1b3-07f6ee70d96b">
               <AttributeID>Date Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="13095b08-5093-4a1f-ad43-08addc2e7948">
+                <KeyColumn dwd:design-time-name="5c0592ae-9704-4fc9-bc47-17f6875af529">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="95949b3f-fa8f-4338-b42f-1a29521d585f">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="975daf47-b132-44fc-bbc8-166eda7df03d">
                     <TableID>dbo_FactTrafficViolation</TableID>
                     <ColumnID>DateKey</ColumnID>
                   </Source>
@@ -357,15 +362,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8bda72be-f13d-4b29-8587-8313a0b8ee45">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7aa1b09e-8cec-4106-a803-880f80a5d600">
           <CubeDimensionID>Dim Weather</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="8ff64e5f-fead-4418-9b6c-ae4eff0b6157">
+            <Attribute dwd:design-time-name="27941b77-9398-40f8-ad31-6c82e41ccfee">
               <AttributeID>Weather Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="902966b8-c0b2-4748-8388-e0f917e444eb">
+                <KeyColumn dwd:design-time-name="194335f6-a94c-447f-a65c-4074f1afb916">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1dd17a9f-07c5-45cd-9f27-4fa66fc182cc">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b382c9d9-f363-4824-bdaf-cb7c3b793165">
                     <TableID>dbo_FactTrafficViolation</TableID>
                     <ColumnID>WeatherKey</ColumnID>
                   </Source>
@@ -378,7 +383,7 @@
       </Dimensions>
       <Partitions />
     </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="68c59d99-64c4-4cee-8649-751a2ef56ae5">
+    <MeasureGroup dwd:design-time-name="ff139165-1d2f-4e63-bec9-e22bb4def1f7">
       <ID>Dim Weather</ID>
       <Name>Dim Weather</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -386,69 +391,69 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="52c1c523-a347-4ffb-b32e-74c05856b3b1">
+        <Measure dwd:design-time-name="852ef1d6-5139-4708-b5f2-76e5a8df32cd">
           <ID>Average Humidity</ID>
           <Name>Average Humidity</Name>
-          <Source dwd:design-time-name="2e66e42c-975a-4d3e-84a3-f90b0ae4ade9">
+          <Source dwd:design-time-name="e1f3ce7f-5844-496e-8099-8fad59a8b6da">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="436f25c9-7da8-4f8d-bd23-df6bbfb05290">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e24b3365-0852-43cc-861c-c26a227ab035">
               <TableID>dbo_DimWeather</TableID>
               <ColumnID>AverageHumidity</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="22500ff5-e1a6-4bd3-aa5b-cfd4624d6067">
+        <Measure dwd:design-time-name="fa786be1-f6f4-43dc-a75a-adb725122508">
           <ID>Average Pressure</ID>
           <Name>Average Pressure</Name>
-          <Source dwd:design-time-name="39375ad2-c3b9-45f4-baf8-1149a7bc524f">
+          <Source dwd:design-time-name="fcbd1b1e-8855-4d67-a413-e5905fec9c2c">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="94267b76-b116-430e-b271-2f5bdce9fdc7">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c0d07ffe-fc5c-4bd6-beb7-f0a89cfd76ba">
               <TableID>dbo_DimWeather</TableID>
               <ColumnID>AveragePressure</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="5b93668e-8808-4f31-a10d-9bb09a3f7557">
+        <Measure dwd:design-time-name="879a7bfb-356f-435d-a42c-f4573f22d8a8">
           <ID>Average Temperature</ID>
           <Name>Average Temperature</Name>
-          <Source dwd:design-time-name="d51c87f8-4441-4cad-a5c6-4a146395429a">
+          <Source dwd:design-time-name="a7810a61-2746-42f1-b33b-1d25ce2643de">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="64f491f5-8a2a-480a-908c-6197b32d63f3">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b2bd0b43-8bf0-47a2-ae19-38c365e412dc">
               <TableID>dbo_DimWeather</TableID>
               <ColumnID>AverageTemperature</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="97c80e21-94a5-472e-9db2-d2fce3e7e007">
+        <Measure dwd:design-time-name="85a5cd96-5993-4979-897c-9403475ddf57">
           <ID>Average Wind Speed</ID>
           <Name>Average Wind Speed</Name>
-          <Source dwd:design-time-name="f790e958-f669-4daa-9641-4fec93d57437">
+          <Source dwd:design-time-name="6bf1bc4f-b0ee-4ab2-b59c-9e6a56b09c5e">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="6c27bc92-a5b3-4379-9d50-9868741d36a6">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="26f3bebc-e0a9-48bf-8105-11e5dab3d44e">
               <TableID>dbo_DimWeather</TableID>
               <ColumnID>AverageWindSpeed</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="e3968b70-5233-4535-abb4-d6e537a33a80">
+        <Measure dwd:design-time-name="11aa2c14-cbc2-4eec-9e2c-3cc445de8698">
           <ID>Source System Code - Dim Weather</ID>
           <Name>Source System Code - Dim Weather</Name>
-          <Source dwd:design-time-name="4afdd2b4-0777-48ac-beb9-b5a616fed44a">
+          <Source dwd:design-time-name="96929fb5-202e-42b7-ae70-300cdff8064f">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="dd462c53-2bc3-4920-b790-658cbfa14e08">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2e16d5ee-805e-44dc-99e3-8b40830b6858">
               <TableID>dbo_DimWeather</TableID>
               <ColumnID>SourceSystemCode</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="4a31aeeb-1eef-454d-9de7-44e36165a852">
+        <Measure dwd:design-time-name="54f9994d-f129-4464-b1cd-d31ead2ce2b0">
           <ID>Dim Weather Count</ID>
           <Name>Dim Weather Count</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="0671a88d-fc13-43e6-a8c0-e68562314563">
+          <Source dwd:design-time-name="7d71cd20-b10b-4f87-95e4-3e1bc1acbe3c">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="b3c4737b-2755-4360-b38b-f62636efab4e">
+            <Source xsi:type="RowBinding" dwd:design-time-name="b050fe24-b62c-4605-83b1-b683432b6f26">
               <TableID>dbo_DimWeather</TableID>
             </Source>
           </Source>
@@ -457,15 +462,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="65b0cb28-c6cd-46b7-a2c9-bbe07331538d">
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="98bcc6ea-a687-4210-a4ea-fe4a749dfafa">
           <CubeDimensionID>Dim Weather</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="4b90a298-3fc3-479a-b803-c474ad2764d1">
+            <Attribute dwd:design-time-name="acb9e8ce-6ff8-42cb-8dfc-872969641a99">
               <AttributeID>Weather Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="c6312c65-96e3-417a-9584-316fc174f7ef">
+                <KeyColumn dwd:design-time-name="7a0064e2-c907-4ac5-a6a8-ad154622cbd9">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="062c73fa-7d33-49b1-a05b-ea6577f5156d">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0b6a2bc2-96f0-471d-b954-5a4b6a315145">
                     <TableID>dbo_DimWeather</TableID>
                     <ColumnID>WeatherKey</ColumnID>
                   </Source>
@@ -479,7 +484,7 @@
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="87f5d9f8-64f9-41a9-8c83-70d5770a1347">
+  <Source dwd:design-time-name="59c5f73e-7652-455c-af9e-5161264d4677">
     <DataSourceViewID>Weather Traffic DM</DataSourceViewID>
   </Source>
 </Cube>
